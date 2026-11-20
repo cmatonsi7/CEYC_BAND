@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens. Values are RGB triplets so Tailwind can apply opacity. */
+:root {
+  --bg: 246 244 239;
+  --surface: 255 255 255;
+  --sunken: 238 235 228;
+  --line: 224 220 211;
+  --ink: 28 26 23;
+  --muted: 104 99 90;
+  --faint: 150 145 135;
+  --accent: 140 47 57;       /* oxblood */
+  --accent-ink: 255 255 255;
+  --accent-soft: 244 228 229;
+  --chord: 140 47 57;
+  --warn: 146 95 10;
+  --warn-soft: 251 241 220;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: 20 19 17;
+  --surface: 30 28 26;
+  --sunken: 39 37 34;
+  --line: 56 53 49;
+  --ink: 240 236 228;
+  --muted: 168 161 150;
+  --faint: 120 114 105;
+  --accent: 232 128 138;
+  --accent-ink: 30 16 18;
+  --accent-soft: 64 32 36;
+  --chord: 240 150 158;
+  --warn: 236 186 92;
+  --warn-soft: 58 44 18;
+  color-scheme: dark;
+}
+
+/* Performance mode is always high contrast. */
+.stage {
+  --bg: 0 0 0;
+  --surface: 14 14 14;
+  --sunken: 24 24 24;
+  --line: 48 48 48;
+  --ink: 255 255 255;
+  --muted: 190 190 190;
+  --faint: 130 130 130;
+  --accent: 255 200 97;
+  --accent-ink: 0 0 0;
+  --accent-soft: 52 40 16;
+  --chord: 255 200 97;
+  --warn: 255 200 97;
+  --warn-soft: 40 32 12;
+  color-scheme: dark;
+}
+
+html, body, #root { height: 100%; }
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+  font-feature-settings: 'cv11', 'ss01';
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-3.5 h-10 text-sm font-medium
+      transition-colors duration-150 select-none disabled:opacity-40 disabled:pointer-events-none
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+  .btn-primary { @apply btn bg-accent text-accent-ink hover:bg-accent/90; }
+  .btn-quiet { @apply btn text-ink hover:bg-sunken; }
+  .btn-outline { @apply btn border border-line bg-surface hover:bg-sunken; }
+  .icon-btn {
+    @apply inline-flex items-center justify-center rounded-xl h-10 w-10 text-muted hover:text-ink hover:bg-sunken
+      transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent;
+  }
+  .card { @apply rounded-2xl border border-line bg-surface; }
+  .input {
+    @apply h-10 w-full rounded-xl border border-line bg-surface px-3 text-sm text-ink placeholder:text-faint
+      focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent/60;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-line px-2.5 h-7 text-xs font-medium text-muted
+      whitespace-nowrap transition-colors;
+  }
+  .chip-on { @apply bg-ink text-bg border-ink; }
+  .eyebrow { @apply text-[11px] font-semibold uppercase tracking-[0.12em] text-faint; }
+}
+
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

@@ -1,0 +1,5032 @@
+{
+ "version": 1,
+ "source": {
+  "title": "CEYC BAND PROGRESSIONS",
+  "file": "CEYC BAND PROGRESSIONS (1).pdf",
+  "pages": 34
+ },
+ "songs": [
+  {
+   "title": "Strong and Mighty God",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "Key -",
+     "sourcePages": [
+      1
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 4 - 1 - 4 - 1 - 2 - 5 (3 - 4 - 5)",
+       "page": 1,
+       "progression": "1 - 4 - 1 - 4 - 1 - 2 - 5 (3 - 4 - 5)",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 1 - 4 - 1 - 2 - 5\n1 - 4 - 5 - 6 - 2 - 5 - 1",
+       "page": 1,
+       "progression": "1 - 4 - 1 - 4 - 1 - 2 - 5\n1 - 4 - 5 - 6 - 2 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 4 - 5\n1 - 4 - 5 - 1\n4 - 5 - 2 - 6\n6 - 5 - 1",
+       "page": 1,
+       "progression": "1 - 4 - 5\n1 - 4 - 5 - 1\n4 - 5 - 2 - 6\n6 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 5 - 1 - 6 - 1 - 5 - 2",
+       "page": 1,
+       "progression": "1 - 5 - 1 - 6 - 1 - 5 - 2",
+       "id": "bridge"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "strong-and-mighty-god--main"
+    }
+   ],
+   "id": "strong-and-mighty-god",
+   "sourcePages": [
+    1
+   ]
+  },
+  {
+   "title": "You are God",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "E",
+     "keyText": "Key: E",
+     "sourcePages": [
+      1
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "5 - 4 - 2 - 6 - 5",
+       "page": 1,
+       "progression": "5 - 4 - 2 - 6 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 5 - 4 - 5\n1 - 5 - 4 - 5",
+       "page": 1,
+       "progression": "1 - 5 - 4 - 5\n1 - 5 - 4 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "5 - 4 - 2 - 6 - 5",
+       "page": 1,
+       "sourceLabel": "Prechorus",
+       "progression": "5 - 4 - 2 - 6 - 5",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 4 - 2 - 6 - 5] * 3\n2 - 5 - 6, 2 - 5 - 1",
+       "page": 1,
+       "progression": "1 - 4 - 2 - 6 - 5] * 3\n2 - 5 - 6, 2 - 5 - 1",
+       "flags": [
+        "Closing bracket \"]\" has no matching opening bracket in the PDF; read as the first line repeated 3 times."
+       ],
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "5 - 4 - 2 - 6 - 5",
+       "page": 1,
+       "progression": "5 - 4 - 2 - 6 - 5",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "5 - 4 - 1\n2 - 4 - 6 - 5\n5 - 4 - 1\n2 - 6 - 5",
+       "page": 1,
+       "progression": "5 - 4 - 1\n2 - 4 - 6 - 5\n5 - 4 - 1\n2 - 6 - 5",
+       "flags": [
+        "Bridge continues onto page 2."
+       ],
+       "id": "bridge"
+      }
+     ],
+     "id": "you-are-god--main"
+    }
+   ],
+   "id": "you-are-god",
+   "sourcePages": [
+    1
+   ]
+  },
+  {
+   "title": "The Reason",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "Key:",
+     "sourcePages": [
+      2
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 7 - 1 - 4 - 1 - 5",
+       "page": 2,
+       "progression": "6 - 7 - 1 - 4 - 1 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "6 - 4 - 1 - 5 - 6 - 5 - 4",
+       "page": 2,
+       "progression": "6 - 4 - 1 - 5 - 6 - 5 - 4",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 4 - 6 - 5 - 4\n1 - 4 - 6 - 5",
+       "page": 2,
+       "progression": "1 - 4 - 6 - 5 - 4\n1 - 4 - 6 - 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 4 - 5 - 6",
+       "page": 2,
+       "progression": "1 - 4 - 5 - 6",
+       "id": "interlude"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "the-reason--main"
+    }
+   ],
+   "id": "the-reason",
+   "sourcePages": [
+    2
+   ]
+  },
+  {
+   "title": "Beyond Description",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "Key:",
+     "sourcePages": [
+      2
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "7 - 6 - 4 - 2 - 1",
+       "page": 2,
+       "progression": "7 - 6 - 4 - 2 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "4 - 6 - 5",
+       "page": 2,
+       "sourceLabel": "Prechorus",
+       "progression": "4 - 6 - 5",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 4 - 6 - 5 - 3 - 4 - 2 - 5 - 2 - 5 - 1",
+       "page": 2,
+       "progression": "1 - 4 - 6 - 5 - 3 - 4 - 2 - 5 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "2 - 4 - 1 - 5",
+       "page": 2,
+       "progression": "2 - 4 - 1 - 5",
+       "id": "bridge"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF.",
+      "No verse is written for this song."
+     ],
+     "id": "beyond-description--main"
+    }
+   ],
+   "id": "beyond-description",
+   "sourcePages": [
+    2
+   ]
+  },
+  {
+   "title": "Monarch of the Universe",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "A",
+     "keyText": "Key: A",
+     "sourcePages": [
+      3
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 1 - 5 - 6 - 2 - 5 - 1] * 2, 2 - 5 - 1",
+       "page": 3,
+       "progression": "4 - 1 - 5 - 6 - 2 - 5 - 1] * 2, 2 - 5 - 1",
+       "flags": [
+        "Closing bracket \"]\" has no matching opening bracket in the PDF."
+       ],
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 2 - 1 - 4 - 5 - 4 - 1 - 5 - 6\n2 - 5 - 6 - 2 - 5 - 1",
+       "page": 3,
+       "progression": "1 - 2 - 1 - 4 - 5 - 4 - 1 - 5 - 6\n2 - 5 - 6 - 2 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 1 - 5 - 6 - 4 - 1 - 6 - 2 - 5 - 1",
+       "page": 3,
+       "progression": "4 - 1 - 5 - 6 - 4 - 1 - 6 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "4 - 1 - 5 - 6 - 4 - 1 - 5 - 1",
+       "page": 3,
+       "progression": "4 - 1 - 5 - 6 - 4 - 1 - 5 - 1",
+       "id": "bridge"
+      }
+     ],
+     "id": "monarch-of-the-universe--main"
+    }
+   ],
+   "aliases": [
+    "Monarch of the universe"
+   ],
+   "id": "monarch-of-the-universe",
+   "sourcePages": [
+    3
+   ]
+  },
+  {
+   "title": "I'm One With You",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "Key:",
+     "sourcePages": [
+      3
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 6 - 4 - 3 - 6# - 4",
+       "page": 3,
+       "progression": "1 - 6 - 4 - 3 - 6# - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 6 - 4 - 3 - 2 - 5",
+       "page": 3,
+       "progression": "1 - 6 - 4 - 3 - 2 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 6 - 4 - 3 - 2 - 5",
+       "page": 3,
+       "progression": "1 - 6 - 4 - 3 - 2 - 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "2 - 6 - 4 - 5",
+       "page": 3,
+       "progression": "2 - 6 - 4 - 5",
+       "id": "bridge"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "im-one-with-you--main"
+    }
+   ],
+   "aliases": [
+    "Im one with you"
+   ],
+   "id": "im-one-with-you",
+   "sourcePages": [
+    3
+   ]
+  },
+  {
+   "title": "Your Word is Truth and Life",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "",
+     "sourcePages": [
+      3
+     ],
+     "sections": [
+      {
+       "name": "Progression",
+       "kind": "other",
+       "source": "1 - 5 - 2 - 6 - 5",
+       "page": 3,
+       "progression": "1 - 5 - 2 - 6 - 5",
+       "id": "progression"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF.",
+      "Only one progression is written, with no section label."
+     ],
+     "id": "your-word-is-truth-and-life--main"
+    }
+   ],
+   "id": "your-word-is-truth-and-life",
+   "sourcePages": [
+    3
+   ]
+  },
+  {
+   "title": "Lord Saviour Divine",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "C#",
+     "keyText": "Key: C#",
+     "sourcePages": [
+      3,
+      4
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 4 - 1",
+       "page": 3,
+       "progression": "6 - 4 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "6 - 4 - 1] *3\n6 - 4 - 1 - 5",
+       "page": 3,
+       "progression": "6 - 4 - 1] *3\n6 - 4 - 1 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "4 - 5 - 1 - 7 - 6…. 4 - 5 - 1 - 6 - 4 - 1\n4 - 5 - 1 - 7 - 6…. 4 - 5 - 1",
+       "page": 3,
+       "sourceLabel": "PreChorus",
+       "progression": "4 - 5 - 1 - 7 - 6…. 4 - 5 - 1 - 6 - 4 - 1\n4 - 5 - 1 - 7 - 6…. 4 - 5 - 1",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 5 - 1 - 7 - 6…. 4 - 5 - 1",
+       "page": 4,
+       "progression": "4 - 5 - 1 - 7 - 6…. 4 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 4 - 1 - 5 - 4 - 1 - 4 - 2 - 5 - 1",
+       "page": 4,
+       "progression": "1 - 4 - 1 - 5 - 4 - 1 - 4 - 2 - 5 - 1",
+       "id": "bridge"
+      }
+     ],
+     "id": "lord-saviour-divine--main"
+    }
+   ],
+   "id": "lord-saviour-divine",
+   "sourcePages": [
+    3,
+    4
+   ]
+  },
+  {
+   "title": "Spirit of Truth",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "Key:",
+     "sourcePages": [
+      4
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "2 - 4",
+       "page": 4,
+       "progression": "2 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 1 - 4",
+       "page": 4,
+       "progression": "1 - 4 - 1 - 4",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "6 - 5 - 2 - 4 - 6 - 7 - 1",
+       "page": 4,
+       "sourceLabel": "Prechorus",
+       "progression": "6 - 5 - 2 - 4 - 6 - 7 - 1",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 6 - 4 - 5 - 1 - 6 - 2 - 5 - 1 - 6",
+       "page": 4,
+       "progression": "1 - 6 - 4 - 5 - 1 - 6 - 2 - 5 - 1 - 6",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Interlude = Intro",
+       "page": 4,
+       "progression": "",
+       "refersTo": "intro",
+       "id": "interlude"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "spirit-of-truth--main"
+    }
+   ],
+   "id": "spirit-of-truth",
+   "sourcePages": [
+    4
+   ]
+  },
+  {
+   "title": "Precious Word of Truth",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Version 1 (page 4)",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "",
+     "sourcePages": [
+      4
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 6 - 4 - 5",
+       "page": 4,
+       "progression": "1 - 6 - 4 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 3 - 4 - 5 - 1",
+       "page": 4,
+       "progression": "1 - 3 - 4 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 6 - 5 - 4 - 6 - 5",
+       "page": 4,
+       "progression": "4 - 6 - 5 - 4 - 6 - 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 4",
+       "page": 4,
+       "progression": "1 - 4",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "7 - 6 - 4 - 7 - 6 - 4",
+       "page": 4,
+       "progression": "7 - 6 - 4 - 7 - 6 - 4",
+       "id": "bridge"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "precious-word-of-truth--version-1-page-4"
+    },
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "C",
+     "keyText": "Key: C (Lubone)",
+     "sourcePages": [
+      6,
+      7
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 6 - 4 - 5",
+       "page": 6,
+       "progression": "1 - 6 - 4 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 6 - 4 - 5\nx2",
+       "page": 6,
+       "progression": "1 - 6 - 4 - 5\nx2",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[4 - 6 - 5] x 4\n——> 4",
+       "page": 7,
+       "progression": "[4 - 6 - 5] x 4\n——> 4",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "4 - 1 - 4 - 1",
+       "page": 7,
+       "progression": "4 - 1 - 4 - 1",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "5 - 6 - 4",
+       "page": 7,
+       "progression": "5 - 6 - 4",
+       "id": "bridge"
+      }
+     ],
+     "id": "precious-word-of-truth--lubone"
+    }
+   ],
+   "aliases": [
+    "Precious Word Of Truth"
+   ],
+   "flags": [
+    "Appears twice in the PDF (pages 4 and 6–7) with different progressions; kept as two arrangements."
+   ],
+   "id": "precious-word-of-truth",
+   "sourcePages": [
+    4,
+    6,
+    7
+   ]
+  },
+  {
+   "title": "You are Great",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "Ab",
+     "keyText": "Key: Ab",
+     "sourcePages": [
+      5
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 4 - 2 - 5",
+       "page": 5,
+       "progression": "1 - 4 - 2 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 6 - 5",
+       "page": 5,
+       "progression": "1 - 4 - 6 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 4 - 2 - 5",
+       "page": 5,
+       "progression": "1 - 4 - 2 - 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 4 - 2 - 5",
+       "page": 5,
+       "progression": "1 - 4 - 2 - 5",
+       "id": "bridge"
+      },
+      {
+       "name": "Your love",
+       "kind": "cue",
+       "source": "1 - 5 - 4 - 5",
+       "page": 5,
+       "lyricCue": "Your love",
+       "progression": "1 - 5 - 4 - 5",
+       "id": "your-love"
+      }
+     ],
+     "id": "you-are-great--main"
+    }
+   ],
+   "id": "you-are-great",
+   "sourcePages": [
+    5
+   ]
+  },
+  {
+   "title": "You are my Life",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "",
+     "sourcePages": [
+      5
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 5 - 1] * 3\n2 - 5 - 1",
+       "page": 5,
+       "progression": "4 - 5 - 1] * 3\n2 - 5 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "4 - 1 - 6 - 5 - 4 - 3 - 6 - 2 - 5 - 1",
+       "page": 5,
+       "progression": "4 - 1 - 6 - 5 - 4 - 3 - 6 - 2 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 1 - 6 - 5 - 4 - 3 - 6 - 2 - 5 - 1",
+       "page": 5,
+       "progression": "4 - 1 - 6 - 5 - 4 - 3 - 6 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Interlude - Intro",
+       "page": 5,
+       "progression": "",
+       "refersTo": "intro",
+       "id": "interlude"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "2 - 5 - 6",
+       "page": 5,
+       "progression": "2 - 5 - 6",
+       "id": "outro"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "you-are-my-life--main"
+    }
+   ],
+   "id": "you-are-my-life",
+   "sourcePages": [
+    5
+   ]
+  },
+  {
+   "title": "Righteousness and Salvation",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "C#",
+     "keyText": "Key: C#",
+     "sourcePages": [
+      5,
+      6
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 4 - 6 - 5 - 4",
+       "page": 5,
+       "progression": "1 - 4 - 6 - 5 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 6 - 5",
+       "page": 5,
+       "progression": "1 - 4 - 6 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 4 - 6 - 5\n1 - 4 - 6 - 5 - 1",
+       "page": 5,
+       "progression": "1 - 4 - 6 - 5\n1 - 4 - 6 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 4 - 6 - 5 - 4\n1 - 4 - 6 - 5 - 4 - 1",
+       "page": 5,
+       "progression": "1 - 4 - 6 - 5 - 4\n1 - 4 - 6 - 5 - 4 - 1",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 4 - 6 - 5",
+       "page": 6,
+       "progression": "1 - 4 - 6 - 5",
+       "id": "bridge"
+      },
+      {
+       "name": "Lord Jesus you reign",
+       "kind": "cue",
+       "source": "1 - 4 - 6 - 1",
+       "page": 6,
+       "lyricCue": "Lord Jesus you reign",
+       "progression": "1 - 4 - 6 - 1",
+       "id": "lord-jesus-you-reign"
+      }
+     ],
+     "id": "righteousness-and-salvation--main"
+    }
+   ],
+   "id": "righteousness-and-salvation",
+   "sourcePages": [
+    5,
+    6
+   ]
+  },
+  {
+   "title": "Lord I Bless Your Name",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "F",
+     "keyText": "Key: F (Lubone)",
+     "sourcePages": [
+      6
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 5- 3- 6 - 2 - 5 - 1",
+       "page": 6,
+       "progression": "4 - 5- 3- 6 - 2 - 5 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 2,3 - 4 - 3 - 6 -5 - 6,7\nX2",
+       "page": 6,
+       "progression": "1 - 2,3 - 4 - 3 - 6 -5 - 6,7\nX2",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 5- 3- 6 - 2 - 5 - 1",
+       "page": 6,
+       "progression": "4 - 5- 3- 6 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "(same as chorus)",
+       "page": 6,
+       "progression": "",
+       "refersTo": "chorus",
+       "id": "interlude"
+      }
+     ],
+     "id": "lord-i-bless-your-name--lubone"
+    }
+   ],
+   "aliases": [
+    "Lord I bless Your Name"
+   ],
+   "id": "lord-i-bless-your-name",
+   "sourcePages": [
+    6
+   ]
+  },
+  {
+   "title": "We Give You Thanks",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "G",
+     "keyText": "Key: G - Ab",
+     "sourcePages": [
+      6
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 4 - 6 - 5 - 6 - 5",
+       "page": 6,
+       "progression": "1 - 4 - 6 - 5 - 6 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 6 - 5\n1 - 4 - 6 - 5 - 6 - 5\n2 - 465",
+       "page": 6,
+       "progression": "1 - 4 - 6 - 5\n1 - 4 - 6 - 5 - 6 - 5\n2 - 465",
+       "flags": [
+        "\"465\" is written without separators; it may mean 4 - 6 - 5. Left as written."
+       ],
+       "id": "verse"
+      }
+     ],
+     "modulationNotes": [
+      "Key is written as \"G - Ab\". This looks like a key change from G to Ab, but the PDF does not say where it happens."
+     ],
+     "flags": [
+      "Key change G → Ab has no position in the PDF."
+     ],
+     "id": "we-give-you-thanks--main"
+    }
+   ],
+   "aliases": [
+    "We give you thanks"
+   ],
+   "id": "we-give-you-thanks",
+   "sourcePages": [
+    6
+   ]
+  },
+  {
+   "title": "The Creator That Was Never Created",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "Ab",
+     "keyText": "Key: Ab (Tawa)",
+     "sourcePages": [
+      7
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 7,6 - 2 - 5 - 1",
+       "page": 7,
+       "progression": "1 - 7,6 - 2 - 5 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[1 - 6 - 4 - 5 - 1 - 6,5\n1 - 6 - 4 - 5 - 1] x2",
+       "page": 7,
+       "progression": "[1 - 6 - 4 - 5 - 1 - 6,5\n1 - 6 - 4 - 5 - 1] x2",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[4 - 5 - 6 - 2 - 5 - 1\n4 - 5 - 6 - 5 - 1]x2\n→ BACK TO VERSE",
+       "page": 7,
+       "progression": "[4 - 5 - 6 - 2 - 5 - 1\n4 - 5 - 6 - 5 - 1]x2\n→ BACK TO VERSE",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "[1 - 4 - 5 - 1] x\n[1 - 2,3 - 4 - 2 - 5 → 3 - 6 - 2 - 5 - 1\n1 - 2,3 - 4 - 2 - 5 - 1 ] x 2\n→ TO CHORUS (END)9",
+       "page": 7,
+       "sourceLabel": "Bride",
+       "progression": "[1 - 4 - 5 - 1] x\n[1 - 2,3 - 4 - 2 - 5 → 3 - 6 - 2 - 5 - 1\n1 - 2,3 - 4 - 2 - 5 - 1 ] x 2\n→ TO CHORUS (END)9",
+       "flags": [
+        "Labelled \"Bride\" in the PDF; read as Bridge.",
+        "First line ends \"x\" with no repeat count.",
+        "Stray \"9\" after \"(END)\"."
+       ],
+       "id": "bridge"
+      }
+     ],
+     "id": "the-creator-that-was-never-created--tawa"
+    }
+   ],
+   "id": "the-creator-that-was-never-created",
+   "sourcePages": [
+    7
+   ]
+  },
+  {
+   "title": "Everything You Do Is Good",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "D",
+     "keyText": "Key: D - Lubone",
+     "sourcePages": [
+      7
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "7 - 1 - 4",
+       "page": 7,
+       "progression": "7 - 1 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 2 - 3 - 4 - 5 - 5/4 - 1",
+       "page": 7,
+       "progression": "1 - 2 - 3 - 4 - 5 - 5/4 - 1",
+       "flags": [
+        "\"5/4\" shown as a slash chord (5 over 4 in the bass). Confirm this is the intended meaning."
+       ],
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "5 - 4 - 1, 5 - 4 - 1",
+       "page": 7,
+       "progression": "5 - 4 - 1, 5 - 4 - 1",
+       "id": "chorus"
+      }
+     ],
+     "id": "everything-you-do-is-good--lubone"
+    }
+   ],
+   "id": "everything-you-do-is-good",
+   "sourcePages": [
+    7
+   ]
+  },
+  {
+   "title": "Beautiful",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [
+      "Busi",
+      "Tawa"
+     ],
+     "originalKey": "Eb",
+     "keyText": "Key: Eb - Busi / Key: E - Tawa",
+     "sourcePages": [
+      8
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "(4- 6- 5) x2",
+       "page": 8,
+       "progression": "(4- 6- 5) x2",
+       "id": "intro"
+      },
+      {
+       "name": "Solo (Verse)",
+       "kind": "verse",
+       "source": "4 - 6 - 5, 4 - 5\n2 - 5, 2 - 5",
+       "page": 8,
+       "progression": "4 - 6 - 5, 4 - 5\n2 - 5, 2 - 5",
+       "id": "solo-verse"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "4-1-6-5, 4-5\n2-4-5, 2-4-5",
+       "page": 8,
+       "progression": "4-1-6-5, 4-5\n2-4-5, 2-4-5",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "4-1-6-5, 4-1-5",
+       "page": 8,
+       "progression": "4-1-6-5, 4-1-5",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "2-4-6-5 x3\n2-4-5",
+       "page": 8,
+       "progression": "2-4-6-5 x3\n2-4-5",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "2-4-6-5",
+       "page": 8,
+       "progression": "2-4-6-5",
+       "id": "bridge"
+      }
+     ],
+     "keyOptions": [
+      {
+       "key": "Eb",
+       "label": "Busi"
+      },
+      {
+       "key": "E",
+       "label": "Tawa"
+      }
+     ],
+     "performanceNotes": [
+      "Two keys are listed for one progression: Eb (Busi) and E (Tawa)."
+     ],
+     "id": "beautiful--main"
+    }
+   ],
+   "id": "beautiful",
+   "sourcePages": [
+    8
+   ]
+  },
+  {
+   "title": "Magnificent You Are",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "G",
+     "keyText": "Key: G - Tawa",
+     "sourcePages": [
+      8,
+      9
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 6 - 4 - 2 - 5\n1 - 6 - 2 - 3 - 4 - 5",
+       "page": 8,
+       "progression": "1 - 6 - 4 - 2 - 5\n1 - 6 - 2 - 3 - 4 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 6 - 4 - 5",
+       "page": 8,
+       "progression": "1 - 6 - 4 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "[ 4 - 1 - 6 - 5 ] x2",
+       "page": 8,
+       "progression": "[ 4 - 1 - 6 - 5 ] x2",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 5 - 2 - 4 - 5\n1 - 5 - 2 - 4 - 5 - 1",
+       "page": 8,
+       "progression": "1 - 5 - 2 - 4 - 5\n1 - 5 - 2 - 4 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 6 - 4 - 2 - 5\n1 - 6 - 2 - 3 - 4 - 5",
+       "page": 8,
+       "progression": "1 - 6 - 4 - 2 - 5\n1 - 6 - 2 - 3 - 4 - 5",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "5 - 6 - 4 - 5\n5 - 6 - 4 - 5 - 5#",
+       "page": 8,
+       "progression": "5 - 6 - 4 - 5\n5 - 6 - 4 - 5 - 5#",
+       "id": "bridge"
+      },
+      {
+       "name": "Chorus (key change)",
+       "kind": "chorus",
+       "source": "Chorus: (G#/Ab): 1 - 5 - 2 - 4 - 5\n1 - 5 - 2 - 4 - 5 - 1",
+       "page": 9,
+       "sourceLabel": "Chorus (G#/Ab)",
+       "progression": "1 - 5 - 2 - 4 - 5\n1 - 5 - 2 - 4 - 5 - 1",
+       "key": "Ab",
+       "instructions": [
+        "Played in G#/Ab, a semitone up."
+       ],
+       "id": "chorus-key-change"
+      }
+     ],
+     "modulationNotes": [
+      "Bridge ends on 5# and the final chorus moves up to G#/Ab."
+     ],
+     "id": "magnificent-you-are--tawa"
+    }
+   ],
+   "aliases": [
+    "Magnificent you Are"
+   ],
+   "id": "magnificent-you-are",
+   "sourcePages": [
+    8,
+    9
+   ]
+  },
+  {
+   "title": "Oh Wise God",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "F#",
+     "keyText": "Key: F# - Lubone",
+     "sourcePages": [
+      9
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "5 - 4 - 1",
+       "page": 9,
+       "progression": "5 - 4 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "5 - 4 - 1",
+       "page": 9,
+       "progression": "5 - 4 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "5 - 4 - 1",
+       "page": 9,
+       "progression": "5 - 4 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 4 - 4 - 1 - 6 - 4 - 4 - 1",
+       "page": 9,
+       "sourceLabel": "Bride",
+       "progression": "1 - 4 - 4 - 1 - 6 - 4 - 4 - 1",
+       "flags": [
+        "Labelled \"Bride\" in the PDF; read as Bridge."
+       ],
+       "id": "bridge"
+      }
+     ],
+     "id": "oh-wise-god--lubone"
+    }
+   ],
+   "id": "oh-wise-god",
+   "sourcePages": [
+    9
+   ]
+  },
+  {
+   "title": "Thine Is The Kingdom",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Busi",
+     "musicians": [
+      "Busi"
+     ],
+     "originalKey": "E",
+     "keyText": "Key: E - Busi",
+     "sourcePages": [
+      9,
+      10
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 5 - 3 - 6 x 2",
+       "page": 9,
+       "progression": "6 - 5 - 3 - 6 x 2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "4 - 2 - 3 - 6",
+       "page": 9,
+       "progression": "4 - 2 - 3 - 6",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 5 - 3 - 6",
+       "page": 9,
+       "progression": "4 - 5 - 3 - 6",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "(intro)",
+       "page": 9,
+       "progression": "",
+       "refersTo": "intro",
+       "id": "interlude"
+      },
+      {
+       "name": "Intro (second block)",
+       "kind": "intro",
+       "source": "4171",
+       "page": 9,
+       "sourceLabel": "Intro",
+       "progression": "4171",
+       "flags": [
+        "A second Intro/Verse block follows, written without separators (\"4171\"). It may be 4 - 1 - 7 - 1. Left as written."
+       ],
+       "id": "intro-second-block"
+      },
+      {
+       "name": "Verse (second block)",
+       "kind": "verse",
+       "source": "14651\n2564#",
+       "page": 10,
+       "sourceLabel": "Verse",
+       "progression": "14651\n2564#",
+       "flags": [
+        "Written without separators (\"14651\", \"2564#\"). May be 1 - 4 - 6 - 5 - 1 and 2 - 5 - 6 - 4#. Left as written."
+       ],
+       "id": "verse-second-block"
+      }
+     ],
+     "id": "thine-is-the-kingdom--busi"
+    }
+   ],
+   "id": "thine-is-the-kingdom",
+   "sourcePages": [
+    9,
+    10
+   ]
+  },
+  {
+   "title": "Dearest Shepherd",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "C",
+     "keyText": "Key: C - Lubone",
+     "sourcePages": [
+      10
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 3 - 4 - 5 - 6\n6 - 3 - 4 - 5 - 1",
+       "page": 10,
+       "progression": "1 - 3 - 4 - 5 - 6\n6 - 3 - 4 - 5 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 3 - 4 - 5 - 6, 3 - 4 - 4 - 5 - 1",
+       "page": 10,
+       "progression": "1 - 3 - 4 - 5 - 6, 3 - 4 - 4 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "6/1 - 3 - 4 - 5 - 1\n6 - 3 - 4 - 5 - 1",
+       "page": 10,
+       "progression": "6/1 - 3 - 4 - 5 - 1\n6 - 3 - 4 - 5 - 1",
+       "flags": [
+        "\"6/1\" could be a slash chord (6 over 1) or \"6 or 1\". Shown as a slash chord; please confirm."
+       ],
+       "id": "chorus"
+      },
+      {
+       "name": "Master",
+       "kind": "cue",
+       "source": "1 - 4 - 4 - 5 - 6, 3 - 4 - 4 - 5 - 1",
+       "page": 10,
+       "lyricCue": "Master",
+       "progression": "1 - 4 - 4 - 5 - 6, 3 - 4 - 4 - 5 - 1",
+       "id": "master"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Intro",
+       "page": 10,
+       "progression": "",
+       "refersTo": "intro",
+       "id": "interlude"
+      },
+      {
+       "name": "We’re not afraid",
+       "kind": "cue",
+       "source": "1 - 4 - 4 - 5 - 6, 3 - 4 - 4 - 5 - 6 - 7 - 1",
+       "page": 10,
+       "lyricCue": "We’re not afraid",
+       "progression": "1 - 4 - 4 - 5 - 6, 3 - 4 - 4 - 5 - 6 - 7 - 1",
+       "id": "were-not-afraid"
+      },
+      {
+       "name": "Everyday",
+       "kind": "cue",
+       "source": "4 - 4 - 5 - 6 - 3 - 4 - 4 - 5 - 1",
+       "page": 10,
+       "lyricCue": "Everyday",
+       "progression": "4 - 4 - 5 - 6 - 3 - 4 - 4 - 5 - 1",
+       "id": "everyday"
+      },
+      {
+       "name": "Chorus (All we’ve known)",
+       "kind": "chorus",
+       "source": "Chorus:\nAll we’ve known: 4 - 4 - 5 - 6 - 3 - 4 - 4 - 5 - 1 hi",
+       "page": 10,
+       "sourceLabel": "Chorus",
+       "lyricCue": "All we’ve known",
+       "progression": "4 - 4 - 5 - 6 - 3 - 4 - 4 - 5 - 1 hi",
+       "flags": [
+        "Stray word \"hi\" at the end of the line."
+       ],
+       "id": "chorus-all-weve-known"
+      }
+     ],
+     "id": "dearest-shepherd--lubone"
+    }
+   ],
+   "id": "dearest-shepherd",
+   "sourcePages": [
+    10
+   ]
+  },
+  {
+   "title": "King Of Kings",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "G",
+     "keyText": "Key: G",
+     "sourcePages": [
+      10
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 2 - 1 - 6 - 5",
+       "page": 10,
+       "progression": "4 - 2 - 1 - 6 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[4 - 2 - 1 - 6 - 5 ] x 6",
+       "page": 10,
+       "progression": "[4 - 2 - 1 - 6 - 5 ] x 6",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 5 - 1, 6 - 4 - 5\n3 - 4 - 5 - 6 - 2 - 5 - 1",
+       "page": 10,
+       "progression": "4 - 5 - 1, 6 - 4 - 5\n3 - 4 - 5 - 6 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "4 - 2 - 1 - 6 - 5 → back to verse",
+       "page": 10,
+       "progression": "4 - 2 - 1 - 6 - 5 → back to verse",
+       "id": "interlude"
+      }
+     ],
+     "id": "king-of-kings--main"
+    }
+   ],
+   "id": "king-of-kings",
+   "sourcePages": [
+    10
+   ]
+  },
+  {
+   "title": "Dateless Love",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "Ab",
+     "keyText": "Key: Ab",
+     "sourcePages": [
+      11
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1, 7, 6, 5, 4, 3, 2, 5",
+       "page": 11,
+       "progression": "1, 7, 6, 5, 4, 3, 2, 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "4, 3, 2, b5-5\n4, 3-6, 2, b5-5",
+       "page": 11,
+       "progression": "4, 3, 2, b5-5\n4, 3-6, 2, b5-5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4, 3-6, 2, 1-4m, 1-4m",
+       "page": 11,
+       "progression": "4, 3-6, 2, 1-4m, 1-4m",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "4, 5, 6, 7\n4, 5, 6, 7, 1, 4",
+       "page": 11,
+       "progression": "4, 5, 6, 7\n4, 5, 6, 7, 1, 4",
+       "id": "bridge"
+      }
+     ],
+     "id": "dateless-love--main"
+    }
+   ],
+   "id": "dateless-love",
+   "sourcePages": [
+    11
+   ]
+  },
+  {
+   "title": "My Alabaster Box",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "Ab",
+     "keyText": "Key: Ab - Lubone",
+     "sourcePages": [
+      11,
+      12
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 3 - 2 - 6 - 5",
+       "page": 11,
+       "progression": "6 - 3 - 2 - 6 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[1 - 3 - 4 - 5] x 2",
+       "page": 11,
+       "progression": "[1 - 3 - 4 - 5] x 2",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[ 6 - 3 - 2 - 5 - 6 - 3\n6 - 3 - 2 - 5 - 1 ]x2",
+       "page": 11,
+       "progression": "[ 6 - 3 - 2 - 5 - 6 - 3\n6 - 3 - 2 - 5 - 1 ]x2",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "6 - 3 - 2 - 4 - 6 - 3 - 6 - 3 - 2 - 5 - 1",
+       "page": 11,
+       "progression": "6 - 3 - 2 - 4 - 6 - 3 - 6 - 3 - 2 - 5 - 1",
+       "id": "interlude"
+      },
+      {
+       "name": "Verse 2",
+       "kind": "verse",
+       "source": "[1 - 3 - 4 - 5] x 2",
+       "page": 11,
+       "progression": "[1 - 3 - 4 - 5] x 2",
+       "id": "verse-2"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[ 6 - 3 - 2 - 5 - 6 - 3\n6 - 3 - 2 - 5 - 1 ]x2",
+       "page": 12,
+       "progression": "[ 6 - 3 - 2 - 5 - 6 - 3\n6 - 3 - 2 - 5 - 1 ]x2",
+       "id": "chorus-2"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "[6 - 3 - 2 - 5, 6 - 3 - 4 - 5 ] x 3",
+       "page": 12,
+       "progression": "[6 - 3 - 2 - 5, 6 - 3 - 4 - 5 ] x 3",
+       "id": "bridge"
+      },
+      {
+       "name": "Thank you",
+       "kind": "cue",
+       "source": "6 - 3 - 4 - 5, 6 - 3 - 4 - 5 - 1",
+       "page": 12,
+       "lyricCue": "Thank you",
+       "progression": "6 - 3 - 4 - 5, 6 - 3 - 4 - 5 - 1",
+       "id": "thank-you"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "2 - 5 - 1",
+       "page": 12,
+       "progression": "2 - 5 - 1",
+       "id": "outro"
+      }
+     ],
+     "id": "my-alabaster-box--lubone"
+    }
+   ],
+   "id": "my-alabaster-box",
+   "sourcePages": [
+    11,
+    12
+   ]
+  },
+  {
+   "title": "Sovereign Lord You Are",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "D",
+     "keyText": "Key: D - Lubone",
+     "sourcePages": [
+      12
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 5 - 6# - 4",
+       "page": 12,
+       "progression": "1 - 5 - 6# - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 1 - 4 - 5 - 6 - 4",
+       "page": 12,
+       "progression": "1 - 4 - 1 - 4 - 5 - 6 - 4",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 6 - 4 - 3 - 2 - 5\n1 - 6 - 4 - 5 - 1",
+       "page": 12,
+       "progression": "1 - 6 - 4 - 3 - 2 - 5\n1 - 6 - 4 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Chorus",
+       "page": 12,
+       "progression": "",
+       "refersTo": "chorus",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "Bridge:Version:1.0 1 - 6 – 2 – 4, 1 – 6 – 2 – 5",
+       "page": 12,
+       "progression": "1 - 6 – 2 – 4, 1 – 6 – 2 – 5",
+       "flags": [
+        "Text \"Version:1.0\" appears before the bridge progression; it looks like a paste error and is not shown in the progression."
+       ],
+       "id": "bridge"
+      }
+     ],
+     "id": "sovereign-lord-you-are--lubone"
+    }
+   ],
+   "id": "sovereign-lord-you-are",
+   "sourcePages": [
+    12
+   ]
+  },
+  {
+   "title": "The Splendour of Your Majesty",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "A",
+     "keyText": "Key: A",
+     "sourcePages": [
+      12
+     ],
+     "sections": [
+      {
+       "name": "Progression",
+       "kind": "other",
+       "source": "2 - 4 - 1 - 5",
+       "page": 12,
+       "progression": "2 - 4 - 1 - 5",
+       "id": "progression"
+      }
+     ],
+     "flags": [
+      "Only one progression is written, with no section label."
+     ],
+     "id": "the-splendour-of-your-majesty--main"
+    }
+   ],
+   "id": "the-splendour-of-your-majesty",
+   "sourcePages": [
+    12
+   ]
+  },
+  {
+   "title": "The Fullness of God",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "",
+     "sourcePages": [
+      13
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "5 - 4 - 5 - 4",
+       "page": 13,
+       "progression": "5 - 4 - 5 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 5 - 4 - 5",
+       "page": 13,
+       "progression": "1 - 5 - 4 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "4 - 5 - 1 - 5",
+       "page": 13,
+       "sourceLabel": "Pre-chorus",
+       "progression": "4 - 5 - 1 - 5",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[1 - 4 - 5] x2\n6 - 3 - 2 - 5 - 1",
+       "page": 13,
+       "progression": "[1 - 4 - 5] x2\n6 - 3 - 2 - 5 - 1",
+       "id": "chorus"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "the-fullness-of-god--main"
+    }
+   ],
+   "id": "the-fullness-of-god",
+   "sourcePages": [
+    13
+   ]
+  },
+  {
+   "title": "Freely",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "",
+     "sourcePages": [
+      13
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 4 - 1 - 5",
+       "page": 13,
+       "progression": "6 - 4 - 1 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "6 - 4 - 1 - 5\n6 - 2 - 4 - 5",
+       "page": 13,
+       "progression": "6 - 4 - 1 - 5\n6 - 2 - 4 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "6 - 2 - 4 - 5",
+       "page": 13,
+       "sourceLabel": "Pre - chorus",
+       "progression": "6 - 2 - 4 - 5",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "6 - 2 - 4 - 5",
+       "page": 13,
+       "progression": "6 - 2 - 4 - 5",
+       "id": "chorus"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "freely--main"
+    }
+   ],
+   "id": "freely",
+   "sourcePages": [
+    13
+   ]
+  },
+  {
+   "title": "Your Dominion is for Eternity",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "E",
+     "keyText": "(E) Sis Tawa",
+     "sourcePages": [
+      14
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6m 5 4",
+       "page": 14,
+       "progression": "6m 5 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "6m 5 4\n6m 5 6\n2m 1 5\n♭7 6m 5",
+       "page": 14,
+       "progression": "6m 5 4\n6m 5 6\n2m 1 5\n♭7 6m 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 2m 4 6m 5\n1 2m 4 5",
+       "page": 14,
+       "progression": "1 2m 4 6m 5\n1 2m 4 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "6m 5 4",
+       "page": 14,
+       "progression": "6m 5 4",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "4 5 1/3\n6 5 4 3",
+       "page": 14,
+       "progression": "4 5 1/3\n6 5 4 3",
+       "id": "bridge"
+      }
+     ],
+     "id": "your-dominion-is-for-eternity--tawa"
+    }
+   ],
+   "id": "your-dominion-is-for-eternity",
+   "sourcePages": [
+    14
+   ]
+  },
+  {
+   "title": "Heart of Worship",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "A",
+     "keyText": "A - LUBONE",
+     "sourcePages": [
+      14
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 6 - 4 - 5",
+       "page": 14,
+       "progression": "1 - 6 - 4 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1,7 - 6 - 4 - 5\n1,7 - 6 - 2 - 5",
+       "page": 14,
+       "progression": "1,7 - 6 - 4 - 5\n1,7 - 6 - 2 - 5",
+       "instructions": [
+        "👀 (marker after the verse in the PDF)"
+       ],
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "1- 6 - 2 - 7\n4-5",
+       "page": 14,
+       "sourceLabel": "Pre Chorus",
+       "progression": "1- 6 - 2 - 7\n4-5",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "2 - 4 - 1 - 5",
+       "page": 14,
+       "progression": "2 - 4 - 1 - 5",
+       "id": "chorus"
+      }
+     ],
+     "id": "heart-of-worship--lubone"
+    }
+   ],
+   "id": "heart-of-worship",
+   "sourcePages": [
+    14
+   ]
+  },
+  {
+   "title": "King Of Righteousness",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "D",
+     "keyText": "Key: D",
+     "sourcePages": [
+      14,
+      15
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 4 - 5 - 4",
+       "page": 14,
+       "progression": "1 - 4 - 5 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 5 - 6 - 5 - 1",
+       "page": 15,
+       "progression": "1 - 4 - 5 - 6 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "6 - 4 - 1\n6 - 4 - 5\n6 - 4 - 5\n2 - 5 - 1",
+       "page": 15,
+       "progression": "6 - 4 - 1\n6 - 4 - 5\n6 - 4 - 5\n2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "[6 - 4 - 1] x2 → 5 → Verse",
+       "page": 15,
+       "progression": "[6 - 4 - 1] x2 → 5 → Verse",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "5 - 4 - 1 x 4\n5 - 5# - 6,\n5 - 4 - 1.\nx2",
+       "page": 15,
+       "progression": "5 - 4 - 1 x 4\n5 - 5# - 6,\n5 - 4 - 1.\nx2",
+       "id": "bridge"
+      }
+     ],
+     "id": "king-of-righteousness--main"
+    }
+   ],
+   "id": "king-of-righteousness",
+   "sourcePages": [
+    14,
+    15
+   ]
+  },
+  {
+   "title": "Eternal Elixir",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "G",
+     "keyText": "Key: G - Sis Lubone",
+     "sourcePages": [
+      15
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "[1 - 4 - 6 - 4 ] x 2",
+       "page": 15,
+       "progression": "[1 - 4 - 6 - 4 ] x 2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 5 - 2 - 4 - 1 - 5 - 2",
+       "page": 15,
+       "progression": "1 - 5 - 2 - 4 - 1 - 5 - 2",
+       "id": "verse"
+      },
+      {
+       "name": "With you",
+       "kind": "cue",
+       "source": "2 - 3 - 6 - 2 - 4 - 5",
+       "page": 15,
+       "lyricCue": "With you",
+       "progression": "2 - 3 - 6 - 2 - 4 - 5",
+       "instructions": [
+        "🙃 (marker after this line in the PDF)"
+       ],
+       "id": "with-you"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 5 - 2 - 4 - 1 - 5 - 2 - 4-5\n1-5-2-4-6-2-2-3-4-5-1",
+       "page": 15,
+       "progression": "1 - 5 - 2 - 4 - 1 - 5 - 2 - 4-5\n1-5-2-4-6-2-2-3-4-5-1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 4 - 6 - 4 → Verse",
+       "page": 15,
+       "progression": "1 - 4 - 6 - 4 → Verse",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1… 6… 4… 4min\n1 - 5 - 2 - 4 - 5 - 2 - 5 - 2 - 4 - 5 - 1 → Chorus",
+       "page": 15,
+       "progression": "1… 6… 4… 4min\n1 - 5 - 2 - 4 - 5 - 2 - 5 - 2 - 4 - 5 - 1 → Chorus",
+       "id": "bridge"
+      }
+     ],
+     "id": "eternal-elixir--lubone"
+    }
+   ],
+   "id": "eternal-elixir",
+   "sourcePages": [
+    15
+   ]
+  },
+  {
+   "title": "You’re the King Of Glory",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "F",
+     "keyText": "Key: F - ??",
+     "sourcePages": [
+      15,
+      16
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 6 - 4 - 5",
+       "page": 15,
+       "progression": "1 - 6 - 4 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[1 - 6 - 4 - 5 ] x 2\n6 - 4 - 5 - 1 - 2 - 5 - 1",
+       "page": 16,
+       "progression": "[1 - 6 - 4 - 5 ] x 2\n6 - 4 - 5 - 1 - 2 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "5 - 4 - 1 - 5 - 4 - 1\n2 - 5 - 6 - 4 - 2 - 5 - 1 …x2",
+       "page": 16,
+       "progression": "5 - 4 - 1 - 5 - 4 - 1\n2 - 5 - 6 - 4 - 2 - 5 - 1 …x2",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "[5 - 4 - 1 ] x 2",
+       "page": 16,
+       "progression": "[5 - 4 - 1 ] x 2",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "[ 1 - 5 - 4 ] x 2\n[ 2 - 6 - 1 - 5 - 2 - 6 - 5 ] x 2 → TRANSPOSE BY 1 TONE (from F to G) stay on the 5",
+       "page": 16,
+       "progression": "[ 1 - 5 - 4 ] x 2\n[ 2 - 6 - 1 - 5 - 2 - 6 - 5 ] x 2 → key change",
+       "instructions": [
+        "TRANSPOSE BY 1 TONE (from F to G) stay on the 5"
+       ],
+       "id": "bridge"
+      },
+      {
+       "name": "Chorus (in G)",
+       "kind": "chorus",
+       "source": "Chorus: (in G) x 2",
+       "page": 16,
+       "progression": "",
+       "key": "G",
+       "refersTo": "chorus",
+       "instructions": [
+        "Chorus repeated in G, x 2."
+       ],
+       "id": "chorus-in-g"
+      },
+      {
+       "name": "Outro (God of the Universe)",
+       "kind": "outro",
+       "source": "(Outro - God of the Universe): 4 - 1 - 4 - 6 - 5 - 1",
+       "page": 16,
+       "sourceLabel": "(Outro - God of the Universe)",
+       "lyricCue": "God of the Universe",
+       "progression": "4 - 1 - 4 - 6 - 5 - 1",
+       "key": "G",
+       "flags": [
+        "The PDF does not say which key the outro is in. Shown in G because it follows the chorus in G."
+       ],
+       "id": "outro-god-of-the-universe"
+      }
+     ],
+     "modulationNotes": [
+      "Bridge: \"TRANSPOSE BY 1 TONE (from F to G) stay on the 5\". The final chorus is in G."
+     ],
+     "flags": [
+      "Musician is written as \"??\" in the PDF."
+     ],
+     "id": "youre-the-king-of-glory--main"
+    }
+   ],
+   "aliases": [
+    "Youre the King of Glory",
+    "King of Glory"
+   ],
+   "id": "youre-the-king-of-glory",
+   "sourcePages": [
+    15,
+    16
+   ]
+  },
+  {
+   "title": "You are the Christ",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "A",
+     "keyText": "Key: A Yuu - Sis Tawa",
+     "sourcePages": [
+      16
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 5 - 4 - 3",
+       "page": 16,
+       "progression": "6 - 5 - 4 - 3",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "6 - 4 - 1, 4 - 6 - 2 - 4 - 5 - 4 - 1 - 4 - 1 - 4 - 6 - 5\n1 - 4 - 1 - 4 - 6 - 2 - 4 - 5, 4 - 3 - 4 - 2 - 6 - 5",
+       "page": 16,
+       "progression": "6 - 4 - 1, 4 - 6 - 2 - 4 - 5 - 4 - 1 - 4 - 1 - 4 - 6 - 5\n1 - 4 - 1 - 4 - 6 - 2 - 4 - 5, 4 - 3 - 4 - 2 - 6 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[ 6 - 5 - 4 - 3 ] x 4",
+       "page": 16,
+       "progression": "[ 6 - 5 - 4 - 3 ] x 4",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "6 - 5 - 4 - 3",
+       "page": 16,
+       "progression": "6 - 5 - 4 - 3",
+       "id": "interlude"
+      },
+      {
+       "name": "Verse 2",
+       "kind": "verse",
+       "source": "6 - 5 - 4 - 3, 1# - 6# - 6 - 5# → Chorus",
+       "page": 16,
+       "progression": "6 - 5 - 4 - 3, 1# - 6# - 6 - 5# → Chorus",
+       "id": "verse-2"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "[6 - 1 - 3 - 6 ] x 4",
+       "page": 16,
+       "progression": "[6 - 1 - 3 - 6 ] x 4",
+       "id": "outro"
+      }
+     ],
+     "flags": [
+      "Key line reads \"A Yuu\"; \"Yuu\" is unclear."
+     ],
+     "id": "you-are-the-christ--tawa"
+    }
+   ],
+   "id": "you-are-the-christ",
+   "sourcePages": [
+    16
+   ]
+  },
+  {
+   "title": "Gracious Father",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Khomotso",
+     "musicians": [
+      "Khomotso"
+     ],
+     "originalKey": "C",
+     "keyText": "Key: C (Khomotso)",
+     "sourcePages": [
+      17
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 5 - 6 - 4\nx2",
+       "page": 17,
+       "progression": "1 - 5 - 6 - 4\nx2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 5 - 6 - 4 x2",
+       "page": 17,
+       "progression": "1 - 5 - 6 - 4 x2",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[1 - 5 - 2 - 6, 5 - 1 - 5 - 2,3,4 ] x 2",
+       "page": 17,
+       "progression": "[1 - 5 - 2 - 6, 5 - 1 - 5 - 2,3,4 ] x 2",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 5 - 6 - 4\nx2",
+       "page": 17,
+       "progression": "1 - 5 - 6 - 4\nx2",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "2 - 4 - 6 - 5",
+       "page": 17,
+       "sourceLabel": "Bride",
+       "progression": "2 - 4 - 6 - 5",
+       "flags": [
+        "Labelled \"Bride\" in the PDF; read as Bridge."
+       ],
+       "id": "bridge"
+      }
+     ],
+     "id": "gracious-father--khomotso"
+    }
+   ],
+   "id": "gracious-father",
+   "sourcePages": [
+    17
+   ]
+  },
+  {
+   "title": "Oh How Marvelous",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "G",
+     "keyText": "Key:G - Lubone",
+     "sourcePages": [
+      17
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 5 - 4 - 5 x 2",
+       "page": 17,
+       "progression": "1 - 5 - 4 - 5 x 2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 1/7 - 4 - 2 - 5\n6-4-3-2-5",
+       "page": 17,
+       "progression": "1 - 1/7 - 4 - 2 - 5\n6-4-3-2-5",
+       "flags": [
+        "\"1/7\" shown as a slash chord (1 over 7 in the bass)."
+       ],
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1- 4 - 5 - 3 - 4 - 5\n1 - 4 - 5 - 3 - 2 - 5 - 1 x2",
+       "page": 17,
+       "progression": "1- 4 - 5 - 3 - 4 - 5\n1 - 4 - 5 - 3 - 2 - 5 - 1 x2",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "(Intro)",
+       "page": 17,
+       "progression": "",
+       "refersTo": "intro",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 4 - 5 - 6 - 3 - 2 - 5\n1 - 4 - 5 - 6 - 3 - 2 - 5 - 1 - 1# (transpose 1 up) → chorus",
+       "page": 17,
+       "progression": "1 - 4 - 5 - 6 - 3 - 2 - 5\n1 - 4 - 5 - 6 - 3 - 2 - 5 - 1 - 1# → chorus",
+       "instructions": [
+        "transpose 1 up → chorus"
+       ],
+       "id": "bridge"
+      },
+      {
+       "name": "Chorus (after key change)",
+       "kind": "chorus",
+       "source": "(transpose 1 up) → chorus",
+       "page": 17,
+       "progression": "",
+       "key": "Ab",
+       "refersTo": "chorus",
+       "flags": [
+        "Added from the instruction \"1# (transpose 1 up) → chorus\". Shown a semitone up (G → Ab) because the bridge ends on 1#. Please confirm."
+       ],
+       "id": "chorus-after-key-change"
+      }
+     ],
+     "modulationNotes": [
+      "Bridge ends \"1 - 1# (transpose 1 up) → chorus\"."
+     ],
+     "id": "oh-how-marvelous--lubone"
+    }
+   ],
+   "aliases": [
+    "Oh How Marvellous"
+   ],
+   "id": "oh-how-marvelous",
+   "sourcePages": [
+    17
+   ]
+  },
+  {
+   "title": "Your Word is Eternal",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "C#",
+     "keyText": "Your Word is Eternal C# / Lubone",
+     "sourcePages": [
+      17,
+      18
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 4 - 1\n6-4-5",
+       "page": 17,
+       "progression": "6 - 4 - 1\n6-4-5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "6 - 4 - 1\n6-4-5\n1-2-6-4-5-1",
+       "page": 17,
+       "progression": "6 - 4 - 1\n6-4-5\n1-2-6-4-5-1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 5 - 1\n4-6-5\n4-3-2-1-7-6\n4-5-1",
+       "page": 18,
+       "progression": "4 - 5 - 1\n4-6-5\n4-3-2-1-7-6\n4-5-1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "intro",
+       "page": 18,
+       "progression": "",
+       "refersTo": "intro",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "4 - 5 - 6\n4-6-5",
+       "page": 18,
+       "progression": "4 - 5 - 6\n4-6-5",
+       "id": "bridge"
+      }
+     ],
+     "id": "your-word-is-eternal--lubone"
+    }
+   ],
+   "id": "your-word-is-eternal",
+   "sourcePages": [
+    17,
+    18
+   ]
+  },
+  {
+   "title": "Creator Of the Universe",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone / Tawa",
+     "musicians": [
+      "Lubone",
+      "Tawa"
+     ],
+     "originalKey": "F",
+     "keyText": "Key: F→F# → G - Lubone/Tawa",
+     "sourcePages": [
+      18
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 5 - 6 x 2\n2-3-6-7-1",
+       "page": 18,
+       "progression": "4 - 5 - 6 x 2\n2-3-6-7-1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "6 - 7 - 1, 2 - 5\n6 - 7 - 1, 2 - 5\n2 - 3 - 4 - 5,\n4 - 5 - 6, 4 - 5 - 6\n2-3-6-7-1",
+       "page": 18,
+       "progression": "6 - 7 - 1, 2 - 5\n6 - 7 - 1, 2 - 5\n2 - 3 - 4 - 5,\n4 - 5 - 6, 4 - 5 - 6\n2-3-6-7-1",
+       "id": "verse"
+      },
+      {
+       "name": "God of everything",
+       "kind": "cue",
+       "source": "6 - 4 - 2 - 5 - 1 - 4 (3) 2 - 3 - 4 - 5,\n2 - 3 - 4 - 5 - 1 - 1#",
+       "page": 18,
+       "lyricCue": "God of everything",
+       "progression": "6 - 4 - 2 - 5 - 1 - 4 (3) 2 - 3 - 4 - 5,\n2 - 3 - 4 - 5 - 1 - 1#",
+       "id": "god-of-everything"
+      },
+      {
+       "name": "Verse (F#)",
+       "kind": "verse",
+       "source": "F#: Verse: 6 - 7 - 1, 2 - 5\n6 - 7 - 1, 2 - 5\n2 - 3 - 4 - 5,\n4 - 5 - 6, 4 - 5 - 6\n2 - 3 - 6 - 7 - 1 - 1#",
+       "page": 18,
+       "sourceLabel": "F#: Verse",
+       "progression": "6 - 7 - 1, 2 - 5\n6 - 7 - 1, 2 - 5\n2 - 3 - 4 - 5,\n4 - 5 - 6, 4 - 5 - 6\n2 - 3 - 6 - 7 - 1 - 1#",
+       "key": "F#",
+       "id": "verse-f"
+      },
+      {
+       "name": "Verse (G)",
+       "kind": "verse",
+       "source": "G: Verse: 6 - 7 - 1, 2 - 5\n6 - 7 - 1, 2 - 5\n2 - 3 - 4 - 5,\n4 - 5 - 6, 4 - 5 - 6\n2-3-6-7-1",
+       "page": 18,
+       "sourceLabel": "G: Verse",
+       "progression": "6 - 7 - 1, 2 - 5\n6 - 7 - 1, 2 - 5\n2 - 3 - 4 - 5,\n4 - 5 - 6, 4 - 5 - 6\n2-3-6-7-1",
+       "key": "G",
+       "id": "verse-g"
+      }
+     ],
+     "modulationNotes": [
+      "Song moves F → F# → G. Each new key is announced by 1 - 1# at the end of the previous section."
+     ],
+     "id": "creator-of-the-universe--lubone-tawa"
+    }
+   ],
+   "aliases": [
+    "Creator of the Universe"
+   ],
+   "id": "creator-of-the-universe",
+   "sourcePages": [
+    18
+   ]
+  },
+  {
+   "title": "King Of Eternity",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "F",
+     "keyText": "Key: F",
+     "sourcePages": [
+      19
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4, 1, 6, 5, 1",
+       "page": 19,
+       "progression": "4, 1, 6, 5, 1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse (Solo)",
+       "kind": "verse",
+       "source": "4, 5, 1, 5, 6\n4, 1, 2, 5",
+       "page": 19,
+       "progression": "4, 5, 1, 5, 6\n4, 1, 2, 5",
+       "id": "verse-solo"
+      },
+      {
+       "name": "Verse (Choir)",
+       "kind": "verse",
+       "source": "1, 5, 6, 4, 5",
+       "page": 19,
+       "progression": "1, 5, 6, 4, 5",
+       "id": "verse-choir"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "2, 6, 5\n1, 5, 6\n2, 6, 5\n2, 6, 5",
+       "page": 19,
+       "sourceLabel": "Pre Chorus",
+       "progression": "2, 6, 5\n1, 5, 6\n2, 6, 5\n2, 6, 5",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "2, 5, 1, 5, 6 x3\n2, 1, 4, 5, 1",
+       "page": 19,
+       "progression": "2, 5, 1, 5, 6 x3\n2, 1, 4, 5, 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "#6, 4, 1 x2\n#6, 1 x2\n#5, #2, 5",
+       "page": 19,
+       "progression": "#6, 4, 1 x2\n#6, 1 x2\n#5, #2, 5",
+       "id": "bridge"
+      }
+     ],
+     "id": "king-of-eternity--main"
+    }
+   ],
+   "id": "king-of-eternity",
+   "sourcePages": [
+    19
+   ]
+  },
+  {
+   "title": "In Your Image",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "G",
+     "keyText": "Key: G - Tawa",
+     "sourcePages": [
+      19,
+      20,
+      28
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "[ 1 - 2 - 6, - 4 - 5 - 1 ] x 2",
+       "page": 19,
+       "progression": "[ 1 - 2 - 6, - 4 - 5 - 1 ] x 2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[1 - 2 - 6, - 4 - 5 - 1 ] x 4",
+       "page": 19,
+       "progression": "[1 - 2 - 6, - 4 - 5 - 1 ] x 4",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "[ 5 - 4 - 1, 5 - 6 - 5 ] x 1",
+       "page": 20,
+       "sourceLabel": "Pre-chorus",
+       "progression": "[ 5 - 4 - 1, 5 - 6 - 5 ] x 1",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[ 1 - 2 - 3 - 4 - 6 - 5 - 1 - 4 ] x 2",
+       "page": 20,
+       "progression": "[ 1 - 2 - 3 - 4 - 6 - 5 - 1 - 4 ] x 2",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 2 - 6, - 4 - 5 - 1 → back to verse",
+       "page": 20,
+       "progression": "1 - 2 - 6, - 4 - 5 - 1 → back to verse",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "5 - 5# - 6 - 5 - 4",
+       "page": 20,
+       "progression": "5 - 5# - 6 - 5 - 4",
+       "id": "bridge"
+      }
+     ],
+     "id": "in-your-image--tawa"
+    }
+   ],
+   "flags": [
+    "Written out twice in the PDF (pages 19–20 and page 28), identically."
+   ],
+   "id": "in-your-image",
+   "sourcePages": [
+    19,
+    20,
+    28
+   ]
+  },
+  {
+   "title": "Glorious God",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Busi",
+     "musicians": [
+      "Busi"
+     ],
+     "originalKey": "A",
+     "keyText": "Key: A - Busi",
+     "sourcePages": [
+      20
+     ],
+     "sections": [
+      {
+       "name": "Intro and Verse",
+       "kind": "intro",
+       "source": "6 - 5 - 1, 4 - 5",
+       "page": 20,
+       "progression": "6 - 5 - 1, 4 - 5",
+       "id": "intro-and-verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 4 - 3 - 6 - 2 - 5 - 1",
+       "page": 20,
+       "progression": "4 - 4 - 3 - 6 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "4 -6 - 5 - 1 - 1",
+       "page": 20,
+       "sourceLabel": "Bride",
+       "progression": "4 -6 - 5 - 1 - 1",
+       "flags": [
+        "Labelled \"Bride\" in the PDF; read as Bridge."
+       ],
+       "id": "bridge"
+      }
+     ],
+     "id": "glorious-god--busi"
+    }
+   ],
+   "id": "glorious-god",
+   "sourcePages": [
+    20
+   ]
+  },
+  {
+   "title": "The Person of Sovereign Majesty",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Version 1 (page 20)",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "Bb",
+     "keyText": "Key: Bb - Original / Key: A - Tawa",
+     "sourcePages": [
+      20
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 7- 3 - 6 - 5 - 1 - 4 - 3\n2-5-3",
+       "page": 20,
+       "progression": "1 - 7- 3 - 6 - 5 - 1 - 4 - 3\n2-5-3",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[ 1 - 4 - 5 - 1 - 2 - 5 ] * 2\n[ 1 - (7maj) - 4 - (2maj) - 5 - 1 - 2 - 5 ] * 2",
+       "page": 20,
+       "progression": "[ 1 - 4 - 5 - 1 - 2 - 5 ] * 2\n[ 1 - (7maj) - 4 - (2maj) - 5 - 1 - 2 - 5 ] * 2",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 7 - 3 - 6 - 5 - 4 - 1 - 5",
+       "page": 20,
+       "progression": "1 - 7 - 3 - 6 - 5 - 4 - 1 - 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Holy Spirit",
+       "kind": "cue",
+       "source": "1 - 7 - 3maj - 6 - 5min - 4 - 5",
+       "page": 20,
+       "lyricCue": "Holy Spirit",
+       "progression": "1 - 7 - 3maj - 6 - 5min - 4 - 5",
+       "id": "holy-spirit"
+      },
+      {
+       "name": "The Greater One",
+       "kind": "cue",
+       "source": "2 - 5 - 1",
+       "page": 20,
+       "lyricCue": "The Greater One",
+       "progression": "2 - 5 - 1",
+       "id": "the-greater-one"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "2 - 5 - 1 - 7,5,6,3,2 - 5 - 1",
+       "page": 20,
+       "sourceLabel": "Outro (The greater One)",
+       "lyricCue": "The greater One",
+       "progression": "2 - 5 - 1 - 7,5,6,3,2 - 5 - 1",
+       "id": "outro"
+      }
+     ],
+     "keyOptions": [
+      {
+       "key": "Bb",
+       "label": "Original"
+      },
+      {
+       "key": "A",
+       "label": "Tawa"
+      }
+     ],
+     "id": "the-person-of-sovereign-majesty--version-1-page-20"
+    },
+    {
+     "label": "Version 2 (page 23)",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "Bb",
+     "keyText": "Key: Bb - Original / Key: A - Tawa",
+     "sourcePages": [
+      23
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 7- 3 - 6 - 5 - 1 - 4 - 3\n2-5-3",
+       "page": 23,
+       "progression": "1 - 7- 3 - 6 - 5 - 1 - 4 - 3\n2-5-3",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[ 1 - 4 - 5 - 1 - 2,5 ] * 2",
+       "page": 23,
+       "progression": "[ 1 - 4 - 5 - 1 - 2,5 ] * 2",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 3 - 7 - 6 - 5 - 1 - 4 - 3 - 5 - 1\n1736:54 5 2 5 6 32361",
+       "page": 23,
+       "progression": "1 - 3 - 7 - 6 - 5 - 1 - 4 - 3 - 5 - 1",
+       "instructions": [
+        "Second line as written in the PDF: 1736:54 5 2 5 6 32361"
+       ],
+       "flags": [
+        "Second line \"1736:54 5 2 5 6 32361\" is written without separators and can't be read reliably. Left as written."
+       ],
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "2 - 5 -1",
+       "page": 23,
+       "progression": "2 - 5 -1",
+       "id": "bridge"
+      }
+     ],
+     "keyOptions": [
+      {
+       "key": "Bb",
+       "label": "Original"
+      },
+      {
+       "key": "A",
+       "label": "Tawa"
+      }
+     ],
+     "id": "the-person-of-sovereign-majesty--version-2-page-23"
+    }
+   ],
+   "aliases": [
+    "The Person of his Sovereign Majesty"
+   ],
+   "flags": [
+    "Appears twice: \"The Person of Sovereign Majesty\" (page 20) and \"The Person of his Sovereign Majesty\" (page 23), with different progressions."
+   ],
+   "id": "the-person-of-sovereign-majesty",
+   "sourcePages": [
+    20,
+    23
+   ]
+  },
+  {
+   "title": "Divinity",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "A",
+     "keyText": "Key: A - Sis Tawa",
+     "sourcePages": [
+      21
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 3 - 4 - 5, 1 - 3 - 4",
+       "page": 21,
+       "progression": "1 - 3 - 4 - 5, 1 - 3 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse (Through it all)",
+       "kind": "verse",
+       "source": "Verse:\nThrough it all: 1 - 4 - 1 - 4\n1-4-1-4",
+       "page": 21,
+       "sourceLabel": "Through it all",
+       "lyricCue": "Through it all",
+       "progression": "1 - 4 - 1 - 4\n1-4-1-4",
+       "id": "verse-through-it-all"
+      },
+      {
+       "name": "Lord your righteousness",
+       "kind": "cue",
+       "source": "1 - 4 - 1 - 4 - 1 - 4 - 5",
+       "page": 21,
+       "lyricCue": "Lord your righteousness",
+       "progression": "1 - 4 - 1 - 4 - 1 - 4 - 5",
+       "id": "lord-your-righteousness"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "Chorus:\nThe true vine:\nThe one and only:\n4 - 1 - 4 - 1, 6 - 3 - 4 - 1\n4 - 5 - 6, 3 - 6\n4-5-4-5-4-5-1",
+       "page": 21,
+       "progression": "4 - 1 - 4 - 1, 6 - 3 - 4 - 1\n4 - 5 - 6, 3 - 6\n4-5-4-5-4-5-1",
+       "instructions": [
+        "Lyric cues \"The true vine\" and \"The one and only\" are written above the chords without their own progressions."
+       ],
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Intro → back to verse",
+       "page": 21,
+       "progression": "→ back to verse",
+       "refersTo": "intro",
+       "id": "interlude"
+      }
+     ],
+     "id": "divinity--tawa"
+    },
+    {
+     "label": "Ab version (page 23)",
+     "musicians": [],
+     "originalKey": "Ab",
+     "keyText": "Divinity Ab",
+     "sourcePages": [
+      23
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1, 5, 4, 5",
+       "page": 23,
+       "progression": "1, 5, 4, 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1, 4, 1, 4\n1, 4, 1, 5",
+       "page": 23,
+       "progression": "1, 4, 1, 4\n1, 4, 1, 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4, 1, 4, 1 x2\n4, 5, 6, 3, 1\n4, 5, 4, 5, 4, 5, 1",
+       "page": 23,
+       "progression": "4, 1, 4, 1 x2\n4, 5, 6, 3, 1\n4, 5, 4, 5, 4, 5, 1",
+       "id": "chorus"
+      }
+     ],
+     "id": "divinity--ab-version-page-23"
+    }
+   ],
+   "flags": [
+    "Appears twice (page 20–21 in A for Tawa, page 23 in Ab) with different progressions."
+   ],
+   "id": "divinity",
+   "sourcePages": [
+    21,
+    23
+   ]
+  },
+  {
+   "title": "Christ our Lord",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "A",
+     "keyText": "Key A - Sis Lubone",
+     "sourcePages": [
+      21
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 6 - 5",
+       "page": 21,
+       "progression": "4 - 6 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse 1",
+       "kind": "verse",
+       "source": "4 - 7/1 - 7/1\n4-6-5\n4-1-5\n2-4-5",
+       "page": 21,
+       "progression": "4 - 7/1 - 7/1\n4-6-5\n4-1-5\n2-4-5",
+       "flags": [
+        "\"7/1\" shown as a slash chord (7 over 1). Please confirm."
+       ],
+       "id": "verse-1"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 1 - 5",
+       "page": 21,
+       "progression": "4 - 1 - 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Verse 2",
+       "kind": "verse",
+       "source": "[4 - 1 - 5]\n[2 - 4 - 5] x2",
+       "page": 21,
+       "progression": "[4 - 1 - 5]\n[2 - 4 - 5] x2",
+       "id": "verse-2"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "4 - 1 - 5 - 3",
+       "page": 21,
+       "progression": "4 - 1 - 5 - 3",
+       "id": "bridge"
+      }
+     ],
+     "id": "christ-our-lord--lubone"
+    }
+   ],
+   "id": "christ-our-lord",
+   "sourcePages": [
+    21
+   ]
+  },
+  {
+   "title": "No God Greater Than You",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "Ab",
+     "keyText": "Key: Ab - Lubone",
+     "sourcePages": [
+      22
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "[ 4 - 2 - 1 - 5 ] x 2",
+       "page": 22,
+       "progression": "[ 4 - 2 - 1 - 5 ] x 2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[ 2 - 6 - 1 - 5 ] x 2",
+       "page": 22,
+       "progression": "[ 2 - 6 - 1 - 5 ] x 2",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "[ 6 - 4 - 1, 4 - 6 - 5 ] x 2",
+       "page": 22,
+       "progression": "[ 6 - 4 - 1, 4 - 6 - 5 ] x 2",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 5 - 2 - 6 - 5 - 1 - 5 - 2,3,4,5 - 1",
+       "page": 22,
+       "progression": "1 - 5 - 2 - 6 - 5 - 1 - 5 - 2,3,4,5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 5 - 2 - 6 - 5 - 1 - 5 - 2,3,4,5 - 1",
+       "page": 22,
+       "progression": "1 - 5 - 2 - 6 - 5 - 1 - 5 - 2,3,4,5 - 1",
+       "id": "interlude"
+      },
+      {
+       "name": "Almighty God",
+       "kind": "cue",
+       "source": "1 - 5 - 2,3,4,5 - 1",
+       "page": 22,
+       "lyricCue": "Almighty God",
+       "progression": "1 - 5 - 2,3,4,5 - 1",
+       "id": "almighty-god"
+      }
+     ],
+     "id": "no-god-greater-than-you--lubone"
+    }
+   ],
+   "id": "no-god-greater-than-you",
+   "sourcePages": [
+    22
+   ]
+  },
+  {
+   "title": "There’s Nothing Impossible",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "Ab",
+     "keyText": "Key: Ab",
+     "sourcePages": [
+      22
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 5 - 4 x 2",
+       "page": 22,
+       "progression": "6 - 5 - 4 x 2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "6 - 4 - 1, 6 - 5 - 4\n6 - 4 - 1 - 4, 2 - 4 - 5",
+       "page": 22,
+       "progression": "6 - 4 - 1, 6 - 5 - 4\n6 - 4 - 1 - 4, 2 - 4 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 4 - 6 - 5 - 4",
+       "page": 22,
+       "progression": "1 - 4 - 6 - 5 - 4",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 4",
+       "page": 22,
+       "progression": "1 - 4",
+       "id": "interlude"
+      }
+     ],
+     "id": "theres-nothing-impossible--main"
+    }
+   ],
+   "aliases": [
+    "Theres Nothing Impossible"
+   ],
+   "id": "theres-nothing-impossible",
+   "sourcePages": [
+    22
+   ]
+  },
+  {
+   "title": "You Sit Above the Cherubim",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "G",
+     "keyText": "Key: G - Tawa",
+     "sourcePages": [
+      24
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "5 - 4 - 3 - 6 - 2 - 5 - 4 - 3 - 2 - 5 - 1",
+       "page": 24,
+       "progression": "5 - 4 - 3 - 6 - 2 - 5 - 4 - 3 - 2 - 5 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "4 - 3 - 2 - ( 5,1 ) - 4 - 3 - 2 - 5\n4-3 -6-2-5-1-4-5-2-5-1\n4 - 3 - 2 - (5,1) - 4 - 3 - 6 - 2 - 5",
+       "page": 24,
+       "progression": "4 - 3 - 2 - ( 5,1 ) - 4 - 3 - 2 - 5\n4-3 -6-2-5-1-4-5-2-5-1\n4 - 3 - 2 - (5,1) - 4 - 3 - 6 - 2 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Most",
+       "kind": "cue",
+       "source": "4 - 3 - 6 - 2 - 5 - 1 - 4... - 5 - 6 - 2 - 5 - 1",
+       "page": 24,
+       "lyricCue": "Most",
+       "progression": "4 - 3 - 6 - 2 - 5 - 1 - 4... - 5 - 6 - 2 - 5 - 1",
+       "id": "most"
+      },
+      {
+       "name": "Hallelujah",
+       "kind": "cue",
+       "source": "[4 - (2maj) - 5 - 6 - 2 - 5 - 1 ] x 4",
+       "page": 24,
+       "lyricCue": "Hallelujah",
+       "progression": "[4 - (2maj) - 5 - 6 - 2 - 5 - 1 ] x 4",
+       "id": "hallelujah"
+      },
+      {
+       "name": "Holy",
+       "kind": "cue",
+       "source": "4 - (2maj) - 5 - 6 - 2 - 4 - 3 - 6 - 2 - 5… - 4",
+       "page": 24,
+       "lyricCue": "Holy",
+       "progression": "4 - (2maj) - 5 - 6 - 2 - 4 - 3 - 6 - 2 - 5… - 4",
+       "id": "holy"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "5 - 4 - 5",
+       "page": 24,
+       "progression": "5 - 4 - 5",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "4 - 5 - 4 - 2 - 5",
+       "page": 24,
+       "progression": "4 - 5 - 4 - 2 - 5",
+       "id": "bridge"
+      },
+      {
+       "name": "You’re",
+       "kind": "cue",
+       "source": "1 - 4 - 5",
+       "page": 24,
+       "lyricCue": "You’re",
+       "progression": "1 - 4 - 5",
+       "id": "youre"
+      },
+      {
+       "name": "Hallelujah",
+       "kind": "cue",
+       "source": "[4 - (2maj) - 5 - 6 - 2 - 5 - 1 ] x 4",
+       "page": 24,
+       "lyricCue": "Hallelujah",
+       "progression": "[4 - (2maj) - 5 - 6 - 2 - 5 - 1 ] x 4",
+       "id": "hallelujah-2"
+      },
+      {
+       "name": "Holy",
+       "kind": "cue",
+       "source": "4 - (2maj) - 5 - 6 - 2 - 4 - 3 - 6 - 2 - 5… - 4",
+       "page": 24,
+       "lyricCue": "Holy",
+       "progression": "4 - (2maj) - 5 - 6 - 2 - 4 - 3 - 6 - 2 - 5… - 4",
+       "id": "holy-2"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "3 - 6 - 2… - 5 - 1",
+       "page": 24,
+       "progression": "3 - 6 - 2… - 5 - 1",
+       "id": "outro"
+      }
+     ],
+     "id": "you-sit-above-the-cherubim--tawa"
+    }
+   ],
+   "id": "you-sit-above-the-cherubim",
+   "sourcePages": [
+    24
+   ]
+  },
+  {
+   "title": "More Than Life",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Lubone",
+     "musicians": [
+      "Lubone"
+     ],
+     "originalKey": "C",
+     "keyText": "Key: C → Db - SIs Lubone",
+     "sourcePages": [
+      24,
+      25
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 4 -1 - 4",
+       "page": 24,
+       "progression": "1 - 4 -1 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "4min - 1 - 5 - 4 - 2 - 4 - 5",
+       "page": 24,
+       "progression": "4min - 1 - 5 - 4 - 2 - 4 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "For you",
+       "kind": "cue",
+       "source": "[3 - 6 - 2 - 5 - 3 - 6 - 2 - 5 ] x 2 - 1 (5#)",
+       "page": 25,
+       "lyricCue": "For you",
+       "progression": "[3 - 6 - 2 - 5 - 3 - 6 - 2 - 5 ] x 2 - 1 (5#)",
+       "id": "for-you"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[3 - 6 - 2 - 5] x 4 … 1",
+       "page": 25,
+       "progression": "[3 - 6 - 2 - 5] x 4 … 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Demons flee",
+       "kind": "cue",
+       "source": "4min - 1 (7,3) - 4 - 2… - 5",
+       "page": 25,
+       "lyricCue": "Demons flee",
+       "progression": "4min - 1 (7,3) - 4 - 2… - 5",
+       "id": "demons-flee"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "[3 - 6 - 2 - 5] x 3 …1 - 5 (Your name is great Oh Lord)",
+       "page": 25,
+       "sourceLabel": "Pre-chours",
+       "progression": "[3 - 6 - 2 - 5] x 3 …1 - 5 (Your name is great Oh Lord)",
+       "flags": [
+        "Labelled \"Pre-chours\" in the PDF; read as Pre-Chorus. It appears after the chorus."
+       ],
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "3 - 6 - 2 - 5\nx2\n(We bless you Lord)\n4 - 5 - 3 - 6 - 2 - 5 - 6, 2 - 5 - 1\n(For your love, and your grace)",
+       "page": 25,
+       "progression": "3 - 6 - 2 - 5\nx2\n(We bless you Lord)\n4 - 5 - 3 - 6 - 2 - 5 - 6, 2 - 5 - 1\n(For your love, and your grace)",
+       "id": "bridge"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "[4 - 5 - 6… - 2 - 5 - 1 ] x 2\n(Your glory is seen)",
+       "page": 25,
+       "progression": "[4 - 5 - 6… - 2 - 5 - 1 ] x 2\n(Your glory is seen)",
+       "id": "outro"
+      }
+     ],
+     "modulationNotes": [
+      "Key is written as \"C → Db\". The PDF does not say exactly where the change happens; \"(5#)\" after \"For you\" may be the pivot."
+     ],
+     "flags": [
+      "Key change C → Db has no clear position in the PDF."
+     ],
+     "id": "more-than-life--lubone"
+    }
+   ],
+   "id": "more-than-life",
+   "sourcePages": [
+    24,
+    25
+   ]
+  },
+  {
+   "title": "I Praise Your Name",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "Key:",
+     "sourcePages": [
+      25
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 4 - 6 – 4, 2 - 4",
+       "page": 25,
+       "progression": "6 - 4 - 6 – 4, 2 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "4 - 5 - 4 - 5 - 4 - 5, 6 - 5",
+       "page": 25,
+       "progression": "4 - 5 - 4 - 5 - 4 - 5, 6 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "2 - 4 -6 - 5",
+       "page": 25,
+       "sourceLabel": "Pre-chorus",
+       "progression": "2 - 4 -6 - 5",
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 1 - 5 ] x 3\n,4 - 6 - 5",
+       "page": 25,
+       "progression": "4 - 1 - 5 ] x 3\n,4 - 6 - 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Chorus → to verse",
+       "page": 25,
+       "progression": "→ to verse",
+       "refersTo": "chorus",
+       "id": "interlude"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "i-praise-your-name--main"
+    }
+   ],
+   "id": "i-praise-your-name",
+   "sourcePages": [
+    25
+   ]
+  },
+  {
+   "title": "Lover of My Soul",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "Key:",
+     "sourcePages": [
+      25,
+      26
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "[2 - 3 - 4 - 5 - 1 ] x2",
+       "page": 25,
+       "progression": "[2 - 3 - 4 - 5 - 1 ] x2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "3, 4 - 5 - 1 - 7 - 6 - (6# - 4) - 2 - 5 - 1\n4 - 5 - 1 - 7 - 6 - (6# - 4) - 2 - 5 - 1",
+       "page": 25,
+       "progression": "3, 4 - 5 - 1 - 7 - 6 - (6# - 4) - 2 - 5 - 1\n4 - 5 - 1 - 7 - 6 - (6# - 4) - 2 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 5 - 1 - 7 - 6 - 4 - 3 - 2 - 5 - 1",
+       "page": 25,
+       "progression": "4 - 5 - 1 - 7 - 6 - 4 - 3 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "4 - 5 - 1 - 7 - 6 - 4 - 3 - 2 - 5 - 1\n[back to verse, chorus]",
+       "page": 25,
+       "progression": "4 - 5 - 1 - 7 - 6 - 4 - 3 - 2 - 5 - 1\n[back to verse, chorus]",
+       "id": "interlude"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "2 - 5 - 1 - 7 - 6 - 2 - 5 - 1 - 7 - 6 - 2 - 5 - 6 - 3 - 2 - 5……. 2 - 3 - 4 - 5 - 1",
+       "page": 26,
+       "progression": "2 - 5 - 1 - 7 - 6 - 2 - 5 - 1 - 7 - 6 - 2 - 5 - 6 - 3 - 2 - 5……. 2 - 3 - 4 - 5 - 1",
+       "id": "outro"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF."
+     ],
+     "id": "lover-of-my-soul--main"
+    }
+   ],
+   "aliases": [
+    "Lover of my soul"
+   ],
+   "id": "lover-of-my-soul",
+   "sourcePages": [
+    25,
+    26
+   ]
+  },
+  {
+   "title": "I Am Satisfied in Your Love",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "G",
+     "keyText": "Key: G",
+     "sourcePages": [
+      26
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1, 4,",
+       "page": 26,
+       "progression": "1, 4,",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1, 5, 4, 5",
+       "page": 26,
+       "progression": "1, 5, 4, 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "5, 4, 1, 6, 5",
+       "page": 26,
+       "progression": "5, 4, 1, 6, 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1, 4, 6, 5",
+       "page": 26,
+       "progression": "1, 4, 6, 5",
+       "id": "bridge"
+      },
+      {
+       "name": "Breakdown",
+       "kind": "other",
+       "source": "(Breakdown - 1,7,2,1",
+       "page": 26,
+       "progression": "1,7,2,1",
+       "flags": [
+        "Written \"(Breakdown - 1,7,2,1\" with no closing bracket. \"1,7,2,1\" may be four separate chords rather than one bar."
+       ],
+       "id": "breakdown"
+      },
+      {
+       "name": "Substitution",
+       "kind": "other",
+       "source": "6 3 4 2 5 1",
+       "page": 26,
+       "progression": "6 3 4 2 5 1",
+       "instructions": [
+        "Substitution progression (where it replaces is not stated)."
+       ],
+       "id": "substitution"
+      }
+     ],
+     "id": "i-am-satisfied-in-your-love--main"
+    }
+   ],
+   "id": "i-am-satisfied-in-your-love",
+   "sourcePages": [
+    26
+   ]
+  },
+  {
+   "title": "Forever You Are God",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "Key:",
+     "sourcePages": [
+      26
+     ],
+     "sections": [
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "2 - 4 - 1",
+       "page": 26,
+       "progression": "2 - 4 - 1",
+       "id": "chorus"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF.",
+      "Only the chorus is written."
+     ],
+     "id": "forever-you-are-god--main"
+    }
+   ],
+   "id": "forever-you-are-god",
+   "sourcePages": [
+    26
+   ]
+  },
+  {
+   "title": "Everlasting King",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "A",
+     "keyText": "Key - A",
+     "sourcePages": [
+      26,
+      27
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 4 - 1 - 4",
+       "page": 26,
+       "progression": "1 - 4 - 1 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 1 - 4, 1 - 4 - 1 - 2 - 3",
+       "page": 26,
+       "progression": "1 - 4 - 1 - 4, 1 - 4 - 1 - 2 - 3",
+       "id": "verse"
+      },
+      {
+       "name": "We give",
+       "kind": "cue",
+       "source": "6 - 3 - 2 - 4 - 5",
+       "page": 26,
+       "lyricCue": "We give",
+       "progression": "6 - 3 - 2 - 4 - 5",
+       "id": "we-give"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[6 - 3 - 4 - 5] * 2\n4-5-1",
+       "page": 27,
+       "progression": "[6 - 3 - 4 - 5] * 2\n4-5-1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "2 - 3 - 4 - 5",
+       "page": 27,
+       "progression": "2 - 3 - 4 - 5",
+       "id": "bridge"
+      }
+     ],
+     "id": "everlasting-king--main"
+    }
+   ],
+   "id": "everlasting-king",
+   "sourcePages": [
+    26,
+    27
+   ]
+  },
+  {
+   "title": "The Greatest Lord",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "Eb",
+     "keyText": "LW Key - Eb / Key: Eb ( Tawa)",
+     "sourcePages": [
+      27
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "[4 - 6 - 5] x 4 - bass comes in on the 3rd",
+       "page": 27,
+       "progression": "[4 - 6 - 5] x 4",
+       "instructions": [
+        "Bass comes in on the 3rd."
+       ],
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[4 - 1 - 5, 4 - 6 - 5\n2 - 4 - 5, 2 - 4 - 5 ] x 2",
+       "page": 27,
+       "progression": "[4 - 1 - 5, 4 - 6 - 5\n2 - 4 - 5, 2 - 4 - 5 ] x 2",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 1 - 6 - 5, 4 - 1 - 5\n4 - 1 - 6 - 5, 4 - 5 - 1",
+       "page": 27,
+       "progression": "4 - 1 - 6 - 5, 4 - 1 - 5\n4 - 1 - 6 - 5, 4 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "[4 - 6 - 5] x 2 → BACK TO VERSE",
+       "page": 27,
+       "progression": "[4 - 6 - 5] x 2 → BACK TO VERSE",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "[2 - 4 - 6 - 5] x 4 → TO CHORUS",
+       "page": 27,
+       "progression": "[2 - 4 - 6 - 5] x 4 → TO CHORUS",
+       "id": "bridge"
+      },
+      {
+       "name": "Melody line",
+       "kind": "melody",
+       "source": "2,2,3,2,1,6 (YOU ARE THE GREATEST LORD)",
+       "page": 27,
+       "sourceLabel": "ML",
+       "lyricCue": "YOU ARE THE GREATEST LORD",
+       "melody": "2,2,3,2,1,6",
+       "id": "melody-line"
+      }
+     ],
+     "keyOptions": [
+      {
+       "key": "Eb",
+       "label": "LW key"
+      },
+      {
+       "key": "Eb",
+       "label": "Tawa"
+      }
+     ],
+     "performanceNotes": [
+      "Intro: bass comes in on the 3rd time."
+     ],
+     "id": "the-greatest-lord--tawa"
+    }
+   ],
+   "id": "the-greatest-lord",
+   "sourcePages": [
+    27
+   ]
+  },
+  {
+   "title": "Holy God",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Busi",
+     "musicians": [
+      "Busi"
+     ],
+     "originalKey": "Eb",
+     "keyText": "LW Key - E / Key: Eb - Busi",
+     "sourcePages": [
+      27,
+      28
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 2 - - 6 - 5",
+       "page": 27,
+       "progression": "1 - 2 - - 6 - 5",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 2 - 6 - 5\n4 - 5 - 6 - 3, 2 - 5 -1 (holy god)",
+       "page": 28,
+       "progression": "1 - 2 - 6 - 5\n4 - 5 - 6 - 3, 2 - 5 -1 (holy god)",
+       "id": "verse"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 2 - 6 - 5",
+       "page": 28,
+       "progression": "1 - 2 - 6 - 5",
+       "id": "bridge"
+      },
+      {
+       "name": "Melody back to chorus",
+       "kind": "melody",
+       "source": "1,2,3,4,5 4,3,1",
+       "page": 28,
+       "melody": "1,2,3,4,5 4,3,1",
+       "flags": [
+        "A melody back to the chorus is given, but no chorus progression is written."
+       ],
+       "id": "melody-back-to-chorus"
+      }
+     ],
+     "keyOptions": [
+      {
+       "key": "E",
+       "label": "LW key"
+      },
+      {
+       "key": "Eb",
+       "label": "Busi"
+      }
+     ],
+     "id": "holy-god--busi"
+    }
+   ],
+   "id": "holy-god",
+   "sourcePages": [
+    27,
+    28
+   ]
+  },
+  {
+   "title": "Grateful (woman version)",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "Lw Key: C# / Key:",
+     "sourcePages": [
+      28
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "Intro 1 4 6 5 4\nIntro: Verse",
+       "page": 28,
+       "progression": "1 4 6 5 4",
+       "flags": [
+        "Followed by \"Intro: Verse\", which may mean the intro uses the verse progression."
+       ],
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "(6 - 7) 1 - 2 - 3 - 4 - 5 - 5 - 1 (bass comes in with choir)",
+       "page": 28,
+       "progression": "(6 - 7) 1 - 2 - 3 - 4 - 5 - 5 - 1",
+       "instructions": [
+        "Bass comes in with choir."
+       ],
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "6 - 4 - 1, 6 - 4 - 5, 6 - 4 - 3 - 6 - 6# - 5 - 1",
+       "page": 28,
+       "progression": "6 - 4 - 1, 6 - 4 - 5, 6 - 4 - 3 - 6 - 6# - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "6# - 4 - 3/1, 6# - 4 - 1 → chorus",
+       "page": 28,
+       "progression": "6# - 4 - 3/1, 6# - 4 - 1 → chorus",
+       "flags": [
+        "\"3/1\" shown as a slash chord (3 over 1)."
+       ],
+       "id": "bridge"
+      }
+     ],
+     "keyOptions": [
+      {
+       "key": "C#",
+       "label": "LW key"
+      }
+     ],
+     "flags": [
+      "Only the LW key (C#) is given; the band key is blank."
+     ],
+     "id": "grateful-woman-version--main"
+    }
+   ],
+   "aliases": [
+    "Grateful"
+   ],
+   "id": "grateful-woman-version",
+   "sourcePages": [
+    28
+   ]
+  },
+  {
+   "title": "Almighty God",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Version 1 (page 29)",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "LW: C #",
+     "sourcePages": [
+      29
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 1 - 4 - 1 - 4 ,5--6 - 2 - 5 - 1",
+       "page": 29,
+       "progression": "4 - 1 - 4 - 1 - 4 ,5--6 - 2 - 5 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Melody line",
+       "kind": "melody",
+       "source": "2,3,2,1,1 - (are the works of your hand)",
+       "page": 29,
+       "sourceLabel": "Melody Line",
+       "lyricCue": "are the works of your hand",
+       "melody": "2,3,2,1,1",
+       "id": "melody-line"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 6 - 5 - 1 - 4 - 6 - 5 - 1",
+       "page": 29,
+       "progression": "1 - 4 - 6 - 5 - 1 - 4 - 6 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 1 - 4 - 1 - 4 ,5--6 - 2 - 5 - 1",
+       "page": 29,
+       "progression": "4 - 1 - 4 - 1 - 4 ,5--6 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Intro",
+       "page": 29,
+       "progression": "",
+       "refersTo": "intro",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 1 - 1 - 1 (4) x 4\n6 - 4 - 6 - 4…",
+       "page": 29,
+       "progression": "1 - 1 - 1 - 1 (4) x 4\n6 - 4 - 6 - 4…",
+       "id": "bridge"
+      },
+      {
+       "name": "Melody line (bridge)",
+       "kind": "melody",
+       "source": "1 - 7 - 6 - 5 ] x 2\n222333666",
+       "page": 29,
+       "sourceLabel": "ML",
+       "melody": "1 - 7 - 6 - 5 ] x 2\n222333666",
+       "flags": [
+        "\"222333666\" is written as one run; likely melody notes 2 2 2 3 3 3 6 6 6."
+       ],
+       "id": "melody-line-bridge"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "2 - 5 - 6 - 4# - 2 - 5 - 1 (how magnificent)",
+       "page": 29,
+       "lyricCue": "how magnificent",
+       "progression": "2 - 5 - 6 - 4# - 2 - 5 - 1",
+       "id": "outro"
+      }
+     ],
+     "keyOptions": [
+      {
+       "key": "C#",
+       "label": "LW key"
+      }
+     ],
+     "id": "almighty-god--version-1-page-29"
+    },
+    {
+     "label": "Version 2 (page 33)",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "LW: C #",
+     "sourcePages": [
+      33
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 1 - 4 - 1 - 4 ,5--6 - 2 - 5 - 1",
+       "page": 33,
+       "progression": "4 - 1 - 4 - 1 - 4 ,5--6 - 2 - 5 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Melody line",
+       "kind": "melody",
+       "source": "2,3,2,1,1 - (are the works of your hand)",
+       "page": 33,
+       "sourceLabel": "Melody Line",
+       "lyricCue": "are the works of your hand",
+       "melody": "2,3,2,1,1",
+       "id": "melody-line"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 6 - 5 - 1 - 4 - 6 - 5 - 1 - 4",
+       "page": 33,
+       "progression": "1 - 4 - 6 - 5 - 1 - 4 - 6 - 5 - 1 - 4",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 1 - 4 - 1 - 4 ,5--6 - 2 - 5 - 1",
+       "page": 33,
+       "progression": "4 - 1 - 4 - 1 - 4 ,5--6 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Intro",
+       "page": 33,
+       "progression": "",
+       "refersTo": "intro",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 1 - 1 - 1 (4) x 4\n6 - 4 - 6 - 4…",
+       "page": 33,
+       "progression": "1 - 1 - 1 - 1 (4) x 4\n6 - 4 - 6 - 4…",
+       "id": "bridge"
+      },
+      {
+       "name": "Melody line (bridge)",
+       "kind": "melody",
+       "source": "1 - 7 - 6 - 5 ] x 2\n222333666",
+       "page": 33,
+       "sourceLabel": "ML",
+       "melody": "1 - 7 - 6 - 5 ] x 2\n222333666",
+       "id": "melody-line-bridge"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "2 - 5 - 6 - 4# - 2 - 5 - 1 (how magnificent)",
+       "page": 33,
+       "lyricCue": "how magnificent",
+       "progression": "2 - 5 - 6 - 4# - 2 - 5 - 1",
+       "id": "outro"
+      }
+     ],
+     "keyOptions": [
+      {
+       "key": "C#",
+       "label": "LW key"
+      }
+     ],
+     "id": "almighty-god--version-2-page-33"
+    }
+   ],
+   "flags": [
+    "Written twice (page 29 and page 33). The versions differ only in the verse, which ends \"- 1 - 4\" on page 33."
+   ],
+   "id": "almighty-god",
+   "sourcePages": [
+    29,
+    33
+   ]
+  },
+  {
+   "title": "Great King of All",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "D",
+     "keyText": "Key: D",
+     "sourcePages": [
+      30
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 5 - 4 - 1] * 2",
+       "page": 30,
+       "progression": "1 - 5 - 4 - 1] * 2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 5 - 4 - 1",
+       "page": 30,
+       "progression": "1 - 5 - 4 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "5 - 4 - 1 - 6 - 4 - 5 - 4 - 1",
+       "page": 30,
+       "progression": "5 - 4 - 1 - 6 - 4 - 5 - 4 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 4 - 5 - 1",
+       "page": 30,
+       "progression": "1 - 4 - 5 - 1",
+       "id": "bridge"
+      }
+     ],
+     "id": "great-king-of-all--main"
+    }
+   ],
+   "id": "great-king-of-all",
+   "sourcePages": [
+    30
+   ]
+  },
+  {
+   "title": "Lord Eternal",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Busi",
+     "musicians": [
+      "Busi"
+     ],
+     "originalKey": "E",
+     "keyText": "Key: E - Busi",
+     "sourcePages": [
+      30
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "6 - 5 - 4 x 2",
+       "page": 30,
+       "progression": "6 - 5 - 4 x 2",
+       "id": "intro"
+      },
+      {
+       "name": "Pastor’s correction (intro)",
+       "kind": "correction",
+       "source": "634",
+       "page": 30,
+       "sourceLabel": "Pastor’s correction",
+       "progression": "6 - 3 - 4",
+       "instructions": [
+        "Replaces the intro: written \"634\" in the PDF."
+       ],
+       "flags": [
+        "Written \"634\" without separators; read as 6 - 3 - 4."
+       ],
+       "id": "pastors-correction-intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "4 - 4 - 1 - 5, 2 - 4 - 1 - 5",
+       "page": 30,
+       "progression": "4 - 4 - 1 - 5, 2 - 4 - 1 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "2 - 4 - 5, 2 - 4 - 5 - 4",
+       "page": 30,
+       "progression": "2 - 4 - 5, 2 - 4 - 5 - 4",
+       "id": "chorus"
+      },
+      {
+       "name": "Pastor’s correction (chorus)",
+       "kind": "correction",
+       "source": "6,4,5,3,4,5,4",
+       "page": 30,
+       "sourceLabel": "Pastor’s correction",
+       "progression": "6 - 4 - 5 - 3 - 4 - 5 - 4",
+       "instructions": [
+        "Replaces the chorus: written \"6,4,5,3,4,5,4\" in the PDF."
+       ],
+       "id": "pastors-correction-chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Intro",
+       "page": 30,
+       "progression": "",
+       "refersTo": "intro",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "2 - 4 - 1 -5, 2 - 4 - 1 - 5 - 1 x 1 —> chorus",
+       "page": 30,
+       "sourceLabel": "Bride",
+       "progression": "2 - 4 - 1 -5, 2 - 4 - 1 - 5 - 1 x 1 —> chorus",
+       "flags": [
+        "Labelled \"Bride\" in the PDF; read as Bridge."
+       ],
+       "id": "bridge"
+      }
+     ],
+     "performanceNotes": [
+      "Pastor’s corrections are given for the intro and chorus."
+     ],
+     "id": "lord-eternal--busi"
+    }
+   ],
+   "id": "lord-eternal",
+   "sourcePages": [
+    30
+   ]
+  },
+  {
+   "title": "I’m Grateful",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "G",
+     "keyText": "Key: G - Tawa",
+     "sourcePages": [
+      30
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "[ 1 - 4 - 6 - 4 ] x 2",
+       "page": 30,
+       "progression": "[ 1 - 4 - 6 - 4 ] x 2",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[ 1 - 4 - 6 - 5 - 4 ] x 4",
+       "page": 30,
+       "progression": "[ 1 - 4 - 6 - 5 - 4 ] x 4",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "[ 1 - 4 - 6 - 4 ] x 2",
+       "page": 30,
+       "progression": "[ 1 - 4 - 6 - 4 ] x 2",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "[ 1 - 4 - 6 - 4 ] x 2 → back to verse",
+       "page": 30,
+       "progression": "[ 1 - 4 - 6 - 4 ] x 2 → back to verse",
+       "id": "interlude"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "1 - 4 - 6 - 4",
+       "page": 30,
+       "progression": "1 - 4 - 6 - 4",
+       "id": "bridge"
+      }
+     ],
+     "id": "im-grateful--tawa"
+    }
+   ],
+   "aliases": [
+    "Im grateful"
+   ],
+   "id": "im-grateful",
+   "sourcePages": [
+    30
+   ]
+  },
+  {
+   "title": "I Sing",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "Tawa",
+     "musicians": [
+      "Tawa"
+     ],
+     "originalKey": "G",
+     "keyText": "Key: G (Tawa)",
+     "sourcePages": [
+      31
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 6 - 5, 4 - 4 - 5 (Melody for leys: 1523",
+       "page": 31,
+       "progression": "4 - 6 - 5, 4 - 4 - 5",
+       "instructions": [
+        "Melody for leys: 1523"
+       ],
+       "flags": [
+        "\"Melody for leys: 1523\" — \"leys\" may be \"keys\". Melody 1 5 2 3."
+       ],
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "[ 4 - 1 - 4 - 1, 4 - 5 - 6,\n4 - 5 - 6, 4 - 5 - 1 ] x 3",
+       "page": 31,
+       "progression": "[ 4 - 1 - 4 - 1, 4 - 5 - 6,\n4 - 5 - 6, 4 - 5 - 1 ] x 3",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 6 - 7 - 1 - 4 - 5 - 1",
+       "page": 31,
+       "progression": "4 - 6 - 7 - 1 - 4 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "You deserve it all",
+       "kind": "cue",
+       "source": "4 - 5 - 6, 4 - 5 - 1",
+       "page": 31,
+       "lyricCue": "You deserve it all",
+       "progression": "4 - 5 - 6, 4 - 5 - 1",
+       "id": "you-deserve-it-all"
+      }
+     ],
+     "id": "i-sing--tawa"
+    }
+   ],
+   "id": "i-sing",
+   "sourcePages": [
+    31
+   ]
+  },
+  {
+   "title": "Omnipotent Father",
+   "collection": "Song List",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "A",
+     "keyText": "Key: A",
+     "sourcePages": [
+      31
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 6 - 5, 4 - 6 - 5\n4 - 5 - 6, 4 - 5 - 1",
+       "page": 31,
+       "progression": "4 - 6 - 5, 4 - 6 - 5\n4 - 5 - 6, 4 - 5 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "4 - 6 - 5, 4 - 6 - 5\n4 - 5 - 6, 4 - 5 - 1",
+       "page": 31,
+       "progression": "4 - 6 - 5, 4 - 6 - 5\n4 - 5 - 6, 4 - 5 - 1",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4.. - 1, 4 - 6 - 5\n4 - 1, 4 - 6 - 5",
+       "page": 31,
+       "progression": "4.. - 1, 4 - 6 - 5\n4 - 1, 4 - 6 - 5",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "6 - 4 - 1 - 5",
+       "page": 31,
+       "progression": "6 - 4 - 1 - 5",
+       "id": "bridge"
+      },
+      {
+       "name": "TO You",
+       "kind": "cue",
+       "source": "4 - 5 - 6, 4 - 5 - 1",
+       "page": 31,
+       "lyricCue": "TO You",
+       "progression": "4 - 5 - 6, 4 - 5 - 1",
+       "id": "to-you"
+      }
+     ],
+     "id": "omnipotent-father--main"
+    }
+   ],
+   "id": "omnipotent-father",
+   "sourcePages": [
+    31
+   ]
+  },
+  {
+   "title": "The Grace",
+   "collection": "Today’s Songs",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "A",
+     "keyText": "Key: A",
+     "sourcePages": [
+      31,
+      32
+     ],
+     "sections": [
+      {
+       "name": "The grace of our Lord",
+       "kind": "cue",
+       "source": "1 - 5 - 6 - 4 - 6 - 4 - 1 - 5",
+       "page": 31,
+       "lyricCue": "The grace of our Lord",
+       "progression": "1 - 5 - 6 - 4 - 6 - 4 - 1 - 5",
+       "id": "the-grace-of-our-lord"
+      },
+      {
+       "name": "Now and forever",
+       "kind": "cue",
+       "source": "4 - 6 - 5 - 4, 6 - 5 - 4",
+       "page": 31,
+       "lyricCue": "Now and forever",
+       "progression": "4 - 6 - 5 - 4, 6 - 5 - 4",
+       "id": "now-and-forever"
+      },
+      {
+       "name": "Surely",
+       "kind": "cue",
+       "source": "4-1-5-4-5",
+       "page": 32,
+       "lyricCue": "Surely",
+       "progression": "4-1-5-4-5",
+       "id": "surely"
+      },
+      {
+       "name": "And we dwell",
+       "kind": "cue",
+       "source": "4 - 6 - 5 - 4 - 5 - 4 - 5 - 4 - 5 - 6 - 7 - 1",
+       "page": 32,
+       "lyricCue": "And we dwell",
+       "progression": "4 - 6 - 5 - 4 - 5 - 4 - 5 - 4 - 5 - 6 - 7 - 1",
+       "id": "and-we-dwell"
+      },
+      {
+       "name": "Outro",
+       "kind": "outro",
+       "source": "4 - 5 - 4 - 5 - 6 - 7 - 1",
+       "page": 32,
+       "progression": "4 - 5 - 4 - 5 - 6 - 7 - 1",
+       "id": "outro"
+      }
+     ],
+     "id": "the-grace--main"
+    }
+   ],
+   "aliases": [
+    "The grace"
+   ],
+   "id": "the-grace",
+   "sourcePages": [
+    31,
+    32
+   ]
+  },
+  {
+   "title": "One Name",
+   "collection": "Today’s Songs",
+   "arrangements": [
+    {
+     "label": "Busi",
+     "musicians": [
+      "Busi"
+     ],
+     "originalKey": "G",
+     "keyText": "Key:G - Sis Busi",
+     "sourcePages": [
+      32
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "1 - 6 - 5 - 4",
+       "page": 32,
+       "progression": "1 - 6 - 5 - 4",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 6 - 5 - 4",
+       "page": 32,
+       "progression": "1 - 6 - 5 - 4",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 5 - 4 - 5 - 1",
+       "page": 32,
+       "progression": "1 - 5 - 4 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "1 - 5 - 4 - 5 - 1\nx 1 → to verse",
+       "page": 32,
+       "progression": "1 - 5 - 4 - 5 - 1\nx 1 → to verse",
+       "id": "interlude"
+      },
+      {
+       "name": "Awesome Wonder",
+       "kind": "cue",
+       "source": "4 - 1",
+       "page": 32,
+       "lyricCue": "Awesome Wonder",
+       "progression": "4 - 1",
+       "id": "awesome-wonder"
+      }
+     ],
+     "id": "one-name--busi"
+    }
+   ],
+   "id": "one-name",
+   "sourcePages": [
+    32
+   ]
+  },
+  {
+   "title": "Unending Praise",
+   "collection": "Today’s Songs",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "C",
+     "keyText": "Key: C",
+     "sourcePages": [
+      32
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "Chorus",
+       "page": 32,
+       "progression": "",
+       "refersTo": "chorus",
+       "id": "intro"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 1 - 5, 1 - 4 - 6 - 4 - 5",
+       "page": 32,
+       "progression": "1 - 4 - 1 - 5, 1 - 4 - 6 - 4 - 5",
+       "id": "verse"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "1 - 4 - 6 - 5 - 3 - 4 - 6,5",
+       "page": 32,
+       "progression": "1 - 4 - 6 - 5 - 3 - 4 - 6,5",
+       "id": "chorus"
+      },
+      {
+       "name": "Interlude",
+       "kind": "interlude",
+       "source": "Chorus",
+       "page": 32,
+       "progression": "",
+       "refersTo": "chorus",
+       "id": "interlude"
+      }
+     ],
+     "id": "unending-praise--main"
+    }
+   ],
+   "id": "unending-praise",
+   "sourcePages": [
+    32
+   ]
+  },
+  {
+   "title": "Unto You We Lift Our Voice",
+   "collection": "Today’s Songs",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": "A",
+     "keyText": "LW Key: F# / Key: A",
+     "sourcePages": [
+      32,
+      33
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "4 - 5 - 1, 4 - 5 - 1",
+       "page": 32,
+       "progression": "4 - 5 - 1, 4 - 5 - 1",
+       "id": "intro"
+      },
+      {
+       "name": "Melody line",
+       "kind": "melody",
+       "source": "6,5,4 - 7,1,2 - 1",
+       "page": 32,
+       "sourceLabel": "Melody",
+       "melody": "6,5,4 - 7,1,2 - 1",
+       "id": "melody-line"
+      },
+      {
+       "name": "Verse",
+       "kind": "verse",
+       "source": "1 - 4 - 5 - 1 - 6 - 4 - 4,5 - 6,5\n1 - 4 - 5 - 6 - 3 - 4 - 4,5 - 6,5",
+       "page": 33,
+       "progression": "1 - 4 - 5 - 1 - 6 - 4 - 4,5 - 6,5\n1 - 4 - 5 - 6 - 3 - 4 - 4,5 - 6,5",
+       "id": "verse"
+      },
+      {
+       "name": "Pre-Chorus",
+       "kind": "prechorus",
+       "source": "1/6 - 4 - 5 - 1 (1 on the first one, 6 for the remaining)",
+       "page": 33,
+       "sourceLabel": "Prechorus",
+       "progression": "1~6 - 4 - 5 - 1",
+       "instructions": [
+        "1 on the first one, 6 for the remaining."
+       ],
+       "flags": [
+        "\"1/6\" here means 1 the first time and 6 after that (stated in the PDF), so it is shown as \"1 or 6\", not a slash chord."
+       ],
+       "id": "pre-chorus"
+      },
+      {
+       "name": "Chorus",
+       "kind": "chorus",
+       "source": "4 - 5 - 6 - 7 - 3\n4 - 5 - 2 - 5 - 1",
+       "page": 33,
+       "progression": "4 - 5 - 6 - 7 - 3\n4 - 5 - 2 - 5 - 1",
+       "id": "chorus"
+      },
+      {
+       "name": "Bridge",
+       "kind": "bridge",
+       "source": "4 - 5 - 6 - 3",
+       "page": 33,
+       "progression": "4 - 5 - 6 - 3",
+       "id": "bridge"
+      }
+     ],
+     "keyOptions": [
+      {
+       "key": "F#",
+       "label": "LW key"
+      },
+      {
+       "key": "A",
+       "label": "Band"
+      }
+     ],
+     "id": "unto-you-we-lift-our-voice--main"
+    }
+   ],
+   "id": "unto-you-we-lift-our-voice",
+   "sourcePages": [
+    32,
+    33
+   ]
+  },
+  {
+   "title": "King Of All The Nations",
+   "collection": "Today’s Songs",
+   "arrangements": [
+    {
+     "label": "",
+     "musicians": [],
+     "originalKey": null,
+     "keyText": "",
+     "sourcePages": [
+      33
+     ],
+     "sections": [
+      {
+       "name": "Intro",
+       "kind": "intro",
+       "source": "(We sing to your lord)\nIntro:",
+       "page": 33,
+       "lyricCue": "We sing to your lord",
+       "progression": "",
+       "id": "intro"
+      }
+     ],
+     "flags": [
+      "No key is written for this song in the PDF.",
+      "Incomplete in the PDF: only a lyric cue and an empty \"Intro:\" are written."
+     ],
+     "id": "king-of-all-the-nations--main"
+    }
+   ],
+   "id": "king-of-all-the-nations",
+   "sourcePages": [
+    33
+   ]
+  }
+ ],
+ "accompaniment": [
+  {
+   "title": "Prayer",
+   "kind": "prayer",
+   "page": 34,
+   "key": null,
+   "progression": "4 - 5 - 6, - 5 - 2 - 3 - 6,- 4",
+   "source": "Prayer: The Spirit of Prayer || Sunday Service || 30th August 2026\n4 - 5 - 6, - 5 - 2 - 3 - 6,- 4",
+   "reference": {
+    "label": "The Spirit of Prayer || Sunday Service || 30th August 2026",
+    "url": "https://www.youtube.com/watch?v=adIH19t9RcU&t=3475s"
+   },
+   "notes": [],
+   "flags": [
+    "No key is given."
+   ],
+   "id": "prayer"
+  },
+  {
+   "title": "Offering",
+   "kind": "offering",
+   "page": 34,
+   "key": null,
+   "progression": "4 - 5 - 6,\n2 - 3 - 6",
+   "source": "Offering: Worship Night | 14 Oct 2026 | CE Waterfront\n4 - 5 - 6,\n2 - 3 - 6 (only in certain moments)",
+   "reference": {
+    "label": "Worship Night | 14 Oct 2026 | CE Waterfront",
+    "url": "https://www.youtube.com/watch?v=O1nPM_ggqdY&t=3245s"
+   },
+   "notes": [
+    "2 - 3 - 6 only in certain moments."
+   ],
+   "flags": [
+    "No key is given."
+   ],
+   "id": "offering"
+  },
+  {
+   "title": "Worship Night recording (21 Oct 2026)",
+   "kind": "reference",
+   "page": 34,
+   "key": null,
+   "progression": "",
+   "source": "Worship Night | 21 Oct 2026 | CE Waterfront",
+   "reference": {
+    "label": "Worship Night | 21 Oct 2026 | CE Waterfront",
+    "url": "https://www.youtube.com/watch?v=uIwmTnM3wnk"
+   },
+   "notes": [],
+   "flags": [
+    "A recording link with no progression or label. It may belong with the Offering entry."
+   ],
+   "id": "worship-night-recording-21-oct-2026"
+  }
+ ]
+}

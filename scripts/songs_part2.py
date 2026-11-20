@@ -229,7 +229,7 @@ song('I Am Satisfied in Your Love', [A('', key='G', keyText='Key: G', sections=[
     S('Chorus', '5, 4, 1, 6, 5', 26),
     S('Bridge', '1, 4, 6, 5', 26),
     S('Breakdown', '(Breakdown - 1,7,2,1', 26, prog='1,7,2,1',
-      flags=['Written "(Breakdown - 1,7,2,1" with no closing bracket. "1,7,2,1" may be four separate chords rather than one bar.']),
+      flags=['Written "(Breakdown - 1,7,2,1" with no closing bracket. Read as passing chords 1, 7, 2 into 1; please confirm.']),
     S('Substitution', '6 3 4 2 5 1', 26, notes=['Substitution progression (where it replaces is not stated).']),
 ])]),
 

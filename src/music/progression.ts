@@ -13,8 +13,11 @@ import { Key, parseKey, transposeKey } from './keys';
 
 export type Token =
   | { kind: 'chord'; raw: string; chord: NumberChord }
-  /** Several chords sharing one bar, written "2,3" or "6,7". */
-  | { kind: 'split'; raw: string; chords: { raw: string; chord: NumberChord }[] }
+  /**
+   * Passing chord(s) into a target, written "2,3" (no space): 2 is played as a
+   * passing chord on the way to 3. In "2,3,4,5" the last number is the target.
+   */
+  | { kind: 'passing'; raw: string; chords: { raw: string; chord: NumberChord }[] }
   /** Either chord, written "1~6" in normalised data (the PDF's "1/6 (1 on the first one, 6 for the remaining)"). */
   | { kind: 'alt'; raw: string; chords: { raw: string; chord: NumberChord }[] }
   | { kind: 'sep'; raw: string }
@@ -42,7 +45,7 @@ const RULES: Array<[RegExp, (m: RegExpExecArray) => Token]> = [
   [/(?:——>|—>|-->|->|→|=>)/y, (m) => ({ kind: 'arrow', raw: m[0] })],
   [/(?:…+\.*|\.{2,})/y, (m) => ({ kind: 'hold', raw: m[0] })],
   [/[xX*×]\s?(\d+)(?![0-9])/y, (m) => ({ kind: 'repeat', raw: m[0], times: Number(m[1]) })],
-  [new RegExp(`${CHORD}(?:,${CHORD})+${BOUNDARY}`, 'y'), (m) => splitGroup(m[0], ',', 'split')],
+  [new RegExp(`${CHORD}(?:,${CHORD})+${BOUNDARY}`, 'y'), (m) => splitGroup(m[0], ',', 'passing')],
   [new RegExp(`${CHORD}(?:~${CHORD})+${BOUNDARY}`, 'y'), (m) => splitGroup(m[0], '~', 'alt')],
   [new RegExp(`${CHORD}${BOUNDARY}`, 'y'), (m) => {
     const chord = parseNumberChord(m[0]);
@@ -55,7 +58,7 @@ const RULES: Array<[RegExp, (m: RegExpExecArray) => Token]> = [
   [/[^\s\-–—,[\]()→…{]+/y, (m) => ({ kind: 'text', raw: m[0] })],
 ];
 
-function splitGroup(raw: string, sep: string, kind: 'split' | 'alt'): Token {
+function splitGroup(raw: string, sep: string, kind: 'passing' | 'alt'): Token {
   const chords = raw.split(sep).map((r) => ({ raw: r, chord: parseNumberChord(r) }));
   if (chords.some((c) => !c.chord)) return { kind: 'text', raw };
   return { kind, raw, chords: chords as { raw: string; chord: NumberChord }[] };
@@ -95,10 +98,10 @@ export function tokenize(input: string): Token[] {
 /** A token prepared for display in a given notation. */
 export type DisplayToken =
   | { kind: 'chord'; nns: string; chord: RenderedChord | null; key: Key | null }
-  | { kind: 'split'; parts: { nns: string; chord: RenderedChord | null }[]; key: Key | null }
+  | { kind: 'passing'; parts: { nns: string; chord: RenderedChord | null }[]; key: Key | null }
   | { kind: 'alt'; parts: { nns: string; chord: RenderedChord | null }[]; key: Key | null }
   | { kind: 'key'; key: Key; label: string }
-  | { kind: Exclude<Token['kind'], 'chord' | 'split' | 'alt' | 'key'>; raw: string };
+  | { kind: Exclude<Token['kind'], 'chord' | 'passing' | 'alt' | 'key'>; raw: string };
 
 /**
  * Resolve tokens against a key. Inline {key:X} markers change the key for the
@@ -113,10 +116,10 @@ export function resolveTokens(tokens: Token[], key: Key | null, shift = 0): Disp
       case 'chord':
         out.push({ kind: 'chord', nns: t.raw, chord: current ? renderNumberChord(t.chord, current) : null, key: current });
         break;
-      case 'split':
+      case 'passing':
       case 'alt':
         out.push({
-          kind: t.kind as 'split',
+          kind: t.kind as 'passing',
           parts: t.chords.map((c) => ({ nns: c.raw, chord: current ? renderNumberChord(c.chord, current) : null })),
           key: current,
         });
@@ -138,7 +141,7 @@ export function renderProgression(input: string, key: Key | null, mode: 'nns' | 
   const parts: string[] = [];
   for (const t of resolveTokens(tokenize(input), key, shift)) {
     if (t.kind === 'chord') parts.push(mode === 'chords' && t.chord ? t.chord.name : t.nns);
-    else if (t.kind === 'split') parts.push(t.parts.map((p) => (mode === 'chords' && p.chord ? p.chord.name : p.nns)).join(','));
+    else if (t.kind === 'passing') parts.push(t.parts.map((p) => (mode === 'chords' && p.chord ? p.chord.name : p.nns)).join(','));
     else if (t.kind === 'alt') parts.push(t.parts.map((p) => (mode === 'chords' && p.chord ? p.chord.name : p.nns)).join(' or '));
     else if (t.kind === 'key') parts.push(`[Key: ${keyLabel(t.key)}]`);
     else if (t.kind === 'sep') parts.push('-');
@@ -154,5 +157,5 @@ function keyLabel(k: Key): string {
 
 /** Count chords in a progression (used for search/summary). */
 export function chordCount(input: string): number {
-  return tokenize(input).reduce((n, t) => n + (t.kind === 'chord' ? 1 : t.kind === 'split' || t.kind === 'alt' ? t.chords.length : 0), 0);
+  return tokenize(input).reduce((n, t) => n + (t.kind === 'chord' ? 1 : t.kind === 'passing' || t.kind === 'alt' ? t.chords.length : 0), 0);
 }

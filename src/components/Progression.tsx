@@ -64,17 +64,32 @@ function renderToken(t: DisplayToken, showChords: boolean) {
   switch (t.kind) {
     case 'chord':
       return <ChordText nns={t.nns} name={t.chord?.name} uncertain={t.chord?.uncertain} showChords={showChords} />;
-    case 'split':
+    case 'passing': {
+      // "2,3": 2 is a passing chord on the way to 3. Passing chords are drawn
+      // smaller and lighter so the target chord stands out.
+      const last = t.parts.length - 1;
+      const label = (p: { nns: string; chord: { name: string } | null }) => (showChords && p.chord ? p.chord.name : p.nns);
       return (
-        <span className="inline-flex items-baseline rounded-md bg-sunken px-1.5" title="Split bar">
+        <span
+          className="inline-flex items-baseline"
+          title={`${t.parts.slice(0, last).map(label).join(', ')} passing into ${label(t.parts[last])}`}
+        >
           {t.parts.map((p, i) => (
             <Fragment key={i}>
-              {i > 0 && <span className="px-0.5 text-faint">,</span>}
-              <ChordText nns={p.nns} name={p.chord?.name} uncertain={p.chord?.uncertain} showChords={showChords} />
+              {i < last ? (
+                <span className="text-[0.72em] opacity-70">
+                  <ChordText nns={p.nns} name={p.chord?.name} uncertain={p.chord?.uncertain} showChords={showChords} />
+                </span>
+              ) : (
+                <ChordText nns={p.nns} name={p.chord?.name} uncertain={p.chord?.uncertain} showChords={showChords} />
+              )}
+              {i < last && <span className="px-[0.12em] text-[0.7em] text-faint" aria-hidden>›</span>}
             </Fragment>
           ))}
+          <span className="sr-only"> (passing)</span>
         </span>
       );
+    }
     case 'alt':
       return (
         <span className="inline-flex items-baseline gap-1">

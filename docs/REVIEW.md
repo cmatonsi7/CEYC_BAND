@@ -114,7 +114,7 @@ Generated from `public/data/library.json` by `scripts/review_list.py`. Nothing b
 - No key is written for this song in the PDF.
 
 ## I Am Satisfied in Your Love — p. 26
-- Breakdown (p. 26): Written "(Breakdown - 1,7,2,1" with no closing bracket. "1,7,2,1" may be four separate chords rather than one bar.
+- Breakdown (p. 26): Written "(Breakdown - 1,7,2,1" with no closing bracket. Read as passing chords 1, 7, 2 into 1; please confirm.
 
 ## Forever You Are God — p. 26
 - No key is written for this song in the PDF.

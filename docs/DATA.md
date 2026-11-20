@@ -39,9 +39,9 @@ The engine reads the band's own notation:
 | `4m` `4min` `5min` | Force minor | Dm |
 | `3maj` `(2maj)` | Force major | C#, B |
 | `57` `2m7` `4maj7` `5sus4` | Extensions | E7, Bm7, Dmaj7, Esus4 |
-| `6#` or `#6`, `b7` or `♭7` | Raised / lowered degree (quality unknown, shown with ?) | F (?), G (?) |
+| `6#` (6 sharp) or `#6`, `b7` or `♭7` | Sharpened / flattened degree (quality unknown, shown with ?) | F (?), G (?) |
 | `1/3` | Slash chord | A/C# |
-| `2,3` | Two chords in one bar (no space after the comma) | Bm,C#m |
+| `2,3` | Passing chord: 2 passes into 3 (comma, no space). In `2,3,4,5` the last number is the target | Bm › C#m |
 | `1~6` | Either chord (only used for Unto You’s “1/6, 1 on the first one”) | A or F#m |
 | `[ … ] x2`, `* 3`, `X2` | Repeats | kept |
 | `→ BACK TO VERSE`, `…`, `(…)`, words | Cues, kept as written | kept |

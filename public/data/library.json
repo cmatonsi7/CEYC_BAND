@@ -3760,7 +3760,7 @@
        "page": 26,
        "progression": "1,7,2,1",
        "flags": [
-        "Written \"(Breakdown - 1,7,2,1\" with no closing bracket. \"1,7,2,1\" may be four separate chords rather than one bar."
+        "Written \"(Breakdown - 1,7,2,1\" with no closing bracket. Read as passing chords 1, 7, 2 into 1; please confirm."
        ],
        "id": "breakdown"
       },

@@ -99,7 +99,7 @@ describe('progressions', () => {
   it('keeps the original numbers in number mode', () => {
     expect(renderProgression('1 - 6# - 4', k('C'), 'nns')).toBe('1 - 6# - 4');
   });
-  it('handles split bars, repeats, brackets and cues', () => {
+  it('handles passing chords, repeats, brackets and cues', () => {
     expect(chords('[4 - 6 - 5] x 4', 'Eb')).toBe('[Ab - Cm - Bb] x 4');
     expect(chords('1 - 2,3 - 4', 'F')).toBe('F - Gm,Am - Bb');
     expect(chords('4min - 1 (7,3)', 'C')).toBe('Fm - C (Bdim,Em)');
@@ -117,5 +117,22 @@ describe('progressions', () => {
     expect(chords(p, 'F')).toBe('Gm - C [Key: G] G - C');
     // Whole song up a tone: F→G and G→A.
     expect(chords(p, 'G', 2)).toBe('Am - D [Key: A] A - D');
+  });
+});
+
+describe('passing chords', () => {
+  it('reads "2,3" as 2 passing into 3, with the target last', () => {
+    const t = tokenize('1 - 2,3 - 4');
+    expect(t[2]).toMatchObject({ kind: 'passing', raw: '2,3' });
+    const p = t[2] as Extract<typeof t[number], { kind: 'passing' }>;
+    expect(p.chords.map((c) => c.raw)).toEqual(['2', '3']);
+    expect(renderProgression('2,3,4,5 - 1', k('Ab'), 'chords')).toBe('Bbm,Cm,Db,Eb - Ab');
+  });
+  it('treats "6#" as 6 sharp', () => {
+    expect(chords('1 - 6# - 4', 'C')).toBe('C - A# - F');
+    expect(chords('1 - #6 - 4', 'C')).toBe('C - A# - F');
+  });
+  it('keeps a comma followed by a space as a phrase break, not a passing chord', () => {
+    expect(tokenize('5 - 4 - 1, 5 - 4 - 1').filter((x) => x.kind === 'passing')).toHaveLength(0);
   });
 });

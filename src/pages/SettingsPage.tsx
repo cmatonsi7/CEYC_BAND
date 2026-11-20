@@ -79,8 +79,8 @@ export default function SettingsPage() {
       <div className="card space-y-2 p-4 text-sm text-ink/85">
         <p>A plain number is the natural chord of that step of the key: in A, <b>2</b> is Bm, <b>6</b> is F#m and <b>7</b> is G#dim.</p>
         <p><b>maj</b> / <b>min</b> / <b>m</b> written after a number override that (e.g. <b>3maj</b> in A is C#).</p>
-        <p><b>6#</b> or <b>#6</b> is a raised 6. The PDF doesn’t say what quality those chords are, so chord view shows just the root with a <span className="font-bold text-warn">?</span>.</p>
-        <p><b>2,3</b> (no space) means two chords in one bar. <b>5/4</b> is shown as a slash chord.</p>
+        <p><b>6#</b> (or <b>#6</b>) is 6 sharp. The PDF doesn’t say what quality those chords are, so chord view shows just the root with a <span className="font-bold text-warn">?</span>.</p>
+        <p><b>2,3</b> (comma, no space) means 2 is a passing chord on the way to 3. The passing chord is drawn smaller and lighter, so <b>3</b> stands out. <b>5/4</b> is shown as a slash chord.</p>
         <p>Songs that change key show the new key on the section, and moving the song’s key moves every section by the same amount.</p>
       </div>
     </div>

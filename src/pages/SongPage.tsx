@@ -8,7 +8,8 @@ import { actions, setlistOps, uid } from '../store/userStore';
 import { keyToString } from '../music';
 import { SectionCard, KIND_STYLE } from '../components/SectionCard';
 import { KeyControl } from '../components/KeyControl';
-import { BackLink, EmptyState, FlagList, Segmented } from '../components/ui';
+import { BackLink, EmptyState, FlagList } from '../components/ui';
+import { NotationSwitch } from '../components/NotationSwitch';
 import { Icon } from '../components/Icon';
 
 export default function SongPage() {
@@ -49,7 +50,6 @@ function SongView({ song }: { song: Song }) {
     setParams(next, { replace: true });
   };
   const setKey = (k: string | null) => update(actions.setPreferredKey(arrangement.id, k));
-  const setNotation = (n: 'nns' | 'chords') => update(actions.updateSettings({ notation: n }));
   const performUrl = `/perform/song/${song.id}?a=${encodeURIComponent(arrangement.id)}`;
 
   return (
@@ -103,12 +103,7 @@ function SongView({ song }: { song: Song }) {
       {/* Controls */}
       <div className="sticky top-14 z-10 -mx-4 mb-4 border-b border-line bg-bg/95 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6 lg:top-0 lg:-mx-10 lg:px-10">
         <div className="flex flex-wrap items-center gap-2">
-          <Segmented
-            label="Notation"
-            value={notation}
-            onChange={setNotation}
-            options={[{ value: 'nns', label: '1 4 5', title: 'Nashville numbers' }, { value: 'chords', label: 'C F G', title: 'Chord names' }]}
-          />
+          <NotationSwitch />
           <KeyControl written={arrangement.originalKey} value={chosenKey} options={arrangement.keyOptions} onChange={setKey} />
           {arrangement.keyOptions?.filter((o, i, all) => all.findIndex((x) => x.key === o.key) === i || o.label !== 'LW key').map((o) => {
             const active = (chosenKey ?? arrangement.originalKey) === o.key;
@@ -119,7 +114,7 @@ function SongView({ song }: { song: Song }) {
               </button>
             );
           })}
-          {notation === 'chords' && !ctx.viewing && (
+          {notation !== 'nns' && !ctx.viewing && (
             <span className="text-xs text-warn">No key in the PDF: pick one to see chords.</span>
           )}
           {ctx.written && ctx.shift !== 0 && ctx.viewing && (

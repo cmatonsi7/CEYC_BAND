@@ -60,9 +60,9 @@ export function SectionCard({ arrangement, section, ctx, notation, writtenKey }:
         <div className="mt-1 flex flex-wrap items-baseline gap-2">
           <span className="text-xs font-medium uppercase tracking-wide text-faint">Melody</span>
           <span className="font-semibold tabular-nums tracking-wide text-chord">
-            {notation === 'chords' && key ? renderMelody(section.melody, key) : section.melody}
+            {notation !== 'nns' && key ? renderMelody(section.melody, key) : section.melody}
           </span>
-          {notation === 'chords' && key && <span className="text-xs text-faint">({section.melody})</span>}
+          {notation === 'both' && key && <span className="text-xs text-faint">({section.melody})</span>}
         </div>
       )}
 

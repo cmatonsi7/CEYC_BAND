@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import { useLibrary } from '../data/LibraryProvider';
-import { useUpdate, useUserData } from '../store/UserDataProvider';
-import { actions } from '../store/userStore';
+import { useUserData } from '../store/UserDataProvider';
 import { parseKey } from '../music';
 import { Progression } from '../components/Progression';
 import { KeyControl } from '../components/KeyControl';
-import { FlagList, PageHeader, Segmented } from '../components/ui';
+import { FlagList, PageHeader } from '../components/ui';
+import { NotationSwitch } from '../components/NotationSwitch';
 import { Icon } from '../components/Icon';
 
 export default function AccompanimentPage() {
   const lib = useLibrary();
   const notation = useUserData((d) => d.settings.notation);
-  const update = useUpdate();
   const [keys, setKeys] = useState<Record<string, string | null>>({});
 
   return (
@@ -21,8 +20,7 @@ export default function AccompanimentPage() {
         title="Prayer & offering"
         subtitle="Progressions for moments in the service that aren’t tied to a song."
         actions={
-          <Segmented label="Notation" value={notation} onChange={(n) => update(actions.updateSettings({ notation: n }))}
-            options={[{ value: 'nns', label: '1 4 5' }, { value: 'chords', label: 'C F G' }]} />
+          <NotationSwitch />
         }
       />
       <div className="grid gap-4 md:grid-cols-2">
@@ -47,7 +45,7 @@ export default function AccompanimentPage() {
                   <div className="rounded-xl bg-sunken px-4 py-3">
                     <Progression text={item.progression} keyCtx={parseKey(k)} notation={notation} size="lg" />
                   </div>
-                  {notation === 'chords' && !k && <p className="mt-2 text-xs text-warn">Pick a key to see chord names.</p>}
+                  {notation !== 'nns' && !k && <p className="mt-2 text-xs text-warn">Pick a key to see chord names.</p>}
                 </>
               ) : (
                 <p className="text-sm italic text-faint">No progression written for this entry.</p>

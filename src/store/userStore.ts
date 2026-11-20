@@ -46,7 +46,11 @@ export function migrate(raw: unknown): UserData {
     preferredKeys: r.preferredKeys && typeof r.preferredKeys === 'object' ? r.preferredKeys : {},
     preferredArrangements: r.preferredArrangements && typeof r.preferredArrangements === 'object' ? r.preferredArrangements : {},
     setlists: Array.isArray(r.setlists) ? r.setlists.filter((s) => s && typeof s.id === 'string' && Array.isArray(s.songs)) : [],
-    settings: { ...base.settings, ...(r.settings ?? {}) },
+    settings: {
+      ...base.settings,
+      ...(r.settings ?? {}),
+      notation: ['nns', 'chords', 'both'].includes(r.settings?.notation as string) ? r.settings!.notation : base.settings.notation,
+    },
   };
 }
 

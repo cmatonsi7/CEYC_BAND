@@ -64,5 +64,7 @@ describe('user data persistence', () => {
     expect(new LocalUserStore(null).get().setlists).toEqual([]);
     expect(migrate({ favourites: [1, 'x'], settings: { notation: 'nns' } }).favourites).toEqual(['x']);
     expect(migrate({ settings: { notation: 'nns' } }).settings.theme).toBe('system');
+    expect(migrate({ settings: { notation: 'both' } }).settings.notation).toBe('both');
+    expect(migrate({ settings: { notation: 'roman' } }).settings.notation).toBe('chords');
   });
 });

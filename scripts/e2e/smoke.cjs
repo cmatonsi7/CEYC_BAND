@@ -22,7 +22,7 @@ const check = (name, ok, extra = '') => { results.push({ name, ok }); console.lo
   check('refresh on nested route renders the song', await page.getByRole('heading', { name: 'Creator Of the Universe' }).isVisible());
 
   // Notation + transposition
-  await page.getByRole('radio', { name: 'C F G' }).click();
+  await page.getByRole('radio', { name: 'Chords' }).click();
   const intro = page.locator('#sec-intro');
   const before = (await intro.innerText()).replace(/\s+/g, ' ');
   await page.getByRole('button', { name: 'Key up a semitone' }).click();
@@ -32,8 +32,15 @@ const check = (name, ok, extra = '') => { results.push({ name, ok }); console.lo
   check('transposed to G', after.includes('C – D – Em'), after.slice(0, 60));
   const fsharp = (await page.locator('#sec-verse-f').innerText());
   check('modulated section follows (F# → Ab when song is in G)', /Key change · Ab/.test(fsharp));
-  await page.getByRole('radio', { name: '1 4 5' }).click();
+  await page.getByRole('radio', { name: 'Both' }).click();
+  const bothText = (await intro.innerText()).replace(/\s+/g, ' ');
+  check('"Both" shows chord names with number degrees', bothText.includes('C 4') && bothText.includes('Em 6'), bothText.slice(0, 60));
+  await page.getByRole('radio', { name: 'Numbers' }).click();
   check('number notation shows original numbers', (await intro.innerText()).includes('4'));
+  await page.goto(B + '#/song/lord-i-bless-your-name');
+  const verse = page.locator('#sec-verse');
+  await verse.waitFor();
+  check('passing chords in numbers read 2›3', (await verse.innerText()).replace(/\s+/g, '').includes('2›3'));
 
   // Favourites persist
   await page.goto(B + '#/song/beautiful');

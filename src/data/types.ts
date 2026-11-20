@@ -95,7 +95,8 @@ export interface Library {
 
 // ---- User data (stored locally) ----
 
-export type Notation = 'nns' | 'chords';
+/** nns = number degrees, chords = chord names, both = chord names with the degree under each. */
+export type Notation = 'nns' | 'chords' | 'both';
 
 export interface SetlistSong {
   /** Unique within the setlist so the same song can appear twice. */

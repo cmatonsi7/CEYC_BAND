@@ -14,7 +14,8 @@ export function Progression({ text, keyCtx, notation, shift = 0, size = 'md' }: 
   size?: 'md' | 'lg' | 'stage';
 }) {
   const tokens = useMemo(() => resolveTokens(tokenize(text), keyCtx, shift), [text, keyCtx, shift]);
-  const showChords = notation === 'chords' && keyCtx !== null;
+  const showChords = notation !== 'nns' && keyCtx !== null;
+  const both = notation === 'both' && keyCtx !== null;
   const lines = useMemo(() => splitLines(tokens), [tokens]);
 
   const sizes = {
@@ -26,9 +27,9 @@ export function Progression({ text, keyCtx, notation, shift = 0, size = 'md' }: 
   return (
     <div className={`space-y-1.5 ${size === 'stage' ? 'space-y-[0.35em]' : ''}`}>
       {lines.map((line, li) => (
-        <div key={li} className={`flex flex-wrap items-baseline leading-snug ${sizes}`}>
+        <div key={li} className={`flex flex-wrap ${both ? 'items-start' : 'items-baseline'} leading-snug ${sizes}`}>
           {line.map((t, i) => (
-            <Fragment key={i}>{renderToken(t, showChords)}</Fragment>
+            <Fragment key={i}>{renderToken(t, showChords, both)}</Fragment>
           ))}
         </div>
       ))}
@@ -45,9 +46,20 @@ function splitLines(tokens: DisplayToken[]): DisplayToken[][] {
   return lines.filter((l) => l.length);
 }
 
-function ChordText({ nns, name, uncertain, showChords }: { nns: string; name?: string; uncertain?: boolean; showChords: boolean }) {
+function ChordText({ nns, name, uncertain, showChords, both }: { nns: string; name?: string; uncertain?: boolean; showChords: boolean; both?: boolean }) {
   if (!showChords || !name) {
     return <span className="font-semibold tabular-nums text-chord">{nns}</span>;
+  }
+  if (both) {
+    return (
+      <span className="inline-flex flex-col items-center leading-none" title={uncertain ? `${nns}: chord quality isn't written in the PDF` : nns}>
+        <span className="font-semibold text-chord">
+          {name}
+          {uncertain && <sup className="ml-px text-[0.6em] font-bold text-warn">?</sup>}
+        </span>
+        <span className="mt-[0.18em] text-[0.62em] font-semibold tabular-nums text-muted">{nns}</span>
+      </span>
+    );
   }
   return (
     <span
@@ -60,28 +72,28 @@ function ChordText({ nns, name, uncertain, showChords }: { nns: string; name?: s
   );
 }
 
-function renderToken(t: DisplayToken, showChords: boolean) {
+function renderToken(t: DisplayToken, showChords: boolean, both: boolean) {
   switch (t.kind) {
     case 'chord':
-      return <ChordText nns={t.nns} name={t.chord?.name} uncertain={t.chord?.uncertain} showChords={showChords} />;
+      return <ChordText nns={t.nns} name={t.chord?.name} uncertain={t.chord?.uncertain} showChords={showChords} both={both} />;
     case 'passing': {
       // "2,3": 2 is a passing chord on the way to 3. Passing chords are drawn
       // smaller and lighter so the target chord stands out.
       const last = t.parts.length - 1;
-      const label = (p: { nns: string; chord: { name: string } | null }) => (showChords && p.chord ? p.chord.name : p.nns);
+      const label = (p: { nns: string; chord: { name: string } | null }) => (showChords && p.chord ? (both ? `${p.chord.name} (${p.nns})` : p.chord.name) : p.nns);
       return (
         <span
-          className="inline-flex items-baseline"
+          className={`inline-flex ${both ? 'items-start' : 'items-baseline'}`}
           title={`${t.parts.slice(0, last).map(label).join(', ')} passing into ${label(t.parts[last])}`}
         >
           {t.parts.map((p, i) => (
             <Fragment key={i}>
               {i < last ? (
                 <span className="text-[0.72em] opacity-70">
-                  <ChordText nns={p.nns} name={p.chord?.name} uncertain={p.chord?.uncertain} showChords={showChords} />
+                  <ChordText nns={p.nns} name={p.chord?.name} uncertain={p.chord?.uncertain} showChords={showChords} both={both} />
                 </span>
               ) : (
-                <ChordText nns={p.nns} name={p.chord?.name} uncertain={p.chord?.uncertain} showChords={showChords} />
+                <ChordText nns={p.nns} name={p.chord?.name} uncertain={p.chord?.uncertain} showChords={showChords} both={both} />
               )}
               {i < last && <span className="px-[0.12em] text-[0.7em] text-faint" aria-hidden>›</span>}
             </Fragment>
@@ -92,11 +104,11 @@ function renderToken(t: DisplayToken, showChords: boolean) {
     }
     case 'alt':
       return (
-        <span className="inline-flex items-baseline gap-1">
+        <span className={`inline-flex ${both ? 'items-start' : 'items-baseline'} gap-1`}>
           {t.parts.map((p, i) => (
             <Fragment key={i}>
               {i > 0 && <span className="text-[0.75em] text-muted">or</span>}
-              <ChordText nns={p.nns} name={p.chord?.name} uncertain={p.chord?.uncertain} showChords={showChords} />
+              <ChordText nns={p.nns} name={p.chord?.name} uncertain={p.chord?.uncertain} showChords={showChords} both={both} />
             </Fragment>
           ))}
         </span>

@@ -2,7 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useLibrary } from '../data/LibraryProvider';
 import { findArrangement, findSong, keyContext, playableProgression, resolveSection, sectionKey } from '../data/library';
-import type { Arrangement, Library, Song, UserData } from '../data/types';
+import type { Arrangement, Library, Notation, Song, UserData } from '../data/types';
+import { NotationSwitch, nextNotation } from '../components/NotationSwitch';
 import { useUpdate, useUserData } from '../store/UserDataProvider';
 import { actions } from '../store/userStore';
 import { keyToString, renderMelody } from '../music';
@@ -85,11 +86,12 @@ export default function PerformancePage() {
       if ((e.target as HTMLElement)?.closest('input, textarea, select')) return;
       if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); go(1); }
       else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); go(-1); }
+      else if (e.key === 'n' || e.key === 'N') update(actions.updateSettings({ notation: nextNotation(settings.notation) }));
       else if (e.key === 'Escape' && !document.fullscreenElement) navigate(built?.back ?? '/');
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [go, navigate, built]);
+  }, [go, navigate, built, settings.notation, update]);
 
   // Swipe left/right.
   const touch = useRef<{ x: number; y: number } | null>(null);
@@ -137,6 +139,14 @@ export default function PerformancePage() {
             {[item.arrangement.label, ctx.viewing ? `Key ${keyToString(ctx.viewing)}` : 'No key chosen'].filter(Boolean).join(' · ')}
           </p>
         </div>
+        <button
+          className="h-11 rounded-xl border border-line px-3 text-sm font-semibold text-accent"
+          onClick={() => update(actions.updateSettings({ notation: nextNotation(notation) }))}
+          aria-label={`Showing ${notation === 'nns' ? 'numbers' : notation}. Tap to switch`}
+          title="Switch Numbers / Chords / Both (N)"
+        >
+          {notation === 'nns' ? '1 4 5' : notation === 'chords' ? 'C F G' : 'C/1'}
+        </button>
         <button className="icon-btn h-11 w-11" onClick={() => setShowControls((s) => !s)} aria-expanded={showControls} aria-label="Show controls">
           <Icon name="settings" size={20} />
         </button>
@@ -144,14 +154,7 @@ export default function PerformancePage() {
 
       {showControls && (
         <div className="flex flex-wrap items-center gap-2 border-b border-line px-3 py-2 sm:px-5">
-          <div role="radiogroup" aria-label="Notation" className="inline-flex h-12 rounded-xl bg-sunken p-1">
-            {(['nns', 'chords'] as const).map((n) => (
-              <button key={n} role="radio" aria-checked={notation === n} onClick={() => update(actions.updateSettings({ notation: n }))}
-                className={`min-w-[4rem] rounded-lg px-3 text-base font-semibold ${notation === n ? 'bg-accent text-accent-ink' : 'text-muted'}`}>
-                {n === 'nns' ? '1 4 5' : 'Chords'}
-              </button>
-            ))}
-          </div>
+          <NotationSwitch size="lg" tone="stage" />
           <KeyControl size="lg" written={item.arrangement.originalKey} value={keys[songIdx]} options={item.arrangement.keyOptions} onChange={setKey} />
           <div className="inline-flex h-12 items-center rounded-xl border border-line">
             <button className="grid h-12 w-12 place-items-center text-muted" aria-label="Smaller text" onClick={() => update(actions.updateSettings({ performanceFontScale: Math.max(0.6, +(scale - 0.1).toFixed(2)) }))}>
@@ -221,7 +224,7 @@ export default function PerformancePage() {
 }
 
 function StageSection({ item, sectionId, ctx, notation, compact = false }: {
-  item: Item; sectionId: string; ctx: ReturnType<typeof keyContext>; notation: 'nns' | 'chords'; compact?: boolean;
+  item: Item; sectionId: string; ctx: ReturnType<typeof keyContext>; notation: Notation; compact?: boolean;
 }) {
   const a = item.arrangement;
   const s = a.sections.find((x) => x.id === sectionId)!;
@@ -245,7 +248,7 @@ function StageSection({ item, sectionId, ctx, notation, compact = false }: {
       {s.melody && (
         <p className="mt-[0.2em] font-semibold text-chord">
           <span className="mr-[0.3em] text-[0.45em] font-bold uppercase text-muted">Melody</span>
-          {notation === 'chords' && key ? renderMelody(s.melody, key) : s.melody}
+          {notation !== 'nns' && key ? renderMelody(s.melody, key) : s.melody}
         </p>
       )}
       {s.instructions?.length ? (

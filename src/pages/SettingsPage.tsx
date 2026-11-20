@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { useUpdate, useUserData } from '../store/UserDataProvider';
 import { actions, emptyUserData, migrate } from '../store/userStore';
 import { PageHeader, Segmented } from '../components/ui';
+import { NotationSwitch } from '../components/NotationSwitch';
 import { Icon } from '../components/Icon';
 
 export default function SettingsPage() {
@@ -34,9 +35,8 @@ export default function SettingsPage() {
     <div className="max-w-2xl">
       <PageHeader eyebrow="Settings" title="Settings" />
       <div className="card divide-y divide-line">
-        <Row title="Default notation" desc="Numbers (Nashville) or chord names. You can switch on any song.">
-          <Segmented label="Default notation" value={s.notation} onChange={(v) => update(actions.updateSettings({ notation: v }))}
-            options={[{ value: 'nns', label: '1 4 5' }, { value: 'chords', label: 'C F G' }]} />
+        <Row title="Show progressions as" desc="Number degrees, chord names, or both together. The same switch is on every song and in Performance Mode.">
+          <NotationSwitch />
         </Row>
         <Row title="Appearance">
           <Segmented label="Appearance" value={s.theme} onChange={(v) => update(actions.updateSettings({ theme: v }))}

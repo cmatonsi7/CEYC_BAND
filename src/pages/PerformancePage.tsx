@@ -4,6 +4,7 @@ import { useLibrary } from '../data/LibraryProvider';
 import { findArrangement, findSong, keyContext, playableProgression, resolveSection, sectionKey } from '../data/library';
 import type { Arrangement, Library, Notation, Song, UserData } from '../data/types';
 import { NotationSwitch, nextNotation } from '../components/NotationSwitch';
+import { decodeSetlist } from '../data/shareLink';
 import { useUpdate, useUserData } from '../store/UserDataProvider';
 import { actions } from '../store/userStore';
 import { keyToString, renderMelody } from '../music';
@@ -27,7 +28,8 @@ function buildItems(lib: Library, mode: string, id: string, params: URLSearchPar
     const arr = findArrangement(song, params.get('a') ?? prefs.preferredArrangements[song.id]);
     return { items: [{ song, arrangement: arr, key: params.get('key') ?? prefs.preferredKeys[arr.id] ?? null }], title: song.title, back: `/song/${song.id}` };
   }
-  const setlist = prefs.setlists.find((s) => s.id === id);
+  const shared = mode === 'shared' ? decodeSetlist(params.get('s') ?? '') : null;
+  const setlist = shared ?? prefs.setlists.find((s) => s.id === id);
   if (!setlist) return null;
   const items: Item[] = [];
   for (const entry of setlist.songs) {
@@ -36,7 +38,7 @@ function buildItems(lib: Library, mode: string, id: string, params: URLSearchPar
     const arrangement = findArrangement(song, entry.arrangementId);
     items.push({ song, arrangement, key: entry.performanceKey ?? null, notes: entry.notes });
   }
-  return { items, title: setlist.name, back: `/setlists/${setlist.id}` };
+  return { items, title: setlist.name, back: shared ? `/shared?s=${params.get('s')}` : `/setlists/${id}` };
 }
 
 export default function PerformancePage() {

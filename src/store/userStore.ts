@@ -7,6 +7,8 @@ import type { Setlist, SetlistSong, Settings, UserData } from '../data/types';
  */
 export interface UserStore {
   get(): UserData;
+  /** False when the browser refuses to save (private window, blocked site data, storage full). */
+  isPersistent(): boolean;
   update(fn: (d: UserData) => UserData): void;
   subscribe(listener: () => void): () => void;
 }
@@ -62,9 +64,15 @@ interface StorageLike {
 export class LocalUserStore implements UserStore {
   private data: UserData;
   private listeners = new Set<() => void>();
+  private persistent: boolean;
 
   constructor(private readonly storage: StorageLike | null, private readonly key = STORAGE_KEY) {
+    this.persistent = !!storage;
     this.data = this.read();
+  }
+
+  isPersistent(): boolean {
+    return this.persistent;
   }
 
   private read(): UserData {
@@ -83,9 +91,13 @@ export class LocalUserStore implements UserStore {
   update(fn: (d: UserData) => UserData): void {
     this.data = fn(this.data);
     try {
-      this.storage?.setItem(this.key, JSON.stringify(this.data));
+      const json = JSON.stringify(this.data);
+      this.storage?.setItem(this.key, json);
+      // Read back to be sure the browser really kept it.
+      this.persistent = !!this.storage && this.storage.getItem(this.key) === json;
     } catch {
-      // Storage full or blocked (private mode): keep working in memory.
+      // Storage full or blocked (private mode): keep working in memory and warn.
+      this.persistent = false;
     }
     this.listeners.forEach((l) => l());
   }

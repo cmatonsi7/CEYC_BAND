@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Icon, type IconName } from './Icon';
+import { usePersistent } from '../store/UserDataProvider';
 
 const NAV: { to: string; label: string; short: string; icon: IconName; end?: boolean }[] = [
   { to: '/', label: 'Home', short: 'Home', icon: 'home', end: true },
@@ -13,6 +14,7 @@ const NAV: { to: string; label: string; short: string; icon: IconName; end?: boo
 
 export function Layout() {
   const { pathname } = useLocation();
+  const persistent = usePersistent();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
 
   return (
@@ -49,6 +51,11 @@ export function Layout() {
       </header>
 
       <main className="mx-auto w-full max-w-6xl px-4 pb-28 pt-4 sm:px-6 lg:px-10 lg:pb-16 lg:pt-8">
+        {!persistent && (
+          <div role="alert" className="mb-4 rounded-xl border border-warn/30 bg-warn-soft px-4 py-3 text-sm">
+            <b className="text-warn">This browser isn’t saving your data.</b> Setlists, favourites and notes will disappear when you refresh. This happens in private or incognito windows, in some in-app browsers, or when site data is blocked. Open the site in a normal browser window, or use <b>Share</b> on a setlist to keep a link to it.
+          </div>
+        )}
         <Outlet />
       </main>
 

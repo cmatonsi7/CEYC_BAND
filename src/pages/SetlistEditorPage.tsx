@@ -9,6 +9,7 @@ import { allKeys, keyToString } from '../music';
 import { useSortable } from '../hooks/useSortable';
 import { BackLink, EmptyState } from '../components/ui';
 import { Icon } from '../components/Icon';
+import { ShareButton } from '../components/ShareButton';
 
 export default function SetlistEditorPage() {
   const { id = '' } = useParams();
@@ -48,6 +49,7 @@ function Editor({ setlist }: { setlist: Setlist }) {
           </div>
         </div>
         <div className="flex gap-2">
+          <ShareButton setlist={setlist} />
           <button className="btn-outline" onClick={() => update(actions.duplicateSetlist(setlist.id))}><Icon name="copy" size={16} /> Duplicate</button>
           <Link to={`/perform/setlist/${setlist.id}`} className={`btn-primary ${setlist.songs.length ? '' : 'pointer-events-none opacity-40'}`}>
             <Icon name="play" size={15} filled /> Perform setlist

@@ -18,6 +18,10 @@ function safeStorage(): Storage | null {
 export function UserDataProvider({ children, store }: { children: ReactNode; store?: UserStore }) {
   const value = useMemo(() => store ?? new LocalUserStore(safeStorage()), [store]);
   useEffect(() => {
+    // Ask the browser not to clear our data under storage pressure (Chrome, Firefox, Safari 17+).
+    navigator.storage?.persist?.().catch(() => {});
+  }, []);
+  useEffect(() => {
     if (!(value instanceof LocalUserStore)) return;
     const onStorage = (e: StorageEvent) => e.key === STORAGE_KEY && value.reload();
     window.addEventListener('storage', onStorage);
@@ -37,6 +41,13 @@ export function useUserData<T = UserData>(selector?: (d: UserData) => T): T {
   const store = useStore();
   const snap = useSyncExternalStore(store.subscribe.bind(store), () => store.get());
   return selector ? selector(snap) : (snap as unknown as T);
+}
+
+/** Whether personal data is actually being saved by this browser. */
+export function usePersistent(): boolean {
+  const store = useStore();
+  useSyncExternalStore(store.subscribe.bind(store), () => store.get());
+  return store.isPersistent();
 }
 
 export function useUpdate(): (fn: (d: UserData) => UserData) => void {

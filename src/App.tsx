@@ -17,6 +17,7 @@ const AccompanimentPage = lazy(() => import('./pages/AccompanimentPage'));
 const FavouritesPage = lazy(() => import('./pages/FavouritesPage'));
 const SettingsPage = lazy(() => import('./pages/SettingsPage'));
 const ReviewPage = lazy(() => import('./pages/ReviewPage'));
+const SharedSetlistPage = lazy(() => import('./pages/SharedSetlistPage'));
 
 /**
  * HashRouter keeps every route under index.html (#/song/...), so refreshing a
@@ -42,6 +43,7 @@ export default function App() {
                   <Route path="favourites" element={<FavouritesPage />} />
                   <Route path="settings" element={<SettingsPage />} />
                   <Route path="review" element={<ReviewPage />} />
+                  <Route path="shared" element={<SharedSetlistPage />} />
                   <Route path="*" element={<EmptyState icon="music" title="Page not found" action={<Link to="/" className="btn-outline">Go home</Link>} />} />
                 </Route>
               </Routes>

@@ -9,7 +9,7 @@ const check = (name, ok, extra = '') => { results.push({ name, ok }); console.lo
 
 (async () => {
   const browser = await chromium.launch();
-  const ctx = await browser.newContext({ viewport: { width: 1280, height: 860 } });
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 860 }, permissions: ['clipboard-read', 'clipboard-write'] });
   const page = await ctx.newPage();
   const bad = [];
   page.on('response', (r) => r.status() >= 400 && bad.push(`${r.status()} ${r.url()}`));
@@ -84,6 +84,20 @@ const check = (name, ok, extra = '') => { results.push({ name, ok }); console.lo
   await page.locator('ol li a.font-semibold').first().waitFor();
   const order = await page.locator('ol li a.font-semibold').allInnerTexts();
   check('setlist persists and drag reorder worked', JSON.stringify(order) === JSON.stringify(['King Of Kings', 'Beautiful', 'One Name']), JSON.stringify(order));
+
+  // Share link opens read-only for someone with no saved data
+  await page.getByRole('button', { name: 'Share' }).click();
+  await page.getByRole('button', { name: 'Link copied' }).waitFor();
+  const link = await page.evaluate(() => navigator.clipboard.readText());
+  const other = await browser.newContext();
+  const op = await other.newPage();
+  await op.goto(link);
+  await op.getByText('Shared setlist · view only').waitFor();
+  const sharedTitles = await op.locator('ol li a').allInnerTexts();
+  check('share link shows the setlist to someone else', JSON.stringify(sharedTitles) === JSON.stringify(['King Of Kings', 'Beautiful', 'One Name']), JSON.stringify(sharedTitles));
+  await op.getByRole('link', { name: 'Perform' }).click();
+  check('shared setlist opens in performance mode', await op.getByText('Song 1 of 3').waitFor({ timeout: 3000 }).then(() => true, () => false));
+  await other.close();
 
   // Perform setlist
   await page.getByRole('link', { name: 'Perform setlist' }).click();

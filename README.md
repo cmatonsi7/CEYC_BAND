@@ -20,7 +20,7 @@ favourites, notes, keys and setlists are saved in their own browser.
 | **Song page** | Every arrangement as a tab. Sections with colour-coded labels and a sticky section jump bar. **Numbers / Chords / Both** switch (Both shows each chord name with its number degree underneath). Key control (−/+ semitone, any key, labelled presets such as *Busi Eb / Tawa E*, reset to the written key). Key-change badges on modulating sections. “Same as Intro” references resolved. Lyric cues, melody lines (shown as note names in chord view), performance and modulation notes, pastor’s corrections, the PDF page for each section, and the original PDF text one tap away. Flags where the PDF is unclear. Personal notes per arrangement. |
 | **Transposition engine** | Proper interval maths with letter-correct spelling (degree 7 of F# is E#, not F). Diatonic default qualities, explicit `m`/`min`/`maj`/`dim` overrides, extensions (`7`, `maj7`, `sus4`…), slash chords, passing chords (`2,3` = 2 passing into 3), sharps/flats written either side (`6#`, `#6`, `♭7`). Modulating sections move with the song, so Creator of the Universe stays F → F# → G when you move it to G → Ab → A. |
 | **Performance Mode** | Black, high-contrast stage view. One section at a time or the whole song. Big previous/next buttons with the next section’s name, swipe left/right, arrow/space/PageUp/PageDown (works with Bluetooth page-turner pedals). Quick key changes, a Numbers / Chords / Both switch that's always in the top bar (or press N), font size 60–220 %, full screen, screen wake lock where the browser supports it. Works for a single song or a whole setlist. |
-| **Setlists** | Create, rename, date, duplicate, delete. Add songs from the library, drag to reorder (mouse and touch) or use the up/down buttons, choose the arrangement and performance key per song, add a note per song, and start Performance Mode from the top or from any song. |
+| **Setlists** | Create, rename, date, duplicate, delete. Add songs from the library, drag to reorder (mouse and touch) or use the up/down buttons, choose the arrangement and performance key per song, add a note per song, and start Performance Mode from the top or from any song. **Share** makes a read-only link (the setlist is packed into the URL) that anyone can open, perform from, or save a copy of. No account or server is needed. A link is a snapshot, so share again after editing. |
 | **Service Accompaniment** | Prayer and Offering progressions from page 34 with their recording links, kept separate from the song library, with key control for chord view. |
 | **Favourites & notes** | Favourite songs, personal notes, preferred key and arrangement per song, recently viewed. |
 | **Review screen** | `#/review` lists every place where the PDF was unclear, for the music team to check. |
@@ -160,7 +160,8 @@ Song data can stay as static JSON, or move to Firestore behind `LibraryRepositor
 
 ## Known limitations
 - Personal data is per browser. Clearing site data removes it. Use the export backup.
-- No shared or real-time setlists without adding a backend (see above).
+- Share links are snapshots. Live, always-up-to-date shared setlists would need a backend (see above).
+- If a browser refuses to save data (private window, some in-app browsers), the app shows a warning banner.
 - Songs with no key in the PDF show numbers until someone picks a key. The chosen key is then treated as the reference key.
 - Chromatic numbers (`5#`, `#6`, `b7`) show the root only with a `?`, because the PDF doesn't say whether they are major, minor or diminished.
 - Screen wake lock depends on browser support (current Chrome, Edge, Safari 16.4+). Full screen isn't available on iPhone Safari; adding the site to the home screen gives a similar result.

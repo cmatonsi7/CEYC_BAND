@@ -5,6 +5,7 @@ import { actions, uid } from '../store/userStore';
 import { useLibrary } from '../data/LibraryProvider';
 import { EmptyState, PageHeader } from '../components/ui';
 import { Icon } from '../components/Icon';
+import { ShareButton } from '../components/ShareButton';
 
 export default function SetlistsPage() {
   const setlists = useUserData((d) => d.setlists);
@@ -45,11 +46,12 @@ export default function SetlistsPage() {
                   </p>
                   <p className="mt-2 line-clamp-2 text-sm text-ink/80">{titles.length ? titles.join(' · ') : <span className="italic text-faint">Empty</span>}</p>
                 </Link>
-                <div className="mt-4 flex items-center gap-1">
+                <div className="mt-4 flex flex-wrap items-center gap-1">
                   <Link to={`/perform/setlist/${s.id}`} className={`btn-primary h-9 ${s.songs.length ? '' : 'pointer-events-none opacity-40'}`} aria-disabled={!s.songs.length}>
                     <Icon name="play" size={14} filled /> Perform
                   </Link>
                   <Link to={`/setlists/${s.id}`} className="btn-quiet h-9"><Icon name="edit" size={15} /> Edit</Link>
+                  <ShareButton setlist={s} compact />
                   <button className="btn-quiet h-9" onClick={() => update(actions.duplicateSetlist(s.id))}><Icon name="copy" size={15} /> Duplicate</button>
                   {confirm === s.id ? (
                     <span className="ml-auto flex items-center gap-1">

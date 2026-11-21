@@ -57,6 +57,20 @@ describe('user data persistence', () => {
     expect(s.get().recent.map((r) => r.songId)).toEqual(['c', 'a', 'b']);
   });
 
+  it('reports when the browser will not keep data', () => {
+    const ok = new LocalUserStore(new MemoryStorage());
+    ok.update(actions.createSetlist('A'));
+    expect(ok.isPersistent()).toBe(true);
+    const blocked = new LocalUserStore({ getItem: () => null, setItem: () => { throw new Error('QuotaExceeded'); } });
+    blocked.update(actions.createSetlist('A'));
+    expect(blocked.isPersistent()).toBe(false);
+    expect(blocked.get().setlists).toHaveLength(1); // still works for this session
+    const silent = new LocalUserStore({ getItem: () => null, setItem: () => {} }); // drops writes silently
+    silent.update(actions.createSetlist('A'));
+    expect(silent.isPersistent()).toBe(false);
+    expect(new LocalUserStore(null).isPersistent()).toBe(false);
+  });
+
   it('recovers from corrupt or missing storage', () => {
     const storage = new MemoryStorage();
     storage.setItem('ceyc-music-library:v1', '{not json');

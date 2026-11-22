@@ -32,7 +32,7 @@ export interface SongSection {
   flags?: string[];
   /** Verbatim source text from the PDF. */
   source: string;
-  /** PDF page number. */
+  /** PDF page number. 0 for sections of songs added in the app. */
   page: number;
 }
 
@@ -60,7 +60,8 @@ export interface Arrangement {
   flags?: string[];
 }
 
-export type SongCollection = 'Song List' | 'Today’s Songs';
+/** 'Band additions' and 'My songs' are songs added in the app, not in the PDF. */
+export type SongCollection = 'Song List' | 'Today’s Songs' | 'Band additions' | 'My songs';
 
 export interface Song {
   id: string;
@@ -134,5 +135,7 @@ export interface UserData {
   /** keyed by song id */
   preferredArrangements: Record<string, string>;
   setlists: Setlist[];
+  /** Songs added on this device only (not in the PDF, not shared with the band). */
+  customSongs: Song[];
   settings: Settings;
 }

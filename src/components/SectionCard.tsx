@@ -44,7 +44,7 @@ export function SectionCard({ arrangement, section, ctx, notation, writtenKey }:
         {modulates && key && (
           <span className="rounded-md border border-accent/40 px-1.5 text-xs font-semibold text-accent">Key change · {keyToString(key)}</span>
         )}
-        <span className="ml-auto text-xs text-faint">p. {section.page}</span>
+        <span className="ml-auto text-xs text-faint">{section.page > 0 ? `p. ${section.page}` : 'Added in the app'}</span>
       </header>
 
       {target && (

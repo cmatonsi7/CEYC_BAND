@@ -10,6 +10,8 @@ import { SectionCard, KIND_STYLE } from '../components/SectionCard';
 import { KeyControl } from '../components/KeyControl';
 import { BackLink, EmptyState, FlagList } from '../components/ui';
 import { NotationSwitch } from '../components/NotationSwitch';
+import { isAddedSong, pagesLabel } from '../band/customSongs';
+import { sortBandSetlists, useBand } from '../band/BandProvider';
 import { Icon } from '../components/Icon';
 
 export default function SongPage() {
@@ -61,7 +63,7 @@ function SongView({ song }: { song: Song }) {
           <h1 className="font-display text-[2rem] font-semibold leading-tight tracking-tight sm:text-[2.5rem]">{song.title}</h1>
           <p className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
             <span>{song.collection}</span>
-            <span>PDF page{song.sourcePages.length > 1 ? 's' : ''} {song.sourcePages.join(', ')}</span>
+            <span>{pagesLabel(song.sourcePages)}</span>
             {song.aliases?.length ? <span className="text-faint">Also written “{song.aliases.join('”, “')}”</span> : null}
           </p>
         </div>
@@ -69,6 +71,7 @@ function SongView({ song }: { song: Song }) {
           <button className={`btn-outline ${fav ? 'text-accent' : ''}`} onClick={() => update(actions.toggleFavourite(song.id))} aria-pressed={fav}>
             <Icon name="heart" size={17} filled={fav} /> <span className="hidden sm:inline">{fav ? 'Favourite' : 'Favourite'}</span>
           </button>
+          {isAddedSong(song) && <Link to={`/song/${song.id}/edit`} className="btn-outline" aria-label="Edit song"><Icon name="edit" size={16} /> <span className="hidden sm:inline">Edit</span></Link>}
           <AddToSetlist song={song} arrangement={arrangement} chosenKey={chosenKey} />
           <button className="btn-primary" onClick={() => navigate(performUrl)}>
             <Icon name="play" size={16} filled /> Perform
@@ -184,7 +187,7 @@ function ArrangementInfo({ arrangement: a }: { arrangement: Arrangement }) {
       ) : null}
       <div>
         <p className="eyebrow mb-1">Source</p>
-        <p>PDF page{a.sourcePages.length > 1 ? 's' : ''} {a.sourcePages.join(', ')}</p>
+        <p>{pagesLabel(a.sourcePages)}</p>
       </div>
       {a.flags?.length ? <FlagList flags={a.flags} /> : null}
     </div>
@@ -229,6 +232,8 @@ function PersonalNote({ arrangementId }: { arrangementId: string }) {
 
 function AddToSetlist({ song, arrangement, chosenKey }: { song: Song; arrangement: Arrangement; chosenKey: string | null }) {
   const setlists = useUserData((d) => d.setlists);
+  const band = useBand();
+  const bandLists = band.canEdit ? sortBandSetlists(band.setlists).slice(0, 6) : [];
   const update = useUpdate();
   const [open, setOpen] = useState(false);
   const [done, setDone] = useState<string | null>(null);
@@ -247,6 +252,12 @@ function AddToSetlist({ song, arrangement, chosenKey }: { song: Song; arrangemen
     setOpen(false);
     window.setTimeout(() => setDone(null), 2000);
   };
+  const addToBand = (id: string, name: string) => {
+    band.updateSetlist(id, setlistOps.add(entry));
+    setDone(name);
+    setOpen(false);
+    window.setTimeout(() => setDone(null), 2000);
+  };
   const createAndAdd = () => {
     const id = uid();
     const name = `Service ${new Date().toLocaleDateString(undefined, { day: 'numeric', month: 'short' })}`;
@@ -256,13 +267,25 @@ function AddToSetlist({ song, arrangement, chosenKey }: { song: Song; arrangemen
 
   return (
     <div ref={ref} className="relative">
-      <button className="btn-outline" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-haspopup="menu">
+      <button className="btn-outline" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-haspopup="menu" aria-label="Add to setlist">
         <Icon name={done ? 'check' : 'plus'} size={17} /> <span className="hidden sm:inline">{done ? 'Added' : 'Setlist'}</span>
       </button>
       {done && <span className="sr-only" role="status">Added to {done}</span>}
       {open && (
         <div role="menu" className="absolute right-0 top-full z-30 mt-2 w-64 rounded-2xl border border-line bg-surface p-2 shadow-[0_12px_32px_-12px_rgb(0_0_0/0.25)] animate-fade-up">
-          <p className="eyebrow px-2 pb-1.5 pt-1">Add to setlist</p>
+          {bandLists.length > 0 && (
+            <>
+              <p className="eyebrow px-2 pb-1.5 pt-1">Band setlists</p>
+              {bandLists.map((s) => (
+                <button key={s.id} role="menuitem" onClick={() => addToBand(s.id, s.name)} className="flex h-9 w-full items-center justify-between rounded-lg px-2 text-left text-sm hover:bg-sunken">
+                  <span className="flex min-w-0 items-center gap-1.5 truncate"><Icon name="users" size={14} className="shrink-0 text-accent" />{s.name}</span>
+                  <span className="text-xs text-faint">{s.songs.length}</span>
+                </button>
+              ))}
+              <div className="my-1.5 border-t border-line" />
+            </>
+          )}
+          <p className="eyebrow px-2 pb-1.5 pt-1">{bandLists.length ? 'My setlists' : 'Add to setlist'}</p>
           {setlists.map((s) => (
             <button key={s.id} role="menuitem" onClick={() => addTo(s.id, s.name)} className="flex h-9 w-full items-center justify-between rounded-lg px-2 text-left text-sm hover:bg-sunken">
               <span className="truncate">{s.name}</span>

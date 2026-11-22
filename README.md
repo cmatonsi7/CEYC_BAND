@@ -21,6 +21,8 @@ favourites, notes, keys and setlists are saved in their own browser.
 | **Transposition engine** | Proper interval maths with letter-correct spelling (degree 7 of F# is E#, not F). Diatonic default qualities, explicit `m`/`min`/`maj`/`dim` overrides, extensions (`7`, `maj7`, `sus4`…), slash chords, passing chords (`2,3` = 2 passing into 3), sharps/flats written either side (`6#`, `#6`, `♭7`). Modulating sections move with the song, so Creator of the Universe stays F → F# → G when you move it to G → Ab → A. |
 | **Performance Mode** | Black, high-contrast stage view. One section at a time or the whole song. Big previous/next buttons with the next section’s name, swipe left/right, arrow/space/PageUp/PageDown (works with Bluetooth page-turner pedals). Quick key changes, a Numbers / Chords / Both switch that's always in the top bar (or press N), font size 60–220 %, full screen, screen wake lock where the browser supports it. Works for a single song or a whole setlist. |
 | **Setlists** | Create, rename, date, duplicate, delete. Add songs from the library, drag to reorder (mouse and touch) or use the up/down buttons, choose the arrangement and performance key per song, add a note per song, and start Performance Mode from the top or from any song. **Share** makes a read-only link (the setlist is packed into the URL) that anyone can open, perform from, or save a copy of. No account or server is needed. A link is a snapshot, so share again after editing. |
+| **Band setlists** | When band sharing is switched on (see below), the MD unlocks editing once with the band PIN and makes setlists that appear on **everyone’s** phone automatically: on the home page as “Next service”, and under Setlists. Changes save as the MD types and reach others within about 30 seconds (or as soon as they open the app). Everyone else gets a read-only view, Performance Mode and “Save a copy”. Each phone keeps the last copy for when there’s no signal. Personal setlists can be published to the band in one tap. |
+| **Add a song** | Library → **Add a song** for songs that aren’t in the PDF: title, key (optional), musician, sections with numbers and lyric cues, and notes, with a live Numbers / Chords preview. Save it for the whole band (needs the PIN) or only on this device. Added songs are marked “Added in the app” and can be edited or deleted; PDF songs can’t be edited. |
 | **Service Accompaniment** | Prayer and Offering progressions from page 34 with their recording links, kept separate from the song library, with key control for chord view. |
 | **Favourites & notes** | Favourite songs, personal notes, preferred key and arrangement per song, recently viewed. |
 | **Review screen** | `#/review` lists every place where the PDF was unclear, for the music team to check. |
@@ -124,6 +126,8 @@ scripts/
   review_list.py               Writes docs/REVIEW.md
   make-icons.cjs               Renders the PNG app icons
   e2e/serve.mjs, e2e/smoke.cjs GitHub Pages-style server + browser smoke test
+  e2e/fake-supabase.mjs, band.cjs  Local stand-in for Supabase + two-phone band sharing test
+supabase/setup.sql             Band sharing database: tables, read-only access, PIN-checked save functions
 docs/
   DATA.md                      Data model and editing guide
   REVIEW.md                    Items to verify against the PDF
@@ -131,9 +135,10 @@ src/
   music/                       Pure music theory: notes, keys, chords, progression tokenizer, melody (+ tests)
   data/                        Types, repository (data-access layer), library queries (+ tests), LibraryProvider
   store/                       Local-first user data store (+ tests) and React provider
+  band/                        Band sharing: config, Supabase REST repository, BandProvider, added songs (+ tests)
   components/                  Layout, icons, Progression renderer, KeyControl, SectionCard, SongCard, UI primitives
   hooks/                       Theme, wake lock, full screen, drag-to-reorder
-  pages/                       Home, Library, Song, Performance, Setlists, Setlist editor, Accompaniment, Favourites, Settings, Review
+  pages/                       Home, Library, Song, Song editor, Performance, Setlists, Setlist editor, Band setlist, Accompaniment, Favourites, Settings, Review
   styles/index.css             Design tokens (light, dark, stage) and component classes
 ```
 
@@ -145,22 +150,42 @@ src/
 
 ---
 
-## Optional: shared team data
+## Band sharing (shared setlists and songs)
 
-Everything works without a backend. The trade-off is that setlists and notes stay on the
-device where they were made (use **Settings → Export/Import backup** to move them).
+Everything works without a server. Band sharing adds one free [Supabase](https://supabase.com) database
+so the MD's setlists and added songs show up for everyone who opens the app.
 
-If the team later wants **shared setlists** that the music director publishes for everyone:
-1. Create a free Firebase project, enable Firestore and (optionally) Google sign-in.
-2. Add the web config as repository secrets and expose them as `VITE_FIREBASE_*` env vars in the workflow.
-3. Implement `UserStore` (or a separate `SetlistRepository`) against Firestore, and keep `LocalUserStore` as the offline cache.
-Song data can stay as static JSON, or move to Firestore behind `LibraryRepository` if the team wants to edit songs in the browser.
+**Set up once (about 10 minutes):**
+1. Create a free Supabase account and a new project (any name, choose the region closest to you).
+2. In the project, open **SQL Editor → New query**, paste all of [`supabase/setup.sql`](supabase/setup.sql),
+   change the PIN on the line marked `>>> CHANGE THIS <<<`, and click **Run**.
+3. Open **Project Settings → API** and copy the **Project URL** and the **anon public** key.
+4. Put them in [`src/band/config.ts`](src/band/config.ts) and push. (Or set repository variables
+   `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY`.) The anon key is meant to be public.
+5. On the MD's phone: Setlists → **I’m the MD** → enter the PIN once.
+
+**How it's protected.** Anyone can read band setlists and songs. Nobody can write to the tables
+directly: every change goes through a database function that checks the PIN against a bcrypt hash
+(the PIN itself is never stored or sent anywhere except in the change request). Wrong PINs are
+slowed down. To change the PIN later, run in the SQL Editor:
+`update band_settings set edit_pin_hash = extensions.crypt('NEW-PIN', extensions.gen_salt('bf')) where id = 1;`
+Phones that had the old PIN are asked for the new one on their next change.
+
+**Good to know.** Supabase's free plan pauses a project after about a week with no visits.
+Opening the app regularly keeps it awake; if it does pause, click **Restore** in the Supabase dashboard.
+While the server is unreachable, phones show the last copy they saved.
+
+**Code.** `src/band/repository.ts` (REST calls with `fetch`, no SDK), `src/band/BandProvider.tsx`
+(polling, local cache, PIN on device, debounced saves that never overwrite unsaved edits),
+`src/band/customSongs.ts` (added songs). Test against a local Postgres with
+`node scripts/e2e/fake-supabase.mjs` and `node scripts/e2e/band.cjs` (two phones: MD and band member).
 
 ---
 
 ## Known limitations
 - Personal data is per browser. Clearing site data removes it. Use the export backup.
-- Share links are snapshots. Live, always-up-to-date shared setlists would need a backend (see above).
+- Share links are snapshots. Band setlists (above) are the live version.
+- Band setlists update every 30 seconds while the app is open, not instantly. If two people with the PIN edit the same setlist at the same moment, the last save wins.
 - If a browser refuses to save data (private window, some in-app browsers), the app shows a warning banner.
 - Songs with no key in the PDF show numbers until someone picks a key. The chosen key is then treated as the reference key.
 - Chromatic numbers (`5#`, `#6`, `b7`) show the root only with a `?`, because the PDF doesn't say whether they are major, minor or diminished.

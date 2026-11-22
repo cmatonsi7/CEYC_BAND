@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useLibrary } from '../data/LibraryProvider';
 import { allMusicians, allOriginalKeys, groupAlphabetically, rankSongs, searchSongs } from '../data/library';
 import { useUpdate, useUserData } from '../store/UserDataProvider';
@@ -42,6 +42,7 @@ export default function LibraryPage() {
         eyebrow="Music Library"
         title="All songs"
         subtitle={`${lib.songs.length} songs · ${lib.songs.reduce((n, s) => n + s.arrangements.length, 0)} arrangements`}
+        actions={<Link to="/songs/new" className="btn-outline"><Icon name="plus" size={17} /> Add a song</Link>}
       />
 
       <div className="sticky top-14 z-10 -mx-4 space-y-3 bg-bg/95 px-4 pb-3 pt-1 backdrop-blur sm:-mx-6 sm:px-6 lg:top-0 lg:-mx-10 lg:px-10">
@@ -71,6 +72,8 @@ export default function LibraryPage() {
             <option value="">All lists</option>
             <option value="Song List">Song List</option>
             <option value="Today’s Songs">Today’s Songs</option>
+            {lib.songs.some((x) => x.collection === 'Band additions') && <option value="Band additions">Added for the band</option>}
+            {lib.songs.some((x) => x.collection === 'My songs') && <option value="My songs">My added songs</option>}
           </select>
           {filtered && (
             <button className="btn-quiet h-9 text-xs" onClick={() => setParams({ view }, { replace: true })}>

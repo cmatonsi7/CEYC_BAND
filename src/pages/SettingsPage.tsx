@@ -4,6 +4,32 @@ import { actions, emptyUserData, migrate } from '../store/userStore';
 import { PageHeader, Segmented } from '../components/ui';
 import { NotationSwitch } from '../components/NotationSwitch';
 import { Icon } from '../components/Icon';
+import { useBand } from '../band/BandProvider';
+import { BandUnlock } from '../components/BandUnlock';
+import { BandStatusLine } from '../components/BandStatus';
+
+function BandSettings() {
+  const band = useBand();
+  return (
+    <>
+      <h2 className="mb-2 mt-8 flex items-center gap-2 font-semibold"><Icon name="users" size={17} /> Band sharing</h2>
+      <div className="card space-y-3 p-4">
+        {band.enabled ? (
+          <>
+            <p className="text-sm text-muted">Band setlists and band songs are shared with everyone who opens this app. The app checks for changes every 30 seconds while it’s open, and keeps a copy on this phone for when there’s no signal.</p>
+            <div className="flex flex-wrap items-center gap-3">
+              <BandStatusLine />
+              <button className="btn-quiet h-8 text-xs" onClick={() => band.refresh()}>Check now</button>
+            </div>
+            <div className="border-t border-line pt-3"><BandUnlock /></div>
+          </>
+        ) : (
+          <p className="text-sm text-muted">Band sharing isn’t switched on for this copy of the app yet, so setlists and added songs stay on each device. Use Share on a setlist to send it to others.</p>
+        )}
+      </div>
+    </>
+  );
+}
 
 export default function SettingsPage() {
   const user = useUserData();
@@ -55,6 +81,8 @@ export default function SettingsPage() {
           </label>
         </Row>
       </div>
+
+      <BandSettings />
 
       <h2 className="mb-2 mt-8 font-semibold">Your data</h2>
       <p className="mb-3 text-sm text-muted">

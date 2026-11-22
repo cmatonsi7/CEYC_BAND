@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { HashRouter, Link, Route, Routes } from 'react-router-dom';
 import { LibraryProvider, useLibraryState } from './data/LibraryProvider';
 import { UserDataProvider } from './store/UserDataProvider';
+import { BandProvider } from './band/BandProvider';
 import { Layout } from './components/Layout';
 import { EmptyState, Spinner } from './components/ui';
 import { useTheme } from './hooks/useTheme';
@@ -18,6 +19,8 @@ const FavouritesPage = lazy(() => import('./pages/FavouritesPage'));
 const SettingsPage = lazy(() => import('./pages/SettingsPage'));
 const ReviewPage = lazy(() => import('./pages/ReviewPage'));
 const SharedSetlistPage = lazy(() => import('./pages/SharedSetlistPage'));
+const BandSetlistPage = lazy(() => import('./pages/BandSetlistPage'));
+const SongEditorPage = lazy(() => import('./pages/SongEditorPage'));
 
 /**
  * HashRouter keeps every route under index.html (#/song/...), so refreshing a
@@ -26,6 +29,7 @@ const SharedSetlistPage = lazy(() => import('./pages/SharedSetlistPage'));
 export default function App() {
   return (
     <UserDataProvider>
+      <BandProvider>
       <LibraryProvider>
         <HashRouter>
           <Themed />
@@ -38,7 +42,10 @@ export default function App() {
                   <Route path="library" element={<LibraryPage />} />
                   <Route path="song/:songId" element={<SongPage />} />
                   <Route path="setlists" element={<SetlistsPage />} />
+                  <Route path="song/:songId/edit" element={<SongEditorPage />} />
+                  <Route path="songs/new" element={<SongEditorPage />} />
                   <Route path="setlists/:id" element={<SetlistEditorPage />} />
+                  <Route path="band/:id" element={<BandSetlistPage />} />
                   <Route path="accompaniment" element={<AccompanimentPage />} />
                   <Route path="favourites" element={<FavouritesPage />} />
                   <Route path="settings" element={<SettingsPage />} />
@@ -51,6 +58,7 @@ export default function App() {
           </LibraryGate>
         </HashRouter>
       </LibraryProvider>
+      </BandProvider>
     </UserDataProvider>
   );
 }

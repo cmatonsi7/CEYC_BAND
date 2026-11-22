@@ -1,4 +1,4 @@
-import type { Setlist, SetlistSong, Settings, UserData } from '../data/types';
+import type { Setlist, SetlistSong, Settings, Song, UserData } from '../data/types';
 
 /**
  * Local-first storage for everything personal: favourites, notes, preferred
@@ -31,6 +31,7 @@ export function emptyUserData(): UserData {
     preferredKeys: {},
     preferredArrangements: {},
     setlists: [],
+    customSongs: [],
     settings: { ...DEFAULT_SETTINGS },
   };
 }
@@ -48,6 +49,7 @@ export function migrate(raw: unknown): UserData {
     preferredKeys: r.preferredKeys && typeof r.preferredKeys === 'object' ? r.preferredKeys : {},
     preferredArrangements: r.preferredArrangements && typeof r.preferredArrangements === 'object' ? r.preferredArrangements : {},
     setlists: Array.isArray(r.setlists) ? r.setlists.filter((s) => s && typeof s.id === 'string' && Array.isArray(s.songs)) : [],
+    customSongs: Array.isArray(r.customSongs) ? r.customSongs.filter((s) => s && typeof s.id === 'string' && Array.isArray(s.arrangements) && s.arrangements.length > 0) : [],
     settings: {
       ...base.settings,
       ...(r.settings ?? {}),
@@ -171,6 +173,11 @@ export const actions = {
     setlists.splice(i + 1, 0, copy);
     return { ...d, setlists };
   },
+  saveCustomSong: (song: Song) => (d: UserData): UserData => ({
+    ...d,
+    customSongs: d.customSongs.some((s) => s.id === song.id) ? d.customSongs.map((s) => (s.id === song.id ? song : s)) : [...d.customSongs, song],
+  }),
+  deleteCustomSong: (id: string) => (d: UserData): UserData => ({ ...d, customSongs: d.customSongs.filter((s) => s.id !== id) }),
   replaceAll: (data: UserData) => (): UserData => migrate(data),
 };
 

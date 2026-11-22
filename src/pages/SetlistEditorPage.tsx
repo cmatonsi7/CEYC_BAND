@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useUpdate, useUserData } from '../store/UserDataProvider';
-import { actions, setlistOps } from '../store/userStore';
+import { actions, setlistOps, uid } from '../store/userStore';
+import { useBand } from '../band/BandProvider';
 import { useLibrary } from '../data/LibraryProvider';
 import { arrangementLabel, findArrangement, rankSongs, searchSongs } from '../data/library';
 import type { Setlist, SetlistSong } from '../data/types';
@@ -21,19 +22,62 @@ export default function SetlistEditorPage() {
       </EmptyState>
     );
   }
-  return <Editor setlist={setlist} />;
+  return <MySetlistEditor setlist={setlist} />;
 }
 
-function Editor({ setlist }: { setlist: Setlist }) {
+function MySetlistEditor({ setlist }: { setlist: Setlist }) {
   const update = useUpdate();
+  const band = useBand();
+  const navigate = useNavigate();
+  const [publishing, setPublishing] = useState<'idle' | 'busy' | 'error'>('idle');
+  const publish = async () => {
+    setPublishing('busy');
+    const id = uid();
+    try {
+      await band.publishSetlist({ ...setlist, id, songs: setlist.songs.map((s) => ({ ...s, uid: uid() })) });
+      navigate(`/band/${id}`);
+    } catch {
+      setPublishing('error');
+    }
+  };
+  return (
+    <SetlistEditor
+      setlist={setlist}
+      edit={(fn) => update(actions.updateSetlist(setlist.id, fn))}
+      back={{ to: '/setlists', label: 'Setlists' }}
+      performBase={`/perform/setlist/${setlist.id}`}
+      actions={
+        <>
+          {band.canEdit && (
+            <button className="btn-outline" onClick={publish} disabled={publishing === 'busy'} title="Copy this setlist to the band so everyone sees it">
+              <Icon name="users" size={16} /> {publishing === 'busy' ? 'Publishing…' : 'Publish to band'}
+            </button>
+          )}
+          <ShareButton setlist={setlist} />
+          <button className="btn-outline" onClick={() => update(actions.duplicateSetlist(setlist.id))}><Icon name="copy" size={16} /> Duplicate</button>
+        </>
+      }
+      status={publishing === 'error' ? <p className="text-sm text-red-600">{band.error ?? 'Couldn’t publish.'}</p> : <p className="text-xs text-faint">Saved on this device only.</p>}
+    />
+  );
+}
+
+/** Editor shared by personal and band setlists; `edit` decides where changes are saved. */
+export function SetlistEditor({ setlist, edit, back, performBase, actions: extra, status }: {
+  setlist: Setlist;
+  edit: (fn: (s: Setlist) => Setlist) => void;
+  back: { to: string; label: string };
+  performBase: string;
+  actions?: React.ReactNode;
+  status?: React.ReactNode;
+}) {
   const lib = useLibrary();
-  const edit = (fn: (s: Setlist) => Setlist) => update(actions.updateSetlist(setlist.id, fn));
   const sortable = useSortable(setlist.songs.length, (from, to) => edit(setlistOps.move(from, to)));
   const [adding, setAdding] = useState(setlist.songs.length === 0);
 
   return (
     <div className="animate-fade-up">
-      <BackLink to="/setlists">Setlists</BackLink>
+      <BackLink to={back.to}>{back.label}</BackLink>
       <div className="flex flex-wrap items-end gap-3 pb-5">
         <div className="min-w-0 flex-1 space-y-2">
           <label className="sr-only" htmlFor="setlist-name">Setlist name</label>
@@ -48,15 +92,15 @@ function Editor({ setlist }: { setlist: Setlist }) {
             <input id="setlist-date" type="date" value={setlist.date ?? ''} onChange={(e) => edit(setlistOps.setDate(e.target.value))} className="input h-9 w-auto" />
           </div>
         </div>
-        <div className="flex gap-2">
-          <ShareButton setlist={setlist} />
-          <button className="btn-outline" onClick={() => update(actions.duplicateSetlist(setlist.id))}><Icon name="copy" size={16} /> Duplicate</button>
-          <Link to={`/perform/setlist/${setlist.id}`} className={`btn-primary ${setlist.songs.length ? '' : 'pointer-events-none opacity-40'}`}>
+        <div className="flex flex-wrap gap-2">
+          {extra}
+          <Link to={performBase} className={`btn-primary ${setlist.songs.length ? '' : 'pointer-events-none opacity-40'}`}>
             <Icon name="play" size={15} filled /> Perform setlist
           </Link>
         </div>
       </div>
 
+      {status && <div className="-mt-2 pb-4">{status}</div>}
       {setlist.songs.length === 0 && !adding ? null : (
         <ol className="space-y-2">
           {setlist.songs.map((entry, i) => (
@@ -72,7 +116,7 @@ function Editor({ setlist }: { setlist: Setlist }) {
                 entry={entry}
                 index={i}
                 count={setlist.songs.length}
-                setlistId={setlist.id}
+                performBase={performBase}
                 onPatch={(p) => edit(setlistOps.patch(entry.uid, p))}
                 onRemove={() => edit(setlistOps.remove(entry.uid))}
                 onMove={(to) => edit(setlistOps.move(i, to))}
@@ -101,8 +145,8 @@ function Editor({ setlist }: { setlist: Setlist }) {
   );
 }
 
-function EntryEditor({ entry, index, count, setlistId, onPatch, onRemove, onMove }: {
-  entry: SetlistSong; index: number; count: number; setlistId: string;
+function EntryEditor({ entry, index, count, performBase, onPatch, onRemove, onMove }: {
+  entry: SetlistSong; index: number; count: number; performBase: string;
   onPatch: (p: Partial<SetlistSong>) => void; onRemove: () => void; onMove: (to: number) => void;
 }) {
   const lib = useLibrary();
@@ -123,7 +167,7 @@ function EntryEditor({ entry, index, count, setlistId, onPatch, onRemove, onMove
         <div className="flex shrink-0 items-center">
           <button className="icon-btn h-9 w-9" disabled={index === 0} onClick={() => onMove(index - 1)} aria-label="Move up"><Icon name="arrowUp" size={16} /></button>
           <button className="icon-btn h-9 w-9" disabled={index === count - 1} onClick={() => onMove(index + 1)} aria-label="Move down"><Icon name="arrowDown" size={16} /></button>
-          <Link to={`/perform/setlist/${setlistId}?i=${index}`} className="icon-btn h-9 w-9" aria-label={`Perform from ${song.title}`}><Icon name="play" size={15} /></Link>
+          <Link to={`${performBase}?i=${index}`} className="icon-btn h-9 w-9" aria-label={`Perform from ${song.title}`}><Icon name="play" size={15} /></Link>
           <button className="icon-btn h-9 w-9" onClick={onRemove} aria-label={`Remove ${song.title}`}><Icon name="x" size={17} /></button>
         </div>
       </div>

@@ -1,4 +1,7 @@
-import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useBand } from '../band/BandProvider';
+import { mergeLibrary } from '../band/customSongs';
+import { useUserData } from '../store/UserDataProvider';
 import { defaultRepository, type LibraryRepository } from './repository';
 import type { Library } from './types';
 
@@ -28,9 +31,16 @@ export function useLibraryState() {
   return c;
 }
 
-/** Only call inside <LibraryGate>, where the library is guaranteed to be loaded. */
+/**
+ * The PDF library plus songs added in the app (shared band additions and this
+ * device's own). Only call inside <LibraryGate>, where the library is loaded.
+ */
 export function useLibrary(): Library {
   const { state } = useLibraryState();
-  if (state.status !== 'ready') throw new Error('Library not loaded');
-  return state.library;
+  const band = useBand().songs;
+  const mine = useUserData((d) => d.customSongs);
+  const base = state.status === 'ready' ? state.library : null;
+  const merged = useMemo(() => (base ? mergeLibrary(base, band, mine) : null), [base, band, mine]);
+  if (!merged) throw new Error('Library not loaded');
+  return merged;
 }

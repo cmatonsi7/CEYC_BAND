@@ -59,3 +59,12 @@ The engine reads the band's own notation:
 **Mark a key change:** give the section `key='G'`. If it repeats another section, add `ref='Chorus'` and `prog=''`.
 
 After editing: `npm run data && npm test`.
+
+## Songs added in the app
+
+Songs added with **Library → Add a song** are not written into `library.json`. Band additions live in the
+Supabase table `band_songs` (one JSON `Song` per row); personal ones live in the device's local data
+(`customSongs`). They use the same `Song` shape with `collection` set to `Band additions` or `My songs`,
+`sourcePages: []` and section `page: 0`, and are shown as “Added in the app”. Ids start with `added-` so they
+never clash with PDF songs. To move a band addition into the PDF data permanently, copy its JSON from
+the table into `scripts/songs_part*.py` and run `npm run data`.

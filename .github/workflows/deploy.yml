@@ -31,6 +31,10 @@ jobs:
         env:
           # Serves the app from https://<user>.github.io/<repo>/
           VITE_BASE: /${{ github.event.repository.name }}/
+          # Optional band sharing. Empty unless set under Settings → Secrets and variables → Actions → Variables;
+          # src/band/config.ts is used otherwise.
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

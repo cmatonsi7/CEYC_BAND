@@ -5,6 +5,9 @@ import { allMusicians, songFlagCount } from '../data/library';
 import { useUserData } from '../store/UserDataProvider';
 import { SongRow } from '../components/SongCard';
 import { Icon } from '../components/Icon';
+import { localToday, sortBandSetlists, useBand } from '../band/BandProvider';
+import { BandStatusLine } from '../components/BandStatus';
+import { formatServiceDate } from '../components/SetlistSongs';
 
 export default function HomePage() {
   const lib = useLibrary();
@@ -35,6 +38,8 @@ export default function HomePage() {
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={`Search ${lib.songs.length} songs…`} className="input h-12 rounded-2xl pl-11 text-base" aria-label="Search songs" />
         </form>
       </section>
+
+      <NextBandSetlist />
 
       <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Stat to="/library" value={lib.songs.length} label="Songs" />
@@ -95,4 +100,30 @@ function Panel({ title, icon, to, linkLabel, children }: { title: string; icon: 
 
 function Empty({ children }: { children: React.ReactNode }) {
   return <p className="px-3 py-4 text-sm text-faint">{children}</p>;
+}
+
+/** The band setlist for the next service, front and centre for everyone. */
+function NextBandSetlist() {
+  const band = useBand();
+  const lib = useLibrary();
+  if (!band.enabled) return null;
+  const today = localToday();
+  const next = sortBandSetlists(band.setlists, today)[0];
+  if (!next) return null;
+  const upcoming = !!next.date && next.date >= today;
+  const titles = next.songs.map((x) => lib.songs.find((s) => s.id === x.songId)?.title).filter(Boolean);
+  return (
+    <section className="card overflow-hidden border-accent/30 p-0" aria-label="Band setlist">
+      <div className="flex flex-wrap items-center gap-4 p-4 sm:p-5">
+        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-accent text-white"><Icon name="users" size={21} /></span>
+        <Link to={`/band/${next.id}`} className="group min-w-0 flex-1">
+          <p className="eyebrow text-accent">{upcoming ? (next.date === today ? 'Today’s service' : 'Next service') : 'Latest band setlist'}{next.date ? ` · ${formatServiceDate(next.date)}` : ''}</p>
+          <h2 className="truncate font-display text-xl font-semibold group-hover:text-accent">{next.name}</h2>
+          <p className="truncate text-sm text-muted">{titles.length ? titles.join(' · ') : 'No songs yet'}</p>
+        </Link>
+        <Link to={`/perform/band/${next.id}`} className={`btn-primary ${next.songs.length ? '' : 'pointer-events-none opacity-40'}`}><Icon name="play" size={15} filled /> Perform</Link>
+      </div>
+      {band.status === 'offline' && <div className="border-t border-line px-5 py-2"><BandStatusLine /></div>}
+    </section>
+  );
 }

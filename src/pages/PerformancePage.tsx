@@ -2,7 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useLibrary } from '../data/LibraryProvider';
 import { findArrangement, findSong, keyContext, playableProgression, resolveSection, sectionKey } from '../data/library';
-import type { Arrangement, Library, Notation, Song, UserData } from '../data/types';
+import type { Arrangement, Library, Notation, Setlist, Song, UserData } from '../data/types';
+import { useBand } from '../band/BandProvider';
 import { NotationSwitch, nextNotation } from '../components/NotationSwitch';
 import { decodeSetlist } from '../data/shareLink';
 import { useUpdate, useUserData } from '../store/UserDataProvider';
@@ -21,7 +22,7 @@ interface Item {
   notes?: string;
 }
 
-function buildItems(lib: Library, mode: string, id: string, params: URLSearchParams, prefs: UserData): { items: Item[]; title: string; back: string } | null {
+function buildItems(lib: Library, mode: string, id: string, params: URLSearchParams, prefs: UserData, bandSetlists: Setlist[]): { items: Item[]; title: string; back: string } | null {
   if (mode === 'song') {
     const song = findSong(lib, id);
     if (!song) return null;
@@ -29,7 +30,7 @@ function buildItems(lib: Library, mode: string, id: string, params: URLSearchPar
     return { items: [{ song, arrangement: arr, key: params.get('key') ?? prefs.preferredKeys[arr.id] ?? null }], title: song.title, back: `/song/${song.id}` };
   }
   const shared = mode === 'shared' ? decodeSetlist(params.get('s') ?? '') : null;
-  const setlist = shared ?? prefs.setlists.find((s) => s.id === id);
+  const setlist = shared ?? (mode === 'band' ? bandSetlists : prefs.setlists).find((s) => s.id === id);
   if (!setlist) return null;
   const items: Item[] = [];
   for (const entry of setlist.songs) {
@@ -38,7 +39,7 @@ function buildItems(lib: Library, mode: string, id: string, params: URLSearchPar
     const arrangement = findArrangement(song, entry.arrangementId);
     items.push({ song, arrangement, key: entry.performanceKey ?? null, notes: entry.notes });
   }
-  return { items, title: setlist.name, back: shared ? `/shared?s=${params.get('s')}` : `/setlists/${id}` };
+  return { items, title: setlist.name, back: shared ? `/shared?s=${params.get('s')}` : mode === 'band' ? `/band/${id}` : `/setlists/${id}` };
 }
 
 export default function PerformancePage() {
@@ -50,11 +51,18 @@ export default function PerformancePage() {
   const navigate = useNavigate();
   // Build once per route so edits elsewhere don't jump the musician's place.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const built = useMemo(() => buildItems(lib, mode, id, params, prefs), [lib, mode, id]);
+  const band = useBand();
+  // A band setlist that hadn't loaded yet when the page opened is picked up once it arrives.
+  const bandReady = mode === 'band' && band.setlists.some((s) => s.id === id);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const built = useMemo(() => buildItems(lib, mode, id, params, prefs, band.setlists), [lib, mode, id, bandReady]);
 
   const [songIdx, setSongIdx] = useState(Number(params.get('i') ?? 0) || 0);
   const [secIdx, setSecIdx] = useState(0);
   const [keys, setKeys] = useState<(string | null)[]>(() => built?.items.map((i) => i.key) ?? []);
+  useEffect(() => {
+    if (built && built.items.length !== keys.length) setKeys(built.items.map((i) => i.key));
+  }, [built]); // eslint-disable-line react-hooks/exhaustive-deps
   const [view, setView] = useState<'section' | 'full'>('section');
   const [showControls, setShowControls] = useState(() => window.innerWidth >= 640);
   const settings = prefs.settings;

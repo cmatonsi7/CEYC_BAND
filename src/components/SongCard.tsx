@@ -30,7 +30,7 @@ export function SongCard({ song, favourite, onToggleFavourite }: { song: Song; f
           <Icon name="library" size={13} /> {n} arrangement{n === 1 ? '' : 's'}
         </span>
         {musicians.length > 0 && <span className="truncate">{musicians.join(' · ')}</span>}
-        <span className="ml-auto text-faint">p. {song.sourcePages.join(', ')}</span>
+        <span className="ml-auto text-faint">{song.sourcePages.length ? `p. ${song.sourcePages.join(', ')}` : 'Added'}</span>
       </div>
     </div>
   );

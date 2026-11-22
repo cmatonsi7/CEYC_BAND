@@ -8,8 +8,8 @@
  * Leave them empty to run without band sharing (everything stays on each device).
  */
 export const BAND_CONFIG = {
-  url: '',
-  anonKey: '',
+  url: 'https://dnqumgeytfyzufiofnos.supabase.co',
+  anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRucXVtZ2V5dGZ5enVmaW9mbm9zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTUzMTE4OTAsImV4cCI6MjExMDg4Nzg5MH0.CYo_4pP_li4CVsEEi3oSJDWBmDuC4RovTVds5FXyu5U',
 };
 
 export function bandConfig(): { url: string; anonKey: string } | null {

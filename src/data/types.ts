@@ -34,6 +34,8 @@ export interface SongSection {
   source: string;
   /** PDF page number. 0 for sections of songs added in the app. */
   page: number;
+  /** Set when the chords were changed in the app: what the progression was before. */
+  edited?: { original: string; by: 'band' | 'device' };
 }
 
 export interface KeyOption {
@@ -58,6 +60,8 @@ export interface Arrangement {
   performanceNotes?: string[];
   modulationNotes?: string[];
   flags?: string[];
+  /** Set when the key was changed in the app: the key the PDF gave. */
+  keyEdited?: { original: string | null; by: 'band' | 'device' };
 }
 
 /** 'Band additions' and 'My songs' are songs added in the app, not in the PDF. */
@@ -72,6 +76,8 @@ export interface Song {
   sourcePages: number[];
   arrangements: Arrangement[];
   flags?: string[];
+  /** Set when any chords of this song were changed in the app. */
+  chordsEdited?: { by: 'band' | 'device'; at: string };
 }
 
 export interface AccompanimentItem {
@@ -137,5 +143,7 @@ export interface UserData {
   setlists: Setlist[];
   /** Songs added on this device only (not in the PDF, not shared with the band). */
   customSongs: Song[];
+  /** Chord changes to PDF songs kept on this device only, keyed by song id. */
+  chordEdits: Record<string, import('../band/chordEdits').ChordEdits>;
   settings: Settings;
 }

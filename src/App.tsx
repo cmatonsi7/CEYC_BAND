@@ -21,6 +21,7 @@ const ReviewPage = lazy(() => import('./pages/ReviewPage'));
 const SharedSetlistPage = lazy(() => import('./pages/SharedSetlistPage'));
 const BandSetlistPage = lazy(() => import('./pages/BandSetlistPage'));
 const SongEditorPage = lazy(() => import('./pages/SongEditorPage'));
+const ChordEditorPage = lazy(() => import('./pages/ChordEditorPage'));
 
 /**
  * HashRouter keeps every route under index.html (#/song/...), so refreshing a
@@ -43,6 +44,7 @@ export default function App() {
                   <Route path="song/:songId" element={<SongPage />} />
                   <Route path="setlists" element={<SetlistsPage />} />
                   <Route path="song/:songId/edit" element={<SongEditorPage />} />
+                  <Route path="song/:songId/chords" element={<ChordEditorPage />} />
                   <Route path="songs/new" element={<SongEditorPage />} />
                   <Route path="setlists/:id" element={<SetlistEditorPage />} />
                   <Route path="band/:id" element={<BandSetlistPage />} />

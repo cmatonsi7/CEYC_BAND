@@ -1,3 +1,4 @@
+import { applyChordEdits, hasEdits, isChordEditRecord, type ChordEdits } from './chordEdits';
 import type { Library, SectionKind, Song, SongCollection } from '../data/types';
 
 /** What the "Add a song" form collects. Nothing is filled in for the user. */
@@ -76,14 +77,25 @@ export function songToDraft(song: Song): SongDraft {
   };
 }
 
-/** PDF songs, then band additions, then this device's own songs. Ids never collide with PDF songs. */
-export function mergeLibrary(base: Library, band: Song[], mine: Song[]): Library {
-  if (!band.length && !mine.length) return base;
+/**
+ * PDF songs (with any chord edits applied), then band additions, then this
+ * device's own songs. Added songs never replace PDF songs. Chord edits made on
+ * this device win over the band's for the same song.
+ */
+export function mergeLibrary(base: Library, band: Song[], mine: Song[], myEdits: Record<string, ChordEdits> = {}): Library {
+  const bandEdits = new Map<string, ChordEdits>();
+  for (const s of band) if (isChordEditRecord(s)) bandEdits.set(s.id, s.chordEdits);
+  if (!band.length && !mine.length && !Object.keys(myEdits).length) return base;
+  const songs = base.songs.map((s) => {
+    const mineE = myEdits[s.id];
+    if (hasEdits(mineE)) return applyChordEdits(s, mineE, 'device');
+    return applyChordEdits(s, bandEdits.get(s.id), 'band');
+  });
   const taken = new Set(base.songs.map((s) => s.id));
   const extra: Song[] = [];
-  for (const s of band) if (!taken.has(s.id)) { taken.add(s.id); extra.push({ ...s, collection: 'Band additions' }); }
+  for (const s of band) if (!isChordEditRecord(s) && !taken.has(s.id)) { taken.add(s.id); extra.push({ ...s, collection: 'Band additions' }); }
   for (const s of mine) if (!taken.has(s.id)) { taken.add(s.id); extra.push({ ...s, collection: 'My songs' }); }
-  return { ...base, songs: [...base.songs, ...extra] };
+  return { ...base, songs: [...songs, ...extra] };
 }
 
 /** "PDF page 4", or "Added in the app" for songs that aren't in the PDF. */

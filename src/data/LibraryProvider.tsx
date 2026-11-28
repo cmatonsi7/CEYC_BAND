@@ -39,8 +39,9 @@ export function useLibrary(): Library {
   const { state } = useLibraryState();
   const band = useBand().songs;
   const mine = useUserData((d) => d.customSongs);
+  const myEdits = useUserData((d) => d.chordEdits);
   const base = state.status === 'ready' ? state.library : null;
-  const merged = useMemo(() => (base ? mergeLibrary(base, band, mine) : null), [base, band, mine]);
+  const merged = useMemo(() => (base ? mergeLibrary(base, band, mine, myEdits) : null), [base, band, mine, myEdits]);
   if (!merged) throw new Error('Library not loaded');
   return merged;
 }

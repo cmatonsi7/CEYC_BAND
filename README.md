@@ -127,6 +127,7 @@ scripts/
   make-icons.cjs               Renders the PNG app icons
   e2e/serve.mjs, e2e/smoke.cjs GitHub Pages-style server + browser smoke test
   e2e/fake-supabase.mjs, band.cjs  Local stand-in for Supabase + two-phone band sharing test
+  e2e/chords.cjs               Two-phone test of editing a PDF song's chords
 supabase/setup.sql             Band sharing database: tables, read-only access, PIN-checked save functions
 docs/
   DATA.md                      Data model and editing guide
@@ -177,13 +178,22 @@ While the server is unreachable, phones show the last copy they saved.
 
 **Code.** `src/band/repository.ts` (REST calls with `fetch`, no SDK), `src/band/BandProvider.tsx`
 (polling, local cache, PIN on device, debounced saves that never overwrite unsaved edits),
-`src/band/customSongs.ts` (added songs). Test against a local Postgres with
+`src/band/customSongs.ts` (added songs), `src/band/chordEdits.ts` (chord edits to PDF songs). Test against a local Postgres with
 `node scripts/e2e/fake-supabase.mjs` and `node scripts/e2e/band.cjs` (two phones: MD and band member).
+
+**Editing chords of PDF songs.** Every song page has **Edit chords**. Change the numbers of any
+section (and the key they're in), then save for the whole band (needs the PIN) or only on this phone.
+Only the changed sections are stored, in the band's own notation, so the PDF text, page numbers and
+flags stay untouched; edited sections show an "Edited" tag and "Show PDF text" also shows the numbers
+before the edit. **Go back to the PDF chords** removes the edits. Band edits are a `band_songs` row
+with the same id as the PDF song (no database change needed; older copies of the app ignore it).
+A change saved on a phone wins over the band's version on that phone.
 
 ---
 
 ## Known limitations
 - Personal data is per browser. Clearing site data removes it. Use the export backup.
+- If two people with the PIN edit the chords of the same song at the same moment, the last save wins.
 - Share links are snapshots. Band setlists (above) are the live version.
 - Band setlists update every 30 seconds while the app is open, not instantly. If two people with the PIN edit the same setlist at the same moment, the last save wins.
 - If a browser refuses to save data (private window, some in-app browsers), the app shows a warning banner.

@@ -1,3 +1,4 @@
+import type { ChordEdits } from '../band/chordEdits';
 import type { Setlist, SetlistSong, Settings, Song, UserData } from '../data/types';
 
 /**
@@ -32,6 +33,7 @@ export function emptyUserData(): UserData {
     preferredArrangements: {},
     setlists: [],
     customSongs: [],
+    chordEdits: {},
     settings: { ...DEFAULT_SETTINGS },
   };
 }
@@ -50,6 +52,7 @@ export function migrate(raw: unknown): UserData {
     preferredArrangements: r.preferredArrangements && typeof r.preferredArrangements === 'object' ? r.preferredArrangements : {},
     setlists: Array.isArray(r.setlists) ? r.setlists.filter((s) => s && typeof s.id === 'string' && Array.isArray(s.songs)) : [],
     customSongs: Array.isArray(r.customSongs) ? r.customSongs.filter((s) => s && typeof s.id === 'string' && Array.isArray(s.arrangements) && s.arrangements.length > 0) : [],
+    chordEdits: r.chordEdits && typeof r.chordEdits === 'object' && !Array.isArray(r.chordEdits) ? r.chordEdits : {},
     settings: {
       ...base.settings,
       ...(r.settings ?? {}),
@@ -178,6 +181,13 @@ export const actions = {
     customSongs: d.customSongs.some((s) => s.id === song.id) ? d.customSongs.map((s) => (s.id === song.id ? song : s)) : [...d.customSongs, song],
   }),
   deleteCustomSong: (id: string) => (d: UserData): UserData => ({ ...d, customSongs: d.customSongs.filter((s) => s.id !== id) }),
+  /** Save this device's chord changes to a PDF song, or remove them with null. */
+  setChordEdits: (songId: string, edits: ChordEdits | null) => (d: UserData): UserData => {
+    const next = { ...d.chordEdits };
+    if (edits) next[songId] = edits;
+    else delete next[songId];
+    return { ...d, chordEdits: next };
+  },
   replaceAll: (data: UserData) => (): UserData => migrate(data),
 };
 

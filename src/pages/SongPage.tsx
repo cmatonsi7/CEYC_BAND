@@ -59,7 +59,7 @@ function SongView({ song }: { song: Song }) {
       <BackLink to="/library">Library</BackLink>
 
       <header className="flex flex-wrap items-start gap-4 pb-4">
-        <div className="min-w-0 flex-1">
+        <div className="w-full min-w-0 sm:w-auto sm:flex-1">
           <h1 className="font-display text-[2rem] font-semibold leading-tight tracking-tight sm:text-[2.5rem]">{song.title}</h1>
           <p className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
             <span>{song.collection}</span>
@@ -71,7 +71,9 @@ function SongView({ song }: { song: Song }) {
           <button className={`btn-outline ${fav ? 'text-accent' : ''}`} onClick={() => update(actions.toggleFavourite(song.id))} aria-pressed={fav}>
             <Icon name="heart" size={17} filled={fav} /> <span className="hidden sm:inline">{fav ? 'Favourite' : 'Favourite'}</span>
           </button>
-          {isAddedSong(song) && <Link to={`/song/${song.id}/edit`} className="btn-outline" aria-label="Edit song"><Icon name="edit" size={16} /> <span className="hidden sm:inline">Edit</span></Link>}
+          {isAddedSong(song)
+            ? <Link to={`/song/${song.id}/edit`} className="btn-outline" aria-label="Edit song"><Icon name="edit" size={16} /> <span className="hidden sm:inline">Edit</span></Link>
+            : <Link to={`/song/${song.id}/chords?a=${encodeURIComponent(arrangement.id)}`} className="btn-outline" aria-label="Edit chords"><Icon name="edit" size={16} /> <span className="hidden sm:inline">Edit chords</span></Link>}
           <AddToSetlist song={song} arrangement={arrangement} chosenKey={chosenKey} />
           <button className="btn-primary" onClick={() => navigate(performUrl)}>
             <Icon name="play" size={16} filled /> Perform
@@ -79,6 +81,13 @@ function SongView({ song }: { song: Song }) {
         </div>
       </header>
 
+      {song.chordsEdited && (
+        <p className="mb-4 flex items-start gap-2 rounded-xl border border-accent/30 bg-accent-soft px-3.5 py-2.5 text-sm text-ink/85">
+          <Icon name="edit" size={15} className="mt-0.5 shrink-0 text-accent" />
+          <span className="flex-1">{song.chordsEdited.by === 'band' ? 'Chords updated for the band' : 'Chords changed on this device only'} since the PDF.</span>
+          <Link to={`/song/${song.id}/chords?a=${encodeURIComponent(arrangement.id)}`} className="font-medium text-accent hover:underline">Edit</Link>
+        </p>
+      )}
       {song.flags?.length ? <div className="mb-4"><FlagList flags={song.flags} title="About this song" /></div> : null}
 
       {song.arrangements.length > 1 && (
@@ -160,6 +169,7 @@ function ArrangementInfo({ arrangement: a }: { arrangement: Arrangement }) {
       <div>
         <p className="eyebrow mb-1">Key line in the PDF</p>
         <p className="font-medium">{a.keyText || <span className="italic text-faint">Not written</span>}</p>
+        {a.keyEdited && <p className="mt-1 text-xs text-accent">Key changed in the app to {a.originalKey ?? 'no key'} (PDF: {a.keyEdited.original ?? 'none'})</p>}
       </div>
       {a.musicians.length > 0 && (
         <div>

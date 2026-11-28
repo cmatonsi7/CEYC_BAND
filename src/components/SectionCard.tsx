@@ -44,6 +44,7 @@ export function SectionCard({ arrangement, section, ctx, notation, writtenKey }:
         {modulates && key && (
           <span className="rounded-md border border-accent/40 px-1.5 text-xs font-semibold text-accent">Key change · {keyToString(key)}</span>
         )}
+        {section.edited && <span className="rounded-md border border-accent/40 px-1.5 text-xs font-semibold text-accent" title={`PDF: ${section.edited.original || '(none)'}`}>Edited</span>}
         <span className="ml-auto text-xs text-faint">{section.page > 0 ? `p. ${section.page}` : 'Added in the app'}</span>
       </header>
 
@@ -79,6 +80,9 @@ export function SectionCard({ arrangement, section, ctx, notation, writtenKey }:
       <button onClick={() => setShowSource((s) => !s)} className="mt-3 inline-flex items-center gap-1 text-xs text-faint hover:text-muted" aria-expanded={showSource}>
         <Icon name="file" size={13} /> {showSource ? 'Hide' : 'Show'} PDF text
       </button>
+      {showSource && section.edited && (
+        <p className="mt-2 text-xs text-muted">Numbers before the edit: <code>{section.edited.original || '(none)'}</code></p>
+      )}
       {showSource && (
         <pre className="mt-2 whitespace-pre-wrap rounded-lg bg-sunken px-3 py-2 font-sans text-xs text-muted">{section.source}</pre>
       )}
